@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-05T14:12:28+09:00</updated><id>http://localhost:4000/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Blog Reopening 블로그 운영 시작</title><link href="http://localhost:4000/blog-opening" rel="alternate" type="text/html" title="Blog Reopening 블로그 운영 시작" /><published>2020-08-01T18:00:00+09:00</published><updated>2020-08-01T18:00:00+09:00</updated><id>http://localhost:4000/blog-opening</id><content type="html" xml:base="http://localhost:4000/blog-opening">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;블로그 목차 내역&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blog-opening&quot;&gt;블로그 목차 추가&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=acVpibElHZ8&amp;amp;t=99s&quot;&gt;목차 추가시 참고 영상&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;블로그를 다시 운영하기로 했습니다. 공부, 일상 등 잡다한 내용을 다룰 예정입니다.
+ 열심히 기록을 남겨 스스로를 되돌아보고 좋은 정보도 공유하고자 합니다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="blog" /><summary type="html">블로그 목차 내역 블로그 목차 추가 목차 추가시 참고 영상</summary></entry><entry><title type="html">Node.js 잇몸으로 뽀개기 (studying Node.js)</title><link href="http://localhost:4000/Node.js-study" rel="alternate" type="text/html" title="Node.js 잇몸으로 뽀개기 (studying Node.js)" /><published>2018-10-05T21:22:00+09:00</published><updated>2018-10-05T21:22:00+09:00</updated><id>http://localhost:4000/Node.js-study</id><content type="html" xml:base="http://localhost:4000/Node.js-study">&lt;h2 id=&quot;왜-nodejs를-공부해야하는가&quot;&gt;왜 Node.js를 공부해야하는가&lt;/h2&gt;
+&lt;p&gt;Node.js의 가장 큰 장점은 방대한 npm 라이브러리다. 많은 사람들이 사용하고 있기 때문에 리소스도 풍부하고 내가 필요한 기능은 이미 다른 사람이 개발해 놓은 경우가 왕왕 있다고 한다. 일종의 네트워크 효과라고 보면 되겠다.
+또 다른 장점은 입출력(I/O)을 기다리는 방식에서 볼 수 있다. Node.js는 non-blocking 방식을 택하고 있는데 이는 데이터를 주고 받는 과정 동안 멈추지 않고 다른 일을 처리하는 것을 말한다. Rails 같은 blocking 방식을 택한 경우, 입출력 하나 하나씩 기다리느라 오랜 시간이 소요된다.&lt;/p&gt;
+
+&lt;p&gt;아래 사진을 보면 확실히 이해가 된다. Non-blocking 방식이 자원을 훨씬 효율적으로 활용하고 결과도 빨리 받아볼 수 있다.
+&lt;img src=&quot;http://i.imgur.com/iSafBIF.png&quot; alt=&quot;blocking vs. nonblocking&quot; /&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;nodejs란-무엇인가&quot;&gt;Node.js란 무엇인가&lt;/h2&gt;
+&lt;p&gt;내가 이해한 바로는 C++로 작성한 V8 Engine을 통해서 Javascript로 작성한 코드가 Machine Code로 작동하는 것이라고 한다. Node.js를 런타임이라고 하는데 런타임 단순히 말하면 프로그래밍 언어가 구동되는 환경이라고 이해하면 된다고 한다&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. 명확하게 이해는 안되지만 Node.js는 자바스크립트로 작성된 코드가 실행될 수 있도록 도와주는 환경인 것 같다.&lt;/p&gt;
+
+&lt;h2 id=&quot;향후-일정&quot;&gt;향후 일정&lt;/h2&gt;
+&lt;p&gt;유데미에서 맥스와 함께 자바스크립트 공부를 차근차근 해 나간다. 궁극적으로 모바일 서버를 운영할 수 있는 실력을 갖추고 싶다.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/ &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://asfirstalways.tistory.com/99 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">왜 Node.js를 공부해야하는가 Node.js의 가장 큰 장점은 방대한 npm 라이브러리다. 많은 사람들이 사용하고 있기 때문에 리소스도 풍부하고 내가 필요한 기능은 이미 다른 사람이 개발해 놓은 경우가 왕왕 있다고 한다. 일종의 네트워크 효과라고 보면 되겠다. 또 다른 장점은 입출력(I/O)을 기다리는 방식에서 볼 수 있다. Node.js는 non-blocking 방식을 택하고 있는데 이는 데이터를 주고 받는 과정 동안 멈추지 않고 다른 일을 처리하는 것을 말한다. Rails 같은 blocking 방식을 택한 경우, 입출력 하나 하나씩 기다리느라 오랜 시간이 소요된다.</summary></entry><entry><title type="html">Vue.js 개괄</title><link href="http://localhost:4000/Vue.js" rel="alternate" type="text/html" title="Vue.js 개괄" /><published>2018-10-05T20:38:03+09:00</published><updated>2018-10-05T20:38:03+09:00</updated><id>http://localhost:4000/Vue.js</id><content type="html" xml:base="http://localhost:4000/Vue.js">&lt;h2 id=&quot;vuejs의-componenet-개발-방식&quot;&gt;Vue.js의 Componenet 개발 방식&lt;/h2&gt;
+&lt;p&gt;Vue의 컴포넌트는 모듈과 같다. 모듈이란 어플리케이션의 독립적인 한 부분이다. 모듈은 어플리케이션을 만들기 위한 부품과 비슷하다. Vue.js는 뷰-로직 모듈을 작성할 수 있도록 디자인된 라이브러리이다. 작은 모듈은 배우고, 이해하고, 유지하고, 재사용과 디버그 하는 것이 더 쉽다. 다른 개발자와 협업도 편해진다.&lt;/p&gt;
+
+&lt;p&gt;Vue.js는 FIRST여야 한다. Focused(단일 책임 원칙), Independent(독립적인), Reusable(재사용 가능한), Small(작은), Testable(테스트 가능한). 각각의 컴포넌트는 너무 크지 않게 100라인 미만을 유지하는 것이 좋다. 또한, Vue 컴포넌트는 독립적으로 작동이 가능해야 한다.&lt;/p&gt;
+
+&lt;p&gt;Vue.js 개발 방식의 단점은 Vue.js에서만 사용되는 문법을 익혀야 한다는 점, 이용자 커뮤니티가 작아서 활용 가능한 리소스가 작다는 점이 있다. Vue.js 개발자가 중국계 미국인이라 많은 수의 이용자가 중국인이다. 따라서 중국어를 잘 한다면 Vue.js를 더 잘 활용할 수 있을 것이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;props-와-events-emitting&quot;&gt;props 와 Events Emitting&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;props&lt;/code&gt; 컴포넌트 속성은 JavaScript 객체를 전달하는 역할을 한다. 하위 컴포넌트로 객체를 전달한다. 컴포넌트 props를 잘 사용하면 당신의 컴포넌트는 항상 작동할 것이다. 이를 방어적 프로그래밍이라고 한다.
+  Events Emitting은 하위 컴포넌트에서 상위 컴포넌트의 이벤트를 발생시키는 것이다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;출처: http://vuejs.kr/jekyll/update/2017/03/13/vuejs-component-style-guide/#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-props%EB%A5%BC-%EC%9E%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&lt;/p&gt;</content><author><name></name></author><summary type="html">Vue.js의 Componenet 개발 방식 Vue의 컴포넌트는 모듈과 같다. 모듈이란 어플리케이션의 독립적인 한 부분이다. 모듈은 어플리케이션을 만들기 위한 부품과 비슷하다. Vue.js는 뷰-로직 모듈을 작성할 수 있도록 디자인된 라이브러리이다. 작은 모듈은 배우고, 이해하고, 유지하고, 재사용과 디버그 하는 것이 더 쉽다. 다른 개발자와 협업도 편해진다.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome-to-jekyll" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-26T17:15:03+09:00</published><updated>2018-09-26T17:15:03+09:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/author/soonjune/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-08-05T14:12:28+09:00</updated>
+  <id>http://localhost:4000/author/soonjune/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Seung Joon’s Blog | </title>
+  
+
+  
+    <subtitle>Personal Blog of Park Seung Joon</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Blog Reopening 블로그 운영 시작</title>
+      <link href="http://localhost:4000/blog-opening" rel="alternate" type="text/html" title="Blog Reopening 블로그 운영 시작" />
+      <published>2020-08-01T18:00:00+09:00</published>
+      <updated>2020-08-01T18:00:00+09:00</updated>
+      <id>http://localhost:4000/blog-opening</id>
+      <content type="html" xml:base="http://localhost:4000/blog-opening">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;블로그 목차 내역&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blog-opening&quot;&gt;블로그 목차 추가&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=acVpibElHZ8&amp;amp;t=99s&quot;&gt;목차 추가시 참고 영상&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;블로그를 다시 운영하기로 했습니다. 공부, 일상 등 잡다한 내용을 다룰 예정입니다.
+ 열심히 기록을 남겨 스스로를 되돌아보고 좋은 정보도 공유하고자 합니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blog" />
+      
+
+      
+        <summary type="html">블로그 목차 내역 블로그 목차 추가 목차 추가시 참고 영상</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

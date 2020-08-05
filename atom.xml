@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Personal Blog of Park Seung Joon</description>
+    <link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>Blog Reopening 블로그 운영 시작</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;블로그 목차 내역&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blog-opening&quot;&gt;블로그 목차 추가&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=acVpibElHZ8&amp;amp;t=99s&quot;&gt;목차 추가시 참고 영상&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sat, 01 Aug 2020 18:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/blog-opening</link>
+        <guid isPermaLink="true">http://localhost:4000/blog-opening</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Node.js 잇몸으로 뽀개기 (studying Node.js)</title>
+        
+          <description>&lt;h2 id=&quot;왜-nodejs를-공부해야하는가&quot;&gt;왜 Node.js를 공부해야하는가&lt;/h2&gt;
+&lt;p&gt;Node.js의 가장 큰 장점은 방대한 npm 라이브러리다. 많은 사람들이 사용하고 있기 때문에 리소스도 풍부하고 내가 필요한 기능은 이미 다른 사람이 개발해 놓은 경우가 왕왕 있다고 한다. 일종의 네트워크 효과라고 보면 되겠다.
+또 다른 장점은 입출력(I/O)을 기다리는 방식에서 볼 수 있다. Node.js는 non-blocking 방식을 택하고 있는데 이는 데이터를 주고 받는 과정 동안 멈추지 않고 다른 일을 처리하는 것을 말한다. Rails 같은 blocking 방식을 택한 경우, 입출력 하나 하나씩 기다리느라 오랜 시간이 소요된다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 05 Oct 2018 21:22:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/Node.js-study</link>
+        <guid isPermaLink="true">http://localhost:4000/Node.js-study</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Vue.js 개괄</title>
+        
+          <description>&lt;h2 id=&quot;vuejs의-componenet-개발-방식&quot;&gt;Vue.js의 Componenet 개발 방식&lt;/h2&gt;
+&lt;p&gt;Vue의 컴포넌트는 모듈과 같다. 모듈이란 어플리케이션의 독립적인 한 부분이다. 모듈은 어플리케이션을 만들기 위한 부품과 비슷하다. Vue.js는 뷰-로직 모듈을 작성할 수 있도록 디자인된 라이브러리이다. 작은 모듈은 배우고, 이해하고, 유지하고, 재사용과 디버그 하는 것이 더 쉽다. 다른 개발자와 협업도 편해진다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 05 Oct 2018 20:38:03 +0900</pubDate>
+        <link>
+        http://localhost:4000/Vue.js</link>
+        <guid isPermaLink="true">http://localhost:4000/Vue.js</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Welcome to Jekyll!</title>
+        
+          <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 26 Sep 2018 17:15:03 +0900</pubDate>
+        <link>
+        http://localhost:4000/welcome-to-jekyll</link>
+        <guid isPermaLink="true">http://localhost:4000/welcome-to-jekyll</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
