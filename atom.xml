@@ -4,7 +4,7 @@
     <title> - Articles</title>
     <description>Personal Blog of Park Seung Joon</description>
     <link>
-    http://localhost:4000</link>
+    https://soonjune.github.io</link>
     
       
       <item>
@@ -23,8 +23,8 @@
         
         <pubDate>Wed, 05 Aug 2020 17:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/rouge</link>
-        <guid isPermaLink="true">http://localhost:4000/rouge</guid>
+        https://soonjune.github.io/rouge</link>
+        <guid isPermaLink="true">https://soonjune.github.io/rouge</guid>
       </item>
       
     
@@ -42,8 +42,8 @@
         
         <pubDate>Sat, 01 Aug 2020 18:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/blog-opening</link>
-        <guid isPermaLink="true">http://localhost:4000/blog-opening</guid>
+        https://soonjune.github.io/blog-opening</link>
+        <guid isPermaLink="true">https://soonjune.github.io/blog-opening</guid>
       </item>
       
     
@@ -59,8 +59,8 @@
         
         <pubDate>Fri, 05 Oct 2018 21:22:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Node.js-study</link>
-        <guid isPermaLink="true">http://localhost:4000/Node.js-study</guid>
+        https://soonjune.github.io/Node.js-study</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Node.js-study</guid>
       </item>
       
     
@@ -75,8 +75,8 @@
         
         <pubDate>Fri, 05 Oct 2018 20:38:03 +0900</pubDate>
         <link>
-        http://localhost:4000/Vue.js</link>
-        <guid isPermaLink="true">http://localhost:4000/Vue.js</guid>
+        https://soonjune.github.io/Vue.js</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Vue.js</guid>
       </item>
       
     
@@ -90,8 +90,8 @@
         
         <pubDate>Wed, 26 Sep 2018 17:15:03 +0900</pubDate>
         <link>
-        http://localhost:4000/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome-to-jekyll</guid>
+        https://soonjune.github.io/welcome-to-jekyll</link>
+        <guid isPermaLink="true">https://soonjune.github.io/welcome-to-jekyll</guid>
       </item>
       
     
