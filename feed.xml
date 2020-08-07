@@ -1,11 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-05T14:12:28+09:00</updated><id>http://localhost:4000/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Blog Reopening 블로그 운영 시작</title><link href="http://localhost:4000/blog-opening" rel="alternate" type="text/html" title="Blog Reopening 블로그 운영 시작" /><published>2020-08-01T18:00:00+09:00</published><updated>2020-08-01T18:00:00+09:00</updated><id>http://localhost:4000/blog-opening</id><content type="html" xml:base="http://localhost:4000/blog-opening">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;블로그 목차 내역&lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-07T21:54:12+09:00</updated><id>http://localhost:4000/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Rouge 적용</title><link href="http://localhost:4000/rouge" rel="alternate" type="text/html" title="Rouge 적용" /><published>2020-08-05T17:00:00+09:00</published><updated>2020-08-05T17:00:00+09:00</updated><id>http://localhost:4000/rouge</id><content type="html" xml:base="http://localhost:4000/rouge">&lt;p&gt;Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;```이용
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JavaScript is a simple language for javatpoint learners&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;~~~javascript로 열고 닫을 때
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JavaScript is a simple language for javatpoint learners&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syntaxHighlight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Hello World'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;%highlight javascript %로 열고 % endhighlight % 닫을 때 중간에 코드가 들어가서 list ordering이 다시 1부터 시작하는 문제가 있었다.
+마크다운 중간에 삽입하기 위해서는  &lt;br /&gt;
+(1) html layout에서 아래와 같이 css style을 불러오고&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/built/syntax.css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;(2) 코드 블럭(Code Blocks) 추가 - ``` 혹은 ~~~ 이용
+코드 첫 줄과 마지막 줄에 Back quote ( ` ) 또는 물결( ~ ) 3개 삽입해서 추가하자.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://medium.com/@vilcins/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda&quot;&gt;https://medium.com/@vilcins/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Park Seung Joon</name></author><category term="blog" /><summary type="html">Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.1 https://medium.com/@vilcins/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda &amp;#8617;</summary></entry><entry><title type="html">Blog Reopening - 블로그 운영 시작</title><link href="http://localhost:4000/blog-opening" rel="alternate" type="text/html" title="Blog Reopening - 블로그 운영 시작" /><published>2020-08-01T18:00:00+09:00</published><updated>2020-08-01T18:00:00+09:00</updated><id>http://localhost:4000/blog-opening</id><content type="html" xml:base="http://localhost:4000/blog-opening">&lt;!-- &lt;span class=&quot;table-of-contents-list&quot;&gt;블로그 목차 내역&lt;/span&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./blog-opening&quot;&gt;블로그 목차 추가&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=acVpibElHZ8&amp;amp;t=99s&quot;&gt;목차 추가시 참고 영상&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=acVpibElHZ8&amp;t=99s&quot;&gt;목차 추가시 참고 영상&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt; --&gt;
 
-&lt;p&gt;블로그를 다시 운영하기로 했습니다. 공부, 일상 등 잡다한 내용을 다룰 예정입니다.
- 열심히 기록을 남겨 스스로를 되돌아보고 좋은 정보도 공유하고자 합니다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="blog" /><summary type="html">블로그 목차 내역 블로그 목차 추가 목차 추가시 참고 영상</summary></entry><entry><title type="html">Node.js 잇몸으로 뽀개기 (studying Node.js)</title><link href="http://localhost:4000/Node.js-study" rel="alternate" type="text/html" title="Node.js 잇몸으로 뽀개기 (studying Node.js)" /><published>2018-10-05T21:22:00+09:00</published><updated>2018-10-05T21:22:00+09:00</updated><id>http://localhost:4000/Node.js-study</id><content type="html" xml:base="http://localhost:4000/Node.js-study">&lt;h2 id=&quot;왜-nodejs를-공부해야하는가&quot;&gt;왜 Node.js를 공부해야하는가&lt;/h2&gt;
+&lt;p&gt;블로그 재운영&lt;/p&gt;
+
+&lt;p&gt;개설만 해놓고 흐지부지 됐던 블로그를 다시 운영하기로 했습니다. 공부, 일상 등 잡다한 내용을 다룰 예정입니다.
+ 열심히 기록을 남겨 스스로를 되돌아보고 좋은 정보도 공유하고자 합니다.&lt;/p&gt;
+
+&lt;p&gt;블로그는 jekyll 기반의 static website이며 아래 자료를 참고했습니다. &lt;br /&gt;
+&lt;a href=&quot;https://moon9342.github.io/tag/jekyll/&quot;&gt;IT Technical Training&lt;/a&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="blog" /><summary type="html"></summary></entry><entry><title type="html">Node.js 잇몸으로 뽀개기 (studying Node.js)</title><link href="http://localhost:4000/Node.js-study" rel="alternate" type="text/html" title="Node.js 잇몸으로 뽀개기 (studying Node.js)" /><published>2018-10-05T21:22:00+09:00</published><updated>2018-10-05T21:22:00+09:00</updated><id>http://localhost:4000/Node.js-study</id><content type="html" xml:base="http://localhost:4000/Node.js-study">&lt;h2 id=&quot;왜-nodejs를-공부해야하는가&quot;&gt;왜 Node.js를 공부해야하는가&lt;/h2&gt;
 &lt;p&gt;Node.js의 가장 큰 장점은 방대한 npm 라이브러리다. 많은 사람들이 사용하고 있기 때문에 리소스도 풍부하고 내가 필요한 기능은 이미 다른 사람이 개발해 놓은 경우가 왕왕 있다고 한다. 일종의 네트워크 효과라고 보면 되겠다.
 또 다른 장점은 입출력(I/O)을 기다리는 방식에서 볼 수 있다. Node.js는 non-blocking 방식을 택하고 있는데 이는 데이터를 주고 받는 과정 동안 멈추지 않고 다른 일을 처리하는 것을 말한다. Rails 같은 blocking 방식을 택한 경우, 입출력 하나 하나씩 기다리느라 오랜 시간이 소요된다.&lt;/p&gt;
 
