@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-08-07T22:00:54+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Rouge 적용</title><link href="https://soonjune.github.io/rouge" rel="alternate" type="text/html" title="Rouge 적용" /><published>2020-08-05T17:00:00+09:00</published><updated>2020-08-05T17:00:00+09:00</updated><id>https://soonjune.github.io/rouge</id><content type="html" xml:base="https://soonjune.github.io/rouge">&lt;p&gt;Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-08-07T23:30:15+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">SMART한 목표 설정하기</title><link href="https://soonjune.github.io/SMART-goal" rel="alternate" type="text/html" title="SMART한 목표 설정하기" /><published>2020-08-07T20:00:00+09:00</published><updated>2020-08-07T20:00:00+09:00</updated><id>https://soonjune.github.io/SMART-goal</id><content type="html" xml:base="https://soonjune.github.io/SMART-goal">&lt;p&gt;우연히 마이크로소프트에서 하는 &lt;a href=&quot;https://www.insidesherpa.com/virtual-internships/prototype/ms2CK9b2SCWGXwPMS/Engineering%3A%20Undergraduate%20%26%20Masters%20Virtual%20Internship%20Platform&quot;&gt;Virtual Intership&lt;/a&gt; 코스에 등록하게 되었다.&lt;/p&gt;
+
+&lt;p&gt;간단하게 인턴십 소개를 들었다. 기술적인 내용을 가르친다기 보다는 마이크로소프트가 어떻게 일하고 전반적인 기술 트렌드를 소개하기 위한 프로그램이라는 느낌이 들었다. 단순한 소개인 Module 1을 마무리 하고 Module 2에서는 SMART한 목표설정을 다뤘다.&lt;/p&gt;
+
+&lt;h3 id=&quot;smart한-목표란&quot;&gt;SMART한 목표란&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Specific
+구체적이고&lt;/li&gt;
+  &lt;li&gt;Measurable
+측정 가능하고&lt;/li&gt;
+  &lt;li&gt;Achievable
+달성 가능하고&lt;/li&gt;
+  &lt;li&gt;Relevant
+달성해야 하는 이유가 적당하며&lt;/li&gt;
+  &lt;li&gt;Time Bound
+시간 제약 안에 달성해야하는 목표이다.
+&lt;a href=&quot;https://www.youtube.com/watch?v=PCRSVRD2EAk&quot;&gt;소개 영상&lt;/a&gt; &lt;br /&gt;
+맞는 말인 것 같으면서도 과정에 대한 평가가 더해졌으면 어땠을까 하는 생각이 든다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;스스로도 SMART한 골을 설정해봤다. 장기적이진 않고 단기 목표이지만 일단 이렇다.&lt;br /&gt;
+&lt;em&gt;8월 15일까지 앞으로 공부할 인공지능에 필수적인 수학 공부(선형대수)를 하자. 선형대수 강의를 수강할 것이며 하루에 4강씩 수강한다. 앞 부분을 쉽기 때문에 빠르게 수강하면 가능할 것이라고 생각한다. 아마 하루 4시간씩 투자를 하게 될 것이다. 그날 공부한 내용을 블로그에 올리도록 하자&lt;/em&gt; &lt;br /&gt;
+목표를 달성할 수 있게 스스로를 한번 채찍질 해보자.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="personal" /><summary type="html">우연히 마이크로소프트에서 하는 Virtual Intership 코스에 등록하게 되었다.</summary></entry><entry><title type="html">Rouge 적용</title><link href="https://soonjune.github.io/rouge" rel="alternate" type="text/html" title="Rouge 적용" /><published>2020-08-05T17:00:00+09:00</published><updated>2020-08-05T17:00:00+09:00</updated><id>https://soonjune.github.io/rouge</id><content type="html" xml:base="https://soonjune.github.io/rouge">&lt;p&gt;Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;```이용
