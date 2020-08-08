@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://soonjune.github.io/tag/math/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
+  <updated>2020-08-08T23:11:01+09:00</updated>
+  <id>https://soonjune.github.io/tag/math/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Seung Joon’s Blog | </title>
+  
+
+  
+    <subtitle>Personal Blog of Park Seung Joon</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">1. Linear Equations in Linear Algebra (1)</title>
+      <link href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (1)" />
+      <published>2020-08-08T22:00:00+09:00</published>
+      <updated>2020-08-08T22:00:00+09:00</updated>
+      <id>https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</id>
+      <content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1">&lt;p&gt;오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 &lt;a href=&quot;https://www.youtube.com/watch?v=3bTr91fLHOg&amp;amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6&quot;&gt;강의&lt;/a&gt; 를 참고했다.
+간단히 오늘 배운 내용을 정리해보자.&lt;/p&gt;
+
+&lt;p&gt;오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자.&lt;/p&gt;
+
+&lt;h2 id=&quot;11-systems-of-linear-equations&quot;&gt;1.1 Systems of Linear Equations&lt;/h2&gt;
+&lt;p&gt;1) &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_equation&quot;&gt;linear equation의 정의&lt;/a&gt; &lt;br /&gt;
+=&amp;gt; 이러한 linear equation(s)의 집합을 &lt;a href=&quot;https://en.wikipedia.org/wiki/System_of_linear_equations&quot;&gt;systems of linear equations&lt;/a&gt; 라 한다.
+2) &lt;a href=&quot;https://en.wikipedia.org/wiki/Consistent_and_inconsistent_equations&quot;&gt;consistent&lt;/a&gt; - 하나 이상의 해가 존재하는 경우 / 그 반대로 해가 없는 경우는 inconsistent
+3) 선형방정식을 행렬로 나타낼 수 있다. (coefficient matrix, augmented matrix)
+4) linear system을 푸는 가장 기본적인 방법은 triangular form으로 만들어 주는 것이다. 이때 아래의 3가지 기본 row operation을 사용한다.&lt;br /&gt;
+=&amp;gt; Replacement, Interchange, Scaling &lt;br /&gt;
+세가지 row operation을 통해 만들 수 있는 행렬들은 row equivalent하다고 표현한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;12-row-reduction-and-echelon-forms&quot;&gt;1.2 Row Reduction and Echelon Forms&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/3743aca294b2e5346c167819fd9ee0bcb79ef22c&quot; align=&quot;left&quot; /&gt;    
+&lt;/p&gt;
+
+&lt;p&gt;위와 같은 모양을 지닌 행렬의 형태를 &lt;a href=&quot;https://en.wikipedia.org/wiki/Row_echelon_form&quot;&gt;echelon form&lt;/a&gt; 이라고 한다.  &lt;br /&gt;
+여기서 각 행의 맨 앞의 0이 아닌 수를 leading entry라고 한다. (여기서는 1, 2, 1)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/0cbe2a26712d3e37787d46b087e97748740b553e&quot; align=&quot;left&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;위와 같이 leading entry가 1이고 leading entry 밑뿐만 아니라 위의 원소들도 0이면 reduced echelon form이라고 부른다.&lt;/p&gt;
+
+&lt;h3 id=&quot;theorem-1-uniqueness-of-the-reduced-echelon-form&quot;&gt;Theorem 1: Uniqueness of the Reduced Echelon Form&lt;/h3&gt;
+&lt;p&gt;우선, 모든 행렬은 (reduced) echelon form으로 변환할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Echelon form인 행렬의 leading entry를 pivot position이라고 한다.  &lt;br /&gt;
+각 행에 pivot position이 존재하느냐의 여부에 따라이 해당 열이 basic variable인지 free variable인지 결정된다.
+    &lt;h3 id=&quot;theorem-2-existence-and-uniqueness-theorem&quot;&gt;Theorem 2: Existence and Uniqueness Theorem&lt;/h3&gt;
+    &lt;p&gt;Echelon form의 행렬에서 [0, …, b] 꼴로 나오는 행(b는 0이 아닌 실수)이 존재하면 해가 없다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;13-vector-equations&quot;&gt;1.3 Vector Equations&lt;/h2&gt;
+&lt;p&gt;교환 법칙, 결합 법칙 등이 성립한다. &lt;br /&gt;
+span의 개념을 확인하자 - set of all possible linear combinations   &lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=k7RM-ot2NWY&quot;&gt;등장개념 영상&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;14-the-matrix-equation-ax--b&quot;&gt;1.4 The Matrix Equation Ax = b&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/1mgvPjG.png&quot; alt=&quot;theorem 3 and 4&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linear-algebra" />
+      
+        <category term="math" />
+      
+
+      
+        <summary type="html">오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 강의 를 참고했다. 간단히 오늘 배운 내용을 정리해보자.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
