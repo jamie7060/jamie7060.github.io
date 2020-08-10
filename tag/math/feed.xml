@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/tag/math/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-09T22:52:29+09:00</updated>
+  <updated>2020-08-10T23:05:31+09:00</updated>
   <id>https://soonjune.github.io/tag/math/feed.xml</id>
 
   
@@ -116,10 +116,10 @@ span의 개념을 확인하자 - set of all possible linear combinations   &lt;b
       <published>2020-08-09T21:00:00+09:00</published>
       <updated>2020-08-09T21:00:00+09:00</updated>
       <id>https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2</id>
-      <content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
-&lt;/script&gt;
+      <content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2">&lt;p&gt;선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자&lt;/p&gt;
 
-&lt;p&gt;선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
 
 &lt;h2 id=&quot;15-solution-sets-of-linear-systems&quot;&gt;1.5 Solution Sets of Linear Systems&lt;/h2&gt;
 &lt;ul&gt;
@@ -201,7 +201,7 @@ ii. T(cu) = cT(u) for all scalars c   &lt;br /&gt;
       
 
       
-        <summary type="html"></summary>
+        <summary type="html">선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자</summary>
       
 
       
