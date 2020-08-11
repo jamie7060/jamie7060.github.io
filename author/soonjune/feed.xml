@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/author/soonjune/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-10T23:05:31+09:00</updated>
+  <updated>2020-08-11T23:15:58+09:00</updated>
   <id>https://soonjune.github.io/author/soonjune/feed.xml</id>
 
   
@@ -30,6 +30,92 @@
   
   
 
+  
+    <entry>
+      <title type="html">2. Matrix Algebra (2)</title>
+      <link href="https://soonjune.github.io/Matrix-Algebra-1" rel="alternate" type="text/html" title="2. Matrix Algebra (2)" />
+      <published>2020-08-11T22:00:00+09:00</published>
+      <updated>2020-08-11T22:00:00+09:00</updated>
+      <id>https://soonjune.github.io/Matrix-Algebra-1</id>
+      <content type="html" xml:base="https://soonjune.github.io/Matrix-Algebra-1">&lt;p&gt;선형대수 공부 3일차 - 행렬에 대해 알아보자&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h2 id=&quot;21-matrix-operations&quot;&gt;2.1 Matrix Operations&lt;/h2&gt;
+&lt;h3 id=&quot;theorem-1&quot;&gt;Theorem 1&lt;/h3&gt;
+&lt;p&gt;덧셈, 뺄셈, scalar multiple은 교환, 결합, 분배 법칙이 성립한다.&lt;/p&gt;
+
+&lt;p&gt;행렬의 곱셈은 조금 다른데, linear transformation, function으로 이해할 수 있다.  &lt;br /&gt;
+따라서 곱할 수록 span을 작아진다. 즉, span(A)가 span(AB)를 포함한다.&lt;/p&gt;
+&lt;h3 id=&quot;theorem-2&quot;&gt;Theorem 2&lt;/h3&gt;
+&lt;p&gt;곱셈은 결합법칙, 오른쪽/왼쪽 분배 법칙이 성립하나 교환법칙은 성립하지 않는다. 즉, AB와 BA는 같지 않을 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Powers of a Matrix  &lt;br /&gt;
+A가 &lt;script type=&quot;math/tex&quot;&gt;nXn&lt;/script&gt; 행렬이라면 &lt;script type=&quot;math/tex&quot;&gt;A^n&lt;/script&gt;과 같이 행렬의 거듭제곱을 정의할 수 있다. &lt;script type=&quot;math/tex&quot;&gt;A^0 = I&lt;/script&gt;로 정의한다.&lt;/li&gt;
+  &lt;li&gt;Transpose  &lt;br /&gt;
+행렬의 열과 행을 뒤바꾼 것이라 보면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;a. &lt;script type=&quot;math/tex&quot;&gt;(A^T)^T = A&lt;/script&gt;    &lt;br /&gt;
+b. &lt;script type=&quot;math/tex&quot;&gt;(A + B)^T = A^T + B^T&lt;/script&gt;   &lt;br /&gt;
+c. For any scalar &lt;script type=&quot;math/tex&quot;&gt;r, (rA)^T = rA^T&lt;/script&gt;   &lt;br /&gt;
+d. &lt;script type=&quot;math/tex&quot;&gt;(AB)^T = B^TA^T&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;22-the-inverse-of-a-matrix&quot;&gt;2.2 The Inverse of a Matrix&lt;/h2&gt;
+&lt;h3 id=&quot;theorem-4&quot;&gt;Theorem 4&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Invertible_matrix#Inversion_of_2_%C3%97_2_matrices&quot;&gt;2X2 행렬의 역행렬 공식&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;theorem-5&quot;&gt;Theorem 5&lt;/h3&gt;
+&lt;p&gt;Ax = b이고 A가 역행렬이 존재하면 하나의 유일해 &lt;script type=&quot;math/tex&quot;&gt;x=A^{-1}b&lt;/script&gt;를 지닌다.&lt;/p&gt;
+
+&lt;p&gt;참고) at least 1 solution &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+&lt;=&gt; %]]&gt;&lt;/script&gt; no free variable&lt;/p&gt;
+&lt;h3 id=&quot;theorem-6&quot;&gt;Theorem 6&lt;/h3&gt;
+&lt;p&gt;a. &lt;script type=&quot;math/tex&quot;&gt;(A^{-1})^{-1} = A&lt;/script&gt;   &lt;br /&gt;
+b. &lt;script type=&quot;math/tex&quot;&gt;(AB)^{-1} = B^{-1}A{-1}&lt;/script&gt;   &lt;br /&gt;
+c. &lt;script type=&quot;math/tex&quot;&gt;(A^T)^{-1} = (A^{-1})^T&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;theorem-7&quot;&gt;Theorem 7&lt;/h3&gt;
+&lt;p&gt;nXn 행렬이 &lt;script type=&quot;math/tex&quot;&gt;I_n&lt;/script&gt;과 row equivalent, 즉 echelon row reduction을 통해 &lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt;로 만들 수 있다면 역행렬이 존재한다.  &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;[A|I]&lt;/script&gt; -&amp;gt; &lt;script type=&quot;math/tex&quot;&gt;[I|C]&lt;/script&gt;로 row reduction을 거치면 C가 역행렬이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;23-characterizations-of-invertible-matrices&quot;&gt;2.3 Characterizations of Invertible Matrices&lt;/h2&gt;
+&lt;h3 id=&quot;theorem-8&quot;&gt;Theorem 8&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/YUK4bQv.png&quot; align=&quot;center&quot; sytle=&quot;height: 100px;&quot; /&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;img src=&quot;https://i.imgur.com/ulOSO1I.png&quot; align=&quot;left&quot; /&gt;
+&lt;img src=&quot;https://i.imgur.com/AwTwn4T.png&quot; align=&quot;right&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt;위와 같은 조건을 하나만 만족해도 역행렬이 존재하고 하나만 위배해도 역행렬이 존재하지 않는다. 마치 고리와 같이 상호 연결되어 있고 증명과정도 하나 하나 연결하면서 확인할 수 있다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linear-algebra" />
+      
+        <category term="math" />
+      
+
+      
+        <summary type="html">선형대수 공부 3일차 - 행렬에 대해 알아보자</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">자바 훑어보기: Run-through of Java Programming Language</title>
@@ -218,85 +304,6 @@ Eclipse IDE에서는 &lt;code&gt;syso&lt;/code&gt;를 타입한 뒤 &lt;kbd&gt;C
     </entry>
   
     <entry>
-      <title type="html">1. Linear Equations in Linear Algebra (1)</title>
-      <link href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (1)" />
-      <published>2020-08-09T22:00:00+09:00</published>
-      <updated>2020-08-09T22:00:00+09:00</updated>
-      <id>https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</id>
-      <content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1">&lt;p&gt;오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 &lt;a href=&quot;https://www.youtube.com/watch?v=3bTr91fLHOg&amp;amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6&quot;&gt;강의&lt;/a&gt;와 수업에 사용한 &lt;a href=&quot;https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X&quot;&gt;교과서&lt;/a&gt;를 참고했다.
-간단히 오늘 배운 내용을 정리해보자.&lt;/p&gt;
-
-&lt;p&gt;오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자.&lt;/p&gt;
-
-&lt;h2 id=&quot;11-systems-of-linear-equations&quot;&gt;1.1 Systems of Linear Equations&lt;/h2&gt;
-&lt;p&gt;1) &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_equation&quot;&gt;linear equation의 정의&lt;/a&gt; &lt;br /&gt;
-=&amp;gt; 이러한 linear equation(s)의 집합을 &lt;a href=&quot;https://en.wikipedia.org/wiki/System_of_linear_equations&quot;&gt;systems of linear equations&lt;/a&gt; 라 한다.   &lt;br /&gt;
-2) &lt;a href=&quot;https://en.wikipedia.org/wiki/Consistent_and_inconsistent_equations&quot;&gt;consistent&lt;/a&gt; - 하나 이상의 해가 존재하는 경우 / 그 반대로 해가 없는 경우는 inconsistent   &lt;br /&gt;
-3) 선형방정식을 행렬로 나타낼 수 있다. (coefficient matrix, augmented matrix)   &lt;br /&gt;
-4) linear system을 푸는 가장 기본적인 방법은 triangular form으로 만들어 주는 것이다. 이때 아래의 3가지 기본 row operation을 사용한다.&lt;br /&gt;
-=&amp;gt; Replacement, Interchange, Scaling &lt;br /&gt;
-세가지 row operation을 통해 만들 수 있는 행렬들은 row equivalent하다고 표현한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;12-row-reduction-and-echelon-forms&quot;&gt;1.2 Row Reduction and Echelon Forms&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/3743aca294b2e5346c167819fd9ee0bcb79ef22c&quot; align=&quot;left&quot; /&gt;    
-&lt;/p&gt;
-
-&lt;p&gt;위와 같은 모양을 지닌 행렬의 형태를 &lt;a href=&quot;https://en.wikipedia.org/wiki/Row_echelon_form&quot;&gt;echelon form&lt;/a&gt; 이라고 한다.  &lt;br /&gt;
-여기서 각 행의 맨 앞의 0이 아닌 수를 leading entry라고 한다. (여기서는 1, 2, 1)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/0cbe2a26712d3e37787d46b087e97748740b553e&quot; align=&quot;left&quot; /&gt;
-&lt;/p&gt;
-&lt;p&gt;위와 같이 leading entry가 1이고 leading entry 밑뿐만 아니라 위의 원소들도 0이면 reduced echelon form이라고 부른다.&lt;/p&gt;
-
-&lt;h3 id=&quot;theorem-1-uniqueness-of-the-reduced-echelon-form&quot;&gt;Theorem 1: Uniqueness of the Reduced Echelon Form&lt;/h3&gt;
-&lt;p&gt;우선, 모든 행렬은 (reduced) echelon form으로 변환할 수 있다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Echelon form인 행렬의 leading entry를 pivot position이라고 한다.  &lt;br /&gt;
-각 행에 pivot position이 존재하느냐의 여부에 따라이 해당 열이 basic variable인지 free variable인지 결정된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;theorem-2-existence-and-uniqueness-theorem&quot;&gt;Theorem 2: Existence and Uniqueness Theorem&lt;/h3&gt;
-&lt;p&gt;Echelon form의 행렬에서 [0, …, b] 꼴로 나오는 행(b는 0이 아닌 실수)이 존재하면 해가 없다.&lt;/p&gt;
-
-&lt;h2 id=&quot;13-vector-equations&quot;&gt;1.3 Vector Equations&lt;/h2&gt;
-&lt;p&gt;교환 법칙, 결합 법칙 등이 성립한다. &lt;br /&gt;
-span의 개념을 확인하자 - set of all possible linear combinations   &lt;br /&gt;
-&lt;a href=&quot;https://www.youtube.com/watch?v=k7RM-ot2NWY&quot;&gt;등장개념 영상&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;14-the-matrix-equation-ax--b&quot;&gt;1.4 The Matrix Equation Ax = b&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/1mgvPjG.png&quot; alt=&quot;theorem 3 and 4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;공부를 하면서 최근에 본 물리학자인 &lt;a href=&quot;https://youtu.be/8n80LX2LGjY?t=90&quot;&gt;파인만의 영상&lt;/a&gt;이 떠올랐다. 선형대수도 직관이 더해지면 더 오래 기억하고 의미있게 활용할 수 있을 것이다. 단순히 해를 구하는 것은 컴퓨터가 더 잘하니 숨겨진 의의를 찾는데 집중하면 좋을 것 같다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Park Seung Joon</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="linear-algebra" />
-      
-        <category term="math" />
-      
-
-      
-        <summary type="html">오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 강의와 수업에 사용한 교과서를 참고했다. 간단히 오늘 배운 내용을 정리해보자.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">1. Linear Equations in Linear Algebra (2)</title>
       <link href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (2)" />
       <published>2020-08-09T21:00:00+09:00</published>
@@ -388,6 +395,85 @@ ii. T(cu) = cT(u) for all scalars c   &lt;br /&gt;
 
       
         <summary type="html">선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">1. Linear Equations in Linear Algebra (1)</title>
+      <link href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (1)" />
+      <published>2020-08-08T22:00:00+09:00</published>
+      <updated>2020-08-08T22:00:00+09:00</updated>
+      <id>https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</id>
+      <content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1">&lt;p&gt;오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 &lt;a href=&quot;https://www.youtube.com/watch?v=3bTr91fLHOg&amp;amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6&quot;&gt;강의&lt;/a&gt;와 수업에 사용한 &lt;a href=&quot;https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X&quot;&gt;교과서&lt;/a&gt;를 참고했다.
+간단히 오늘 배운 내용을 정리해보자.&lt;/p&gt;
+
+&lt;p&gt;오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자.&lt;/p&gt;
+
+&lt;h2 id=&quot;11-systems-of-linear-equations&quot;&gt;1.1 Systems of Linear Equations&lt;/h2&gt;
+&lt;p&gt;1) &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_equation&quot;&gt;linear equation의 정의&lt;/a&gt; &lt;br /&gt;
+=&amp;gt; 이러한 linear equation(s)의 집합을 &lt;a href=&quot;https://en.wikipedia.org/wiki/System_of_linear_equations&quot;&gt;systems of linear equations&lt;/a&gt; 라 한다.   &lt;br /&gt;
+2) &lt;a href=&quot;https://en.wikipedia.org/wiki/Consistent_and_inconsistent_equations&quot;&gt;consistent&lt;/a&gt; - 하나 이상의 해가 존재하는 경우 / 그 반대로 해가 없는 경우는 inconsistent   &lt;br /&gt;
+3) 선형방정식을 행렬로 나타낼 수 있다. (coefficient matrix, augmented matrix)   &lt;br /&gt;
+4) linear system을 푸는 가장 기본적인 방법은 triangular form으로 만들어 주는 것이다. 이때 아래의 3가지 기본 row operation을 사용한다.&lt;br /&gt;
+=&amp;gt; Replacement, Interchange, Scaling &lt;br /&gt;
+세가지 row operation을 통해 만들 수 있는 행렬들은 row equivalent하다고 표현한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;12-row-reduction-and-echelon-forms&quot;&gt;1.2 Row Reduction and Echelon Forms&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/3743aca294b2e5346c167819fd9ee0bcb79ef22c&quot; align=&quot;left&quot; /&gt;    
+&lt;/p&gt;
+
+&lt;p&gt;위와 같은 모양을 지닌 행렬의 형태를 &lt;a href=&quot;https://en.wikipedia.org/wiki/Row_echelon_form&quot;&gt;echelon form&lt;/a&gt; 이라고 한다.  &lt;br /&gt;
+여기서 각 행의 맨 앞의 0이 아닌 수를 leading entry라고 한다. (여기서는 1, 2, 1)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/0cbe2a26712d3e37787d46b087e97748740b553e&quot; align=&quot;left&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;위와 같이 leading entry가 1이고 leading entry 밑뿐만 아니라 위의 원소들도 0이면 reduced echelon form이라고 부른다.&lt;/p&gt;
+
+&lt;h3 id=&quot;theorem-1-uniqueness-of-the-reduced-echelon-form&quot;&gt;Theorem 1: Uniqueness of the Reduced Echelon Form&lt;/h3&gt;
+&lt;p&gt;우선, 모든 행렬은 (reduced) echelon form으로 변환할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Echelon form인 행렬의 leading entry를 pivot position이라고 한다.  &lt;br /&gt;
+각 행에 pivot position이 존재하느냐의 여부에 따라이 해당 열이 basic variable인지 free variable인지 결정된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;theorem-2-existence-and-uniqueness-theorem&quot;&gt;Theorem 2: Existence and Uniqueness Theorem&lt;/h3&gt;
+&lt;p&gt;Echelon form의 행렬에서 [0, …, b] 꼴로 나오는 행(b는 0이 아닌 실수)이 존재하면 해가 없다.&lt;/p&gt;
+
+&lt;h2 id=&quot;13-vector-equations&quot;&gt;1.3 Vector Equations&lt;/h2&gt;
+&lt;p&gt;교환 법칙, 결합 법칙 등이 성립한다. &lt;br /&gt;
+span의 개념을 확인하자 - set of all possible linear combinations   &lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=k7RM-ot2NWY&quot;&gt;등장개념 영상&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;14-the-matrix-equation-ax--b&quot;&gt;1.4 The Matrix Equation Ax = b&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/1mgvPjG.png&quot; alt=&quot;theorem 3 and 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;공부를 하면서 최근에 본 물리학자인 &lt;a href=&quot;https://youtu.be/8n80LX2LGjY?t=90&quot;&gt;파인만의 영상&lt;/a&gt;이 떠올랐다. 선형대수도 직관이 더해지면 더 오래 기억하고 의미있게 활용할 수 있을 것이다. 단순히 해를 구하는 것은 컴퓨터가 더 잘하니 숨겨진 의의를 찾는데 집중하면 좋을 것 같다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linear-algebra" />
+      
+        <category term="math" />
+      
+
+      
+        <summary type="html">오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 강의와 수업에 사용한 교과서를 참고했다. 간단히 오늘 배운 내용을 정리해보자.</summary>
       
 
       

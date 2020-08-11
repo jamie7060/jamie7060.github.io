@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>2. Matrix Algebra (2)</title>
+        
+          <description>&lt;p&gt;선형대수 공부 3일차 - 행렬에 대해 알아보자&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 11 Aug 2020 22:00:00 +0900</pubDate>
+        <link>
+        https://soonjune.github.io/Matrix-Algebra-1</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Matrix-Algebra-1</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>자바 훑어보기: Run-through of Java Programming Language</title>
         
           <description>&lt;p&gt;삼성 SDS 대학생 알고리즘 특강이 시작됐다. 1주일간은 자바, 1주일 간은 C++로 배운다고 한다. 자바를 거의 안 다뤄서 Codecademy에서 자바 부분을 쭉 훑었다. 주요 내용을 정리해보고자 한다.&lt;/p&gt;
@@ -23,22 +38,6 @@
     
       
       <item>
-        <title>1. Linear Equations in Linear Algebra (1)</title>
-        
-          <description>&lt;p&gt;오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 &lt;a href=&quot;https://www.youtube.com/watch?v=3bTr91fLHOg&amp;amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6&quot;&gt;강의&lt;/a&gt;와 수업에 사용한 &lt;a href=&quot;https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X&quot;&gt;교과서&lt;/a&gt;를 참고했다.
-간단히 오늘 배운 내용을 정리해보자.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 09 Aug 2020 22:00:00 +0900</pubDate>
-        <link>
-        https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</link>
-        <guid isPermaLink="true">https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>1. Linear Equations in Linear Algebra (2)</title>
         
           <description>&lt;p&gt;선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자&lt;/p&gt;
@@ -49,6 +48,22 @@
         <link>
         https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2</link>
         <guid isPermaLink="true">https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>1. Linear Equations in Linear Algebra (1)</title>
+        
+          <description>&lt;p&gt;오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 &lt;a href=&quot;https://www.youtube.com/watch?v=3bTr91fLHOg&amp;amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6&quot;&gt;강의&lt;/a&gt;와 수업에 사용한 &lt;a href=&quot;https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X&quot;&gt;교과서&lt;/a&gt;를 참고했다.
+간단히 오늘 배운 내용을 정리해보자.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 08 Aug 2020 22:00:00 +0900</pubDate>
+        <link>
+        https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</guid>
       </item>
       
     
