@@ -11,7 +11,7 @@
 
 
 
-    <title>2. Matrix Algebra (2)</title>
+    <title>IO speed - 입출력 속도 비교 및 자바 입출력 방법</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -48,30 +48,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Personal Blog of Park Seung Joon" />
     <link rel="shortcut icon" href="https://soonjune.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://soonjune.github.io/Matrix-Algebra-1" />
+    <link rel="canonical" href="https://soonjune.github.io/IO" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Seung Joon's Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="2. Matrix Algebra (2)" />
-    <meta property="og:description" content="선형대수 공부 3일차 - 행렬에 대해 알아보자 2.1 Matrix Operations Theorem 1 덧셈, 뺄셈, scalar multiple은 교환, 결합, 분배 법칙이 성립한다. 행렬의 곱셈은 조금 다른데, linear transformation, function으로 이해할 수 있다. 따라서 곱할 수록 span을 작아진다. 즉, span(A)가 span(AB)를 포함한다. Theorem 2 곱셈은 결합법칙, 오른쪽/왼쪽 분배 법칙이 성립하나 교환법칙은 성립하지" />
-    <meta property="og:url" content="https://soonjune.github.io/Matrix-Algebra-1" />
+    <meta property="og:title" content="IO speed - 입출력 속도 비교 및 자바 입출력 방법" />
+    <meta property="og:description" content="오늘은 간단히 입출력 방법에 대해 정리해보고자 한다. 알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다. 백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자. 입력 속도 비교 / 출력 속도 비교 입력 입력은 자바 기준으로 Scanner보다 BufferedReader와 Integer.parseInt를 사용하는게 약 7배 빠른" />
+    <meta property="og:url" content="https://soonjune.github.io/IO" />
     <meta property="og:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-08-11T22:00:00+09:00" />
-    <meta property="article:modified_time" content="2020-08-11T22:00:00+09:00" />
-    <meta property="article:tag" content="Linear-algebra" />
+    <meta property="article:published_time" content="2020-08-10T20:00:00+09:00" />
+    <meta property="article:modified_time" content="2020-08-10T20:00:00+09:00" />
+    <meta property="article:tag" content="Algorithm" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="2. Matrix Algebra (2)" />
-    <meta name="twitter:description" content="선형대수 공부 3일차 - 행렬에 대해 알아보자 2.1 Matrix Operations Theorem 1 덧셈, 뺄셈, scalar multiple은 교환, 결합, 분배 법칙이 성립한다. 행렬의 곱셈은 조금 다른데, linear transformation, function으로 이해할 수 있다. 따라서 곱할 수록 span을 작아진다. 즉, span(A)가 span(AB)를 포함한다. Theorem 2 곱셈은 결합법칙, 오른쪽/왼쪽 분배 법칙이 성립하나 교환법칙은 성립하지" />
+    <meta name="twitter:title" content="IO speed - 입출력 속도 비교 및 자바 입출력 방법" />
+    <meta name="twitter:description" content="오늘은 간단히 입출력 방법에 대해 정리해보고자 한다. 알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다. 백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자. 입력 속도 비교 / 출력 속도 비교 입력 입력은 자바 기준으로 Scanner보다 BufferedReader와 Integer.parseInt를 사용하는게 약 7배 빠른" />
     <meta name="twitter:url" content="https://soonjune.github.io/" />
     <meta name="twitter:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Seung Joon's Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Linear-algebra" />
+    <meta name="twitter:data2" content="Algorithm" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -86,7 +86,7 @@
         "name": "Seung Joon's Blog",
         "logo": "https://soonjune.github.io/"
     },
-    "url": "https://soonjune.github.io/Matrix-Algebra-1",
+    "url": "https://soonjune.github.io/IO",
     "image": {
         "@type": "ImageObject",
         "url": "https://soonjune.github.io/assets/images/blog-cover.jpg",
@@ -95,9 +95,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://soonjune.github.io/Matrix-Algebra-1"
+        "@id": "https://soonjune.github.io/IO"
     },
-    "description": "선형대수 공부 3일차 - 행렬에 대해 알아보자 2.1 Matrix Operations Theorem 1 덧셈, 뺄셈, scalar multiple은 교환, 결합, 분배 법칙이 성립한다. 행렬의 곱셈은 조금 다른데, linear transformation, function으로 이해할 수 있다. 따라서 곱할 수록 span을 작아진다. 즉, span(A)가 span(AB)를 포함한다. Theorem 2 곱셈은 결합법칙, 오른쪽/왼쪽 분배 법칙이 성립하나 교환법칙은 성립하지"
+    "description": "오늘은 간단히 입출력 방법에 대해 정리해보고자 한다. 알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다. 백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자. 입력 속도 비교 / 출력 속도 비교 입력 입력은 자바 기준으로 Scanner보다 BufferedReader와 Integer.parseInt를 사용하는게 약 7배 빠른"
 }
     </script>
 
@@ -110,7 +110,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="2. Matrix Algebra (2)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="IO speed - 입출력 속도 비교 및 자바 입출력 방법" href="/feed.xml" />
 
 
 </head>
@@ -166,82 +166,54 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-linear-algebra tag-math post tag-linear-algebra no-image">
+        <article class="post-full  tag-algorithm tag-java post tag-algorithm no-image">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="11 August 2020">11 August 2020</time>
+                    <time class="post-full-meta-date" datetime="10 August 2020">10 August 2020</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/linear-algebra/'>LINEAR-ALGEBRA</a>,
+                               <a href='/tag/algorithm/'>ALGORITHM</a>,
                             
                         
                             
-                               <a href='/tag/math/'>MATH</a>
+                               <a href='/tag/java/'>JAVA</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">2. Matrix Algebra (2)</h1>
+                <h1 class="post-full-title">IO speed - 입출력 속도 비교 및 자바 입출력 방법</h1>
             </header>
 
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>선형대수 공부 3일차 - 행렬에 대해 알아보자</p>
+                    <p>오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.</p>
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<p>알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다.   <br />
+백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자.  <br />
+<a href="https://www.acmicpc.net/blog/view/56">입력 속도 비교</a> / <a href="https://www.acmicpc.net/blog/view/57">출력 속도 비교</a></p>
 
-<h2 id="21-matrix-operations">2.1 Matrix Operations</h2>
-<h3 id="theorem-1">Theorem 1</h3>
-<p>덧셈, 뺄셈, scalar multiple은 교환, 결합, 분배 법칙이 성립한다.</p>
+<h3 id="입력">입력</h3>
+<p>입력은 자바 기준으로 Scanner보다 BufferedReader와 Integer.parseInt를 사용하는게 약 7배 빠른 것을 알 수 있다.  <br />
+문제 풀이를 위한 한 줄 라인 입력은 아래와 같이 받을 수 있다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">BufferedReader</span> <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">inputStreamReader</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="c1">// 한 줄에 integer input 하나인 경우</span>
+<span class="kt">int</span> <span class="n">input</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+<span class="c1">// 한 줄에 여러 input이 공백을 구분자로 두고 있는 경우</span>
+<span class="n">StringTokenizer</span> <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringTokenizer</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+<span class="kt">int</span> <span class="n">number1</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+</code></pre></div></div>
 
-<p>행렬의 곱셈은 조금 다른데, linear transformation, function으로 이해할 수 있다.  <br />
-따라서 곱할 수록 span을 작아진다. 즉, span(A)가 span(AB)를 포함한다.</p>
-<h3 id="theorem-2">Theorem 2</h3>
-<p>곱셈은 결합법칙, 오른쪽/왼쪽 분배 법칙이 성립하나 교환법칙은 성립하지 않는다. 즉, AB와 BA는 같지 않을 수 있다.</p>
+<h3 id="출력">출력</h3>
+<p>출력은 BufferedWriter를 쓰는것이 System.out.println(sb)을 쓰는 것보다 빠르나 차이가 미미하기 때문에 조금 더 편리한 System.out.println(sb)를 사용하는게 좋겠다.</p>
 
-<ul>
-  <li>Powers of a Matrix  <br />
-A가 <script type="math/tex">nXn</script> 행렬이라면 <script type="math/tex">A^n</script>과 같이 행렬의 거듭제곱을 정의할 수 있다. <script type="math/tex">A^0 = I</script>로 정의한다.</li>
-  <li>Transpose  <br />
-행렬의 열과 행을 뒤바꾼 것이라 보면 된다.</li>
-</ul>
-
-<p>a. <script type="math/tex">(A^T)^T = A</script>    <br />
-b. <script type="math/tex">(A + B)^T = A^T + B^T</script>   <br />
-c. For any scalar <script type="math/tex">r, (rA)^T = rA^T</script>   <br />
-d. <script type="math/tex">(AB)^T = B^TA^T</script></p>
-
-<h2 id="22-the-inverse-of-a-matrix">2.2 The Inverse of a Matrix</h2>
-<h3 id="theorem-4">Theorem 4</h3>
-<p><a href="https://en.wikipedia.org/wiki/Invertible_matrix#Inversion_of_2_%C3%97_2_matrices">2X2 행렬의 역행렬 공식</a></p>
-<h3 id="theorem-5">Theorem 5</h3>
-<p>Ax = b이고 A가 역행렬이 존재하면 하나의 유일해 <script type="math/tex">x=A^{-1}b</script>를 지닌다.</p>
-
-<p>참고) at least 1 solution <script type="math/tex">% <![CDATA[
-<=> %]]></script> no free variable</p>
-<h3 id="theorem-6">Theorem 6</h3>
-<p>a. <script type="math/tex">(A^{-1})^{-1} = A</script>   <br />
-b. <script type="math/tex">(AB)^{-1} = B^{-1}A{-1}</script>   <br />
-c. <script type="math/tex">(A^T)^{-1} = (A^{-1})^T</script></p>
-
-<h3 id="theorem-7">Theorem 7</h3>
-<p>nXn 행렬이 <script type="math/tex">I_n</script>과 row equivalent, 즉 echelon row reduction을 통해 <script type="math/tex">I</script>로 만들 수 있다면 역행렬이 존재한다.  <br />
-<script type="math/tex">[A|I]</script> -&gt; <script type="math/tex">[I|C]</script>로 row reduction을 거치면 C가 역행렬이다.</p>
-
-<h2 id="23-characterizations-of-invertible-matrices">2.3 Characterizations of Invertible Matrices</h2>
-<h3 id="theorem-8">Theorem 8</h3>
-<p><img src="https://i.imgur.com/YUK4bQv.png" align="center" sytle="height: 100px;" /></p>
-<div>
-<img src="https://i.imgur.com/ulOSO1I.png" align="left" />
-<img src="https://i.imgur.com/AwTwn4T.png" align="right" />
-</div>
-<p>위와 같은 조건을 하나만 만족해도 역행렬이 존재하고 하나만 위배해도 역행렬이 존재하지 않는다. 마치 고리와 같이 상호 연결되어 있고 증명과정도 하나 하나 연결하면서 확인할 수 있다.</p>
+<h3 id="cc의-경우">C/C++의 경우</h3>
+<p>C는 fread/fwrite이 빠르고 C++은 출력에서 cout « i « endl을 사용할 경우 시간 초과가 날 수 있다.
+그냥 scanf/printf를 사용하는 것이 무난할 것 같다.</p>
 
                 </div>
             </section>
@@ -305,9 +277,9 @@ c. <script type="math/tex">(A^T)^{-1} = (A^{-1})^T</script></p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://soonjune.github.io/Matrix-Algebra-1';
-                            this.page.identifier = '/Matrix-Algebra-1';
-                            this.page.title = '2. Matrix Algebra (2)';
+                            this.page.url = 'https://soonjune.github.io/IO';
+                            this.page.identifier = '/IO';
+                            this.page.title = 'IO speed - 입출력 속도 비교 및 자바 입출력 방법';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -341,7 +313,7 @@ c. <script type="math/tex">(A^T)^{-1} = (A^{-1})^T</script></p>
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; Seung Joon's Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/linear-algebra/">Linear-algebra</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/algorithm/">Algorithm</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -351,29 +323,22 @@ c. <script type="math/tex">(A^T)^{-1} = (A^{-1})^T</script></p>
                                 
                                 
                                   
-                                    
-                                  
-                                
-                                  
-                                
-                                  
                                 
                                   
                                     
                                         
                                         
-                                            <li><a href="/Linear-Equations-in-Linear-Algebra-2">1. Linear Equations in Linear Algebra (2)</a></li>
+                                            <li><a href="/Run-through-of-Java">자바 훑어보기: Run-through of Java Programming Language</a></li>
                                         
                                     
                                   
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/Linear-Equations-in-Linear-Algebra-1">1. Linear Equations in Linear Algebra (1)</a></li>
-                                        
-                                    
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -391,9 +356,9 @@ c. <script type="math/tex">(A^T)^{-1} = (A^{-1})^T</script></p>
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/linear-algebra/">
+                            <a href="/tag/algorithm/">
                                 
-                                    See all 2 posts  →
+                                    See all 1 posts  →
                                 
                             </a>
                         </footer>
@@ -402,9 +367,6 @@ c. <script type="math/tex">(A^T)^{-1} = (A^{-1})^T</script></p>
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
-            
-
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
 
@@ -456,6 +418,58 @@ c. <script type="math/tex">(A^T)^{-1} = (A^{-1})^T</script></p>
 
             
 
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Linear-Equations-in-Linear-Algebra-2">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Linear-algebra</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Math</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">1. Linear Equations in Linear Algebra (2)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/jdj-logo.jpg" alt="Park Seung Joon" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/soonjune/">Park Seung Joon</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
         </div>
     </div>
 </aside>
@@ -469,18 +483,18 @@ c. <script type="math/tex">(A^T)^{-1} = (A^{-1})^T</script></p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">2. Matrix Algebra (2)</div>
+    <div class="floating-header-title">IO speed - 입출력 속도 비교 및 자바 입출력 방법</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=2.+Matrix+Algebra+%282%29&amp;url=https://soonjune.github.io/Matrix-Algebra-1"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=IO+speed+-+%EC%9E%85%EC%B6%9C%EB%A0%A5+%EC%86%8D%EB%8F%84+%EB%B9%84%EA%B5%90+%EB%B0%8F+%EC%9E%90%EB%B0%94+%EC%9E%85%EC%B6%9C%EB%A0%A5+%EB%B0%A9%EB%B2%95&amp;url=https://soonjune.github.io/IO"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://soonjune.github.io/Matrix-Algebra-1"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://soonjune.github.io/IO"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
