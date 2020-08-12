@@ -179,6 +179,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "io": {
+        "title": "IO speed - 입출력 속도 비교 및 자바 입출력 방법",
+            "author": "soonjune",
+            "category": "",
+            "content": "오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다.   백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자.  입력 속도 비교 / 출력 속도 비교입력입력은 자바 기준으로 Scanner보다 BufferedReader와 Integer.parseInt를 사용하는게 약 7배 빠른 것을 알 수 있다.  문제 풀이를 위한 한 줄 라인 입력은 아래와 같이 받을 수 있다.BufferedReader br = new BufferedReader(new inputStreamReader(System.in));// 한 줄에 integer input 하나인 경우int input = Integer.parseInt(br.readLine());// 한 줄에 여러 input이 공백을 구분자로 두고 있는 경우StringTokenizer st = new StringTokenizer(br.readLine());int number1 = Integer.parseInt(st.nextToken());출력출력은 BufferedWriter를 쓰는것이 System.out.println(sb)을 쓰는 것보다 빠르나 차이가 미미하기 때문에 조금 더 편리한 System.out.println(sb)를 사용하는게 좋겠다.C/C++의 경우C는 fread/fwrite이 빠르고 C++은 출력에서 cout « i « endl을 사용할 경우 시간 초과가 날 수 있다.그냥 scanf/printf를 사용하는 것이 무난할 것 같다.",
+        "url": "/IO"
+    }
+    ,
+    
     "matrix-algebra-1": {
         "title": "2. Matrix Algebra (2)",
             "author": "soonjune",
@@ -194,15 +203,6 @@ into the {body} of the default.hbs template -->
             "category": "",
             "content": "삼성 SDS 대학생 알고리즘 특강이 시작됐다. 1주일간은 자바, 1주일 간은 C++로 배운다고 한다. 자바를 거의 안 다뤄서 Codecademy에서 자바 부분을 쭉 훑었다. 주요 내용을 정리해보고자 한다.I. Introduction      Class - a single concept클래스는 객체 지향 언어에서 많이 등장하는 개념이다. 자바는 프로그램 파일명과 동일한 최소 하나의 클래스를 지녀야 한다(예: Person.java - Person 클라스). 클래스는 주로 대문자로 시작한다.    main() Method모든 자바 프로그램은 아래와 같이 main() method를 포함해야 한다.    public class Person {  public static void main(String[] args) { System.out.println(\"Hello, world!\");  }}                  Print LineSystem.out.println()을 이용한다.  Eclipse IDE에서는 syso를 타입한 뒤 CTRL+Space를 누르면 자동 완성된다.      Comments              Single line: //      Multi-line: /*   */      * ; - 코드는 ;로 끝나야 한다;        Compilation(javac 명령어)프로그램을 컴파일하면 각각의 클래스들이 .class 파일로 변환된다. 변환된 java byte code는 JVM에 의해 실행된다.II. Variables      Primitive Data Typesint, char, boolean, byte, long, short, double, float, null    String - use \" \"          String끼리 같은지 비교는 .equals() 사용      Concatenation: + 사용 =&gt; new를 사용하기 때문에 매우 느리다. 따라서 List를 사용해서 넣다 빼거나 StringBuilder를 사용하여 효율성을 높인다.        Statice Typing - 변수 선언 type과 value가 다를 경우 bug 발생III. 기타 빠르게 정리  Array(정적인 배열) / ArrayList(동적 할당 - add()와 remove() 사용)  Loop          for와 for-each      for는 C와 유사하고 for-each는 아래와 같이 수행      // array of numbersint[] numbers = {1, 2, 3, 4, 5};// for-each loop that prints each number in numbers// int num is the handle while numbers is the source arrayfor (int num : numbers) {  \tSystem.out.println(num);}  String Methods          length() - 길이      concat() - 두 String 연결      equals() - 앞에서 설명. true/false 반환      indexOf() - 특정 substring의 시작 index를 반환한다. 없을 경우 -1 반환.      charAt(int index) - String의 index번째(0부터 시작) character를 반환한다. index는 0부터 length-1까지.      toUpperCase() / toLowerCase() - String의 character를 모두 대문자 / 소문자로 바꾼 값을 반환한다.        클래스 상속(Inheritance) - parent class / child class          child class는 extends로 정의 / super로 child의 속성 override        다형성(Polymorphism) - 하나의 메소드나 클래스가 있을 때 이것들이 다양한 방법으로 동작하는 것(아래 예시 코드 참조)    // Parent classclass Animal {public void greeting() {  System.out.println(\"The animal greets you.\");}}// Child classclass Cat extends Animal {public void greeting() {  System.out.println(\"The cat meows.\");}}class MainClass {public static void main(String[] args) {  Animal animal1 = new Animal();  // Animal object  Animal cat1 = new Cat();  // Cat object  animal1.greeting(); // prints \"The animal greets you.\"  cat1.greeting(); // prints \"The cat meows.\"}}        Eclipse IDE 기능       클래스 내부에서 Alt+Shift+S를 눌러서 생성자 또는 출력 toString() 코드를 바로 생성할 수 있다.  비교 및 sort 방법    List&lt;CustomClass&gt; list = new ArrayList();// 정의대로 정렬Collections.sort(list);=Collections.sort(list, new Comparator&lt;CustomClass&gt;{  @Override  public int compare(CustomClass o1, CustomClass o2){      // 임의의 기준 설정      return 0;  }});CustomClass implements Comparable&lt;CustomClass&gt; {  int a;  int b;  @Override  public int compareTo(CustomClass arg0){      // -1: 원하는 순서, 0: 둘이 같다, 1:원하지 않는 순서 -&gt; swap      // a에 대해 오름차순으로 정렬       if(a &lt; arg0.a){          return -1;      } else if(a == arg0.a) {          // 둘이 같은 경우 b에 대해 내림차순 정렬          if(b &gt; arg0.b){              return -1;          } else if(b == arg0.b){              return 0;          } else{              return 1;          }      } else {          return 1;      }  }}      ",
         "url": "/Run-through-of-Java"
-    }
-    ,
-    
-    "io": {
-        "title": "IO speed - 입출력 속도 비교 및 자바 입출력 방법",
-            "author": "soonjune",
-            "category": "",
-            "content": "오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다.   백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자.  입력 속도 비교 / 출력 속도 비교입력입력은 자바 기준으로 Scanner보다 BufferedReader와 Integer.parseInt를 사용하는게 약 7배 빠른 것을 알 수 있다.  문제 풀이를 위한 한 줄 라인 입력은 아래와 같이 받을 수 있다.BufferedReader br = new BufferedReader(new inputStreamReader(System.in));// 한 줄에 integer input 하나인 경우int input = Integer.parseInt(br.readLine());// 한 줄에 여러 input이 공백을 구분자로 두고 있는 경우StringTokenizer st = new StringTokenizer(br.readLine());int number1 = Integer.parseInt(st.nextToken());출력출력은 BufferedWriter를 쓰는것이 System.out.println(sb)을 쓰는 것보다 빠르나 차이가 미미하기 때문에 조금 더 편리한 System.out.println(sb)를 사용하는게 좋겠다.C/C++의 경우C는 fread/fwrite이 빠르고 C++은 출력에서 cout « i « endl을 사용할 경우 시간 초과가 날 수 있다.그냥 scanf/printf를 사용하는 것이 무난할 것 같다.",
-        "url": "/IO"
     }
     ,
     
