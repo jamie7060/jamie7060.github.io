@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-08-18T00:56:05+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">IO speed - 입출력 속도 비교 및 자바 입출력 방법</title><link href="https://soonjune.github.io/IO" rel="alternate" type="text/html" title="IO speed - 입출력 속도 비교 및 자바 입출력 방법" /><published>2020-08-12T23:30:00+09:00</published><updated>2020-08-12T23:30:00+09:00</updated><id>https://soonjune.github.io/IO</id><content type="html" xml:base="https://soonjune.github.io/IO">&lt;p&gt;오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-08-18T00:57:51+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">면접 대비 - 인공지능, 기계학습 개념 복습</title><link href="https://soonjune.github.io/AI-Review" rel="alternate" type="text/html" title="면접 대비 - 인공지능, 기계학습 개념 복습" /><published>2020-08-17T23:30:00+09:00</published><updated>2020-08-17T23:30:00+09:00</updated><id>https://soonjune.github.io/AI-Review</id><content type="html" xml:base="https://soonjune.github.io/AI-Review">&lt;p&gt;면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-machine-learning-정의&quot;&gt;1. Machine Learning 정의&lt;/h2&gt;
+&lt;h3 id=&quot;well-posed-learning-problem-by-tom-mitchell&quot;&gt;Well-posed learning problem by Tom Mitchell&lt;/h3&gt;
+&lt;p&gt;경험(E)이 늘어남에 따라 특정 작업(T)를 수행하는 지표(P)의 개선이 이루어 질 때 기계가 학습한다고 정의할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-지도비지도-학습-강화학습&quot;&gt;2. 지도/비지도 학습, 강화학습&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;지도 학습 - 정답과 오답이 주어져서 training set을 바탕으로 정확도 높은 함수를 학습하는 것이 목표이다. 연속적인 데이터를 바탕으로 예측하는 회귀 문제나 비연속적인 데이터를 분류하는 Classification 문제가 지도 학습의 예이다.&lt;/li&gt;
+  &lt;li&gt;비지도 학습 - 어떤 명시적인 정답이 주어지지 않고 데이터의 특성을 파악하는 과정이라고 할 수 있다. Clustering, Anomaly detection, association, autoencoder와 같은 문제가 해당된다.&lt;/li&gt;
+  &lt;li&gt;강화학습 - Agent가 가장 reward가 높은 policy를 학습하는 학습 방법이다. 이제부터 강화학습에 대해 좀 더 알아보자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;search-problem&quot;&gt;Search Problem&lt;/h2&gt;
+&lt;p&gt;4가지 요소를 갖는다. - state space, successor function(action, cost), start sate/goal state   &lt;br /&gt;
+여기서 start state에서 goal state까지 도달하게 만드는 일련의 action을 solution이라고 한다.&lt;/p&gt;
+&lt;h3 id=&quot;1-uninformed-search&quot;&gt;1. Uninformed Search&lt;/h3&gt;
+&lt;p&gt;어떤 그래프(State Space Graph) 또는 트리(Search Tree)를 탐색하는 문제에서 아무런 정보가 주어지지 않은 상태이다. DFS, BFS를 통해 완전탐색을 할 수 있다. 그래프는 각각의 상태가 한나의 노드로만 표현되기에 사이즈가 작다는 장점이 있고 트리는 상태가 여러번 등장하기도 하지만 goal state까지 하나의 고유한 path로 나타낼 수 있다는 장점이 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Uniform Cost Search - 모든 옵션까지의 비용을 계산해서 가장 비용이 작은 노드를 확장한다.(Optimal, Complete, but Slow)
+    &lt;h3 id=&quot;2-informed-search&quot;&gt;2. Informed Search&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gready Search - Heuristic function(goal에 가까운 정도를 예측하는 함수)에 따라 goal state에 가장 가깝다고 생각되는 node를 expand한다. Optimal한 solution을 보장하지 못한다.&lt;/li&gt;
+  &lt;li&gt;A* Search(Best of both worlds - optimal &amp;amp; fast)&lt;/li&gt;
+  &lt;li&gt;조건: Admissible(Optimistic) Heuristic - goal까지의 true cost보다 높게(비관적인) 전망을 하지 않아야 한다.   &lt;br /&gt;
+똑같은 node를 두번 탐색하지 않도록 Graph Search에서는 Consistency 조건이 필요하다. 하나의 arc(간선)의 비용 예측이 실제 비용보다 작아야한다.
+f = h + g
+goal에 더 가까운 지점 B보다 goal에서 먼 A가 더 먼저 fringe에 들어간다는 것을 보이는 것으로 optmiality를 증명할 수 있다.
+    &lt;h3 id=&quot;3-adverserial-search&quot;&gt;3. Adverserial Search&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Minimax는 deterministic &amp;amp; perfect information 게임에서 상대방이 optimal한 선택을 한다고 가정하고 상대가 나에게 가장 불리한 선택할 것을 가정한뒤 선택에 임한다. 내가 Max agent인 경우에는 상대가 선택한 최소 reward 중에서 가장 큰 것을 선택하게 되고 min agent는 그 반대로 행동할 것이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pruning - 선택되지 않을 것들을 탐색에서 제외할 수 있다. 알파-베타 프루닝을 통해서 Max agent는 탐색과정에서 얻을 수 있는 최대 value(알파), Min agent는 탐색과정에서 얻을 수 있는 최소 value(베타)와 새로운 노드를 비교해서 탐색하게 되는 노드 수를 줄이는 과정을 거친다.   &lt;br /&gt;
+Minimizer: v &amp;gt; alpha =&amp;gt; prune
+Maximizer: v &amp;lt; beta =&amp;gt; prune&lt;/p&gt;
+
+&lt;p&gt;Expectimax는 상대방이 최적의 선택을 하지 않는다고 가정하고 확률을 도입해서 expected value가 가장 큰 노드를 선택한다.&lt;/p&gt;
+&lt;h3 id=&quot;4-markov-decision-processes&quot;&gt;4. &lt;a href=&quot;https://en.wikipedia.org/wiki/Markov_decision_process&quot;&gt;Markov Decision Processes&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;다음 state는 오직 현재 state에 의해서만 영향을 받는다(Simplified version of the world). 즉, 미래와 과거가 독립이라는 것을 가정한다. 보상 R(s, a, s’) / Transition function T(s, a, s’) = P(s’|s, a)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Value Iteration
+&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/642146ac65c7d64f99f1a77ffdff3397b555068e&quot; /&gt;
+Complexity - O(S^2A)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bellman_equation&quot;&gt;Bellman Equations&lt;/a&gt;: a Bellman equation is a recursion for expected rewards.
+    &lt;h3 id=&quot;value-iteration의-문제점&quot;&gt;Value Iteration의 문제점&lt;/h3&gt;
+    &lt;p&gt;V function에는 optimal action이 포함되지 않음. 수렴하는데 오래 걸림. =&amp;gt; Policy Iteration: action을 track하지 않아도 돼서 시간이 적게 걸림(Value iteration 둘다 one-step lookahead 개념 활용) &lt;br /&gt;
+Q value를 활용하면 action을 선택하기 쉬워짐&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;regret = u(possible action) - u(action taken)
+it converges to 0 if the strategy is good enough&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mdp-아닌-경우model-free-문제점&quot;&gt;MDP 아닌 경우(Model-free) 문제점&lt;/h3&gt;
+&lt;p&gt;In reinforcement learning (RL), a model-free algorithm (as opposed to a model-based one) is an algorithm which does not use the transition probability distribution (and the reward function) associated with the Markov decision process (MDP)   &lt;br /&gt;
+R, T를 모름&lt;/p&gt;
+&lt;h4 id=&quot;해결책-q-learning&quot;&gt;해결책: Q-Learning&lt;/h4&gt;
+&lt;p&gt;Q-values를 활용: action을 선택하고 그에 따른 reward에 맞춰서 Q-value를 업데이트 해줌.
+&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/678cb558a9d59c33ef4810c9618baf34a9577686&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;q-learning의-문제점&quot;&gt;Q-Learning의 문제점&lt;/h3&gt;
+&lt;p&gt;비슷한 노드끼리 서로 다르게 보기 때문에 탐색과정을 일일이 거쳐야 한다는 단점. 따라서 feature를 이용해서 state를 일반화해주는 것이 가능하다. =&amp;gt; Feature-Based Representation &amp;amp; Approximate Q-Learning&lt;/p&gt;
+
+&lt;h3 id=&quot;5-naive-bayes-및-확률-기초-개념-정리&quot;&gt;5. Naive Bayes 및 확률 기초 개념 정리&lt;/h3&gt;
+&lt;p&gt;1) random variable - 확률적인 과정에 따라 값이 결정되는 변수(오메가 -&amp;gt; E로의 mapping)  &lt;br /&gt;
+2) 조건부 확률 - 주어진 사건이 일어났다는 가정 하에 다른 한 사건이 일어날 확률을 뜻한다.  &lt;br /&gt;
+3) &lt;a href=&quot;https://en.wikipedia.org/wiki/Chain_rule_(probability)&quot;&gt;Chain rule&lt;/a&gt;  &lt;br /&gt;
+4) &lt;a href=&quot;https://en.wikipedia.org/wiki/Bayes%27_theorem&quot;&gt;Bayes Theorem&lt;/a&gt;   &lt;br /&gt;
+5) &lt;a href=&quot;https://en.wikipedia.org/wiki/Maximum_likelihood_estimation&quot;&gt;MLE&lt;/a&gt;    &lt;br /&gt;
+6) &lt;a href=&quot;https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation&quot;&gt;MAP&lt;/a&gt;    &lt;br /&gt;
+7) 조건부 독립 - p(a|b,c)=p(a|c), 즉 b, c가 있거나 없거나 a의 확률에 영향을 미치지 않는다.
+8) Naive Bayes- 조건부 독립을 가정하면 c의 prior와 c와 다른 사건의 조건부 확률의 곱 또는 log합으로 나타낼 수 있다.   &lt;br /&gt;
+장점은 단순하고 빠르다는 것이 있으나 independent하지 않을 경우 bias 문제에 빠질 수 있으며 pattern을 모델링 할 수 없다는 문제가 있다. 따라서 정확도도 낮은 편이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-기계학습-정리&quot;&gt;6. 기계학습 정리&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Overfitting 방지를 위한 regularization term 추가&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Backpropagation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A support vector machine (SVM) is a supervised machine learning model that uses classification algorithms for two-group classification problems. After giving an SVM model sets of labeled training data for each category, they’re able to categorize new text.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kernel Trick - Kernel function(similarity function)은 높은 차원의 내적을 의미한다. K(x_i,x_j)로 구성된 행렬은 positive semi-definite matrix여야 하며 대칭행렬(symetric matrix)이어야 합니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PCA - eigenvalue decomposition of covariance matrices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;7-딥러닝&quot;&gt;7. 딥러닝&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;CNN - In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of deep neural networks, most commonly applied to analyzing visual imagery.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;RNN - A recurrent neural network (RNN) is a class of artificial neural networks where connections between nodes form a directed graph along a temporal sequence.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="interview" /><summary type="html">면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.</summary></entry><entry><title type="html">IO speed - 입출력 속도 비교 및 자바 입출력 방법</title><link href="https://soonjune.github.io/IO" rel="alternate" type="text/html" title="IO speed - 입출력 속도 비교 및 자바 입출력 방법" /><published>2020-08-12T23:30:00+09:00</published><updated>2020-08-12T23:30:00+09:00</updated><id>https://soonjune.github.io/IO</id><content type="html" xml:base="https://soonjune.github.io/IO">&lt;p&gt;오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.&lt;/p&gt;
 
 &lt;p&gt;알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다.   &lt;br /&gt;
 백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자.  &lt;br /&gt;
@@ -415,16 +513,4 @@ span의 개념을 확인하자 - set of all possible linear combinations   &lt;b
       &lt;p&gt;http://asfirstalways.tistory.com/99 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">왜 Node.js를 공부해야하는가 Node.js의 가장 큰 장점은 방대한 npm 라이브러리다. 많은 사람들이 사용하고 있기 때문에 리소스도 풍부하고 내가 필요한 기능은 이미 다른 사람이 개발해 놓은 경우가 왕왕 있다고 한다. 일종의 네트워크 효과라고 보면 되겠다. 또 다른 장점은 입출력(I/O)을 기다리는 방식에서 볼 수 있다. Node.js는 non-blocking 방식을 택하고 있는데 이는 데이터를 주고 받는 과정 동안 멈추지 않고 다른 일을 처리하는 것을 말한다. Rails 같은 blocking 방식을 택한 경우, 입출력 하나 하나씩 기다리느라 오랜 시간이 소요된다.</summary></entry><entry><title type="html">Vue.js 개괄</title><link href="https://soonjune.github.io/Vue.js" rel="alternate" type="text/html" title="Vue.js 개괄" /><published>2018-10-05T20:38:03+09:00</published><updated>2018-10-05T20:38:03+09:00</updated><id>https://soonjune.github.io/Vue.js</id><content type="html" xml:base="https://soonjune.github.io/Vue.js">&lt;h2 id=&quot;vuejs의-componenet-개발-방식&quot;&gt;Vue.js의 Componenet 개발 방식&lt;/h2&gt;
-&lt;p&gt;Vue의 컴포넌트는 모듈과 같다. 모듈이란 어플리케이션의 독립적인 한 부분이다. 모듈은 어플리케이션을 만들기 위한 부품과 비슷하다. Vue.js는 뷰-로직 모듈을 작성할 수 있도록 디자인된 라이브러리이다. 작은 모듈은 배우고, 이해하고, 유지하고, 재사용과 디버그 하는 것이 더 쉽다. 다른 개발자와 협업도 편해진다.&lt;/p&gt;
-
-&lt;p&gt;Vue.js는 FIRST여야 한다. Focused(단일 책임 원칙), Independent(독립적인), Reusable(재사용 가능한), Small(작은), Testable(테스트 가능한). 각각의 컴포넌트는 너무 크지 않게 100라인 미만을 유지하는 것이 좋다. 또한, Vue 컴포넌트는 독립적으로 작동이 가능해야 한다.&lt;/p&gt;
-
-&lt;p&gt;Vue.js 개발 방식의 단점은 Vue.js에서만 사용되는 문법을 익혀야 한다는 점, 이용자 커뮤니티가 작아서 활용 가능한 리소스가 작다는 점이 있다. Vue.js 개발자가 중국계 미국인이라 많은 수의 이용자가 중국인이다. 따라서 중국어를 잘 한다면 Vue.js를 더 잘 활용할 수 있을 것이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;props-와-events-emitting&quot;&gt;props 와 Events Emitting&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;props&lt;/code&gt; 컴포넌트 속성은 JavaScript 객체를 전달하는 역할을 한다. 하위 컴포넌트로 객체를 전달한다. 컴포넌트 props를 잘 사용하면 당신의 컴포넌트는 항상 작동할 것이다. 이를 방어적 프로그래밍이라고 한다.
-  Events Emitting은 하위 컴포넌트에서 상위 컴포넌트의 이벤트를 발생시키는 것이다.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;출처: http://vuejs.kr/jekyll/update/2017/03/13/vuejs-component-style-guide/#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-props%EB%A5%BC-%EC%9E%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&lt;/p&gt;</content><author><name></name></author><summary type="html">Vue.js의 Componenet 개발 방식 Vue의 컴포넌트는 모듈과 같다. 모듈이란 어플리케이션의 독립적인 한 부분이다. 모듈은 어플리케이션을 만들기 위한 부품과 비슷하다. Vue.js는 뷰-로직 모듈을 작성할 수 있도록 디자인된 라이브러리이다. 작은 모듈은 배우고, 이해하고, 유지하고, 재사용과 디버그 하는 것이 더 쉽다. 다른 개발자와 협업도 편해진다.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><summary type="html">왜 Node.js를 공부해야하는가 Node.js의 가장 큰 장점은 방대한 npm 라이브러리다. 많은 사람들이 사용하고 있기 때문에 리소스도 풍부하고 내가 필요한 기능은 이미 다른 사람이 개발해 놓은 경우가 왕왕 있다고 한다. 일종의 네트워크 효과라고 보면 되겠다. 또 다른 장점은 입출력(I/O)을 기다리는 방식에서 볼 수 있다. Node.js는 non-blocking 방식을 택하고 있는데 이는 데이터를 주고 받는 과정 동안 멈추지 않고 다른 일을 처리하는 것을 말한다. Rails 같은 blocking 방식을 택한 경우, 입출력 하나 하나씩 기다리느라 오랜 시간이 소요된다.</summary></entry></feed>
