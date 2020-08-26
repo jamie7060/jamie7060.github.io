@@ -192,44 +192,25 @@ into the {body} of the default.hbs template -->
 <p>첫번째 챕터는 Pythonic Thinking이다. Pythonic이라는 것이 형용사로 만들어질만큼 C나 Java와는 다른 특성을 지는 것을 알 수 있다. Pythonic의 정의를 찾아보니 Stack Overflow에서는 <code class="highlighter-rouge">Exploiting the features of the Python language to produce code that is clear, concise and maintainable.</code>이라는 설명이 나온다. 즉, 파이썬 코드의 간결하고 명확한 특성을 나타내는 말이다. Pythonic Thinking은 이러한 명확한 코드를 구현하기 위한 생각 방식이라고 볼 수 있다.</p>
 
 <ol>
-  <li>
-    <p>파이썬 버전을 알자</p>
-
-    <p>최신 버전은 Python 3.8이다(2020년 8월 기준). 커맨드 또는 터미널에서 <code class="highlighter-rouge">python3 --version</code> 또는 <code class="highlighter-rouge">python --version</code>을 통해서 버전을 확인할 수 있다. 맥의 경우 python 2.7이 기본으로 설치되어 있는데 새로 Python 3을 설치해주자.</p>
-
+  <li>파이썬 버전을 알자
+ 최신 버전은 Python 3.8이다(2020년 8월 기준). 커맨드 또는 터미널에서 <code class="highlighter-rouge">python3 --version</code> 또는 <code class="highlighter-rouge">python --version</code>을 통해서 버전을 확인할 수 있다. 맥의 경우 python 2.7이 기본으로 설치되어 있는데 새로 Python 3을 설치해주자.
     <ul>
       <li>명령 프롬트에서 올바른 버전의 파이썬이 설치되어 있는지 확인하자.</li>
     </ul>
   </li>
-  <li>
-    <p>PEP8 스타일 가이드를 따르자</p>
-
+  <li>PEP8 스타일 가이드를 따르자
     <ul>
-      <li>
-        <p>PEP8 가이드에 대해 정리가 잘 된 <a href="https://wayhome25.github.io/python/2017/05/04/pep8/">블로그</a>를 참조하자.</p>
-      </li>
-      <li>
-        <p>공통의 스타일을 사용함으로써 협업을 용이하게 할 수 있다.</p>
-      </li>
-      <li>
-        <p>일관적인 스타일의 사용은 추후 자신의 코드 수정을 용이하게 한다.</p>
-      </li>
+      <li>PEP8 가이드에 대해 정리가 잘 된 <a href="https://wayhome25.github.io/python/2017/05/04/pep8/">블로그</a>를 참조하자.</li>
+      <li>공통의 스타일을 사용함으로써 협업을 용이하게 할 수 있다.</li>
+      <li>일관적인 스타일의 사용은 추후 자신의 코드 수정을 용이하게 한다.</li>
     </ul>
   </li>
-  <li>
-    <p><code class="highlighter-rouge">bytes</code>와 <code class="highlighter-rouge">str</code>의 차이를 알자.</p>
-
+  <li><code class="highlighter-rouge">bytes</code>와 <code class="highlighter-rouge">str</code>의 차이를 알자.
     <ul>
-      <li>
-        <p>bytes: 8-bit values    <br />
- str: Unicode cdoe points</p>
-      </li>
-      <li>
-        <p>헬퍼 함수(개발자의 편의를 위한 함수)를 이용해서 원하는 문자 시퀀스 타입을 리턴하도록 하자.</p>
-      </li>
-      <li>
-        <p><code class="highlighter-rouge">bytes</code>와 <code class="highlighter-rouge">str</code> 인스턴스는 서로 연산할 수 없다 (&gt;, ==, +, % 등).</p>
-      </li>
+      <li>bytes: 8-bit values    <br />
+ str: Unicode cdoe points</li>
+      <li>헬퍼 함수(개발자의 편의를 위한 함수)를 이용해서 원하는 문자 시퀀스 타입을 리턴하도록 하자.</li>
+      <li><code class="highlighter-rouge">bytes</code>와 <code class="highlighter-rouge">str</code> 인스턴스는 서로 연산할 수 없다 (&gt;, ==, +, % 등).</li>
       <li>바이너리 데이터를 읽고 쓰기 위해서는 ‘rb’, ‘wb’ 모드에서 파일을 <code class="highlighter-rouge">open</code>한다.
         <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data.bin'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
   <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s">'</span><span class="se">\xf1\xf2\xf3\xf4\xf5</span><span class="s">'</span><span class="p">)</span>
