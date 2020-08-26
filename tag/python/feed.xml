@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/tag/python/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-26T23:56:14+09:00</updated>
+  <updated>2020-08-26T23:59:08+09:00</updated>
   <id>https://soonjune.github.io/tag/python/feed.xml</id>
 
   
@@ -42,60 +42,61 @@
 &lt;p&gt;첫번째 챕터는 Pythonic Thinking이다. Pythonic이라는 것이 형용사로 만들어질만큼 C나 Java와는 다른 특성을 지는 것을 알 수 있다. Pythonic의 정의를 찾아보니 Stack Overflow에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Exploiting the features of the Python language to produce code that is clear, concise and maintainable.&lt;/code&gt;이라는 설명이 나온다. 즉, 파이썬 코드의 간결하고 명확한 특성을 나타내는 말이다. Pythonic Thinking은 이러한 명확한 코드를 구현하기 위한 생각 방식이라고 볼 수 있다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;파이썬 버전을 알자
-최신 버전은 Python 3.8이다(2020년 8월 기준). 커맨드 또는 터미널에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 --version&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;python --version&lt;/code&gt;을 통해서 버전을 확인할 수 있다. 맥의 경우 python 2.7이 기본으로 설치되어 있는데 새로 Python 3을 설치해주자.&lt;/li&gt;
-&lt;/ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;파이썬 버전을 알자&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;명령 프롬트에서 올바른 버전의 파이썬이 설치되어 있는지 확인하자.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;최신 버전은 Python 3.8이다(2020년 8월 기준). 커맨드 또는 터미널에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 --version&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;python --version&lt;/code&gt;을 통해서 버전을 확인할 수 있다. 맥의 경우 python 2.7이 기본으로 설치되어 있는데 새로 Python 3을 설치해주자.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;PEP8 스타일 가이드를 따르자&lt;/li&gt;
-&lt;/ol&gt;
+    &lt;ul&gt;
+      &lt;li&gt;명령 프롬트에서 올바른 버전의 파이썬이 설치되어 있는지 확인하자.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;PEP8 스타일 가이드를 따르자&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;PEP8 가이드에 대해 정리가 잘 된 &lt;a href=&quot;https://wayhome25.github.io/python/2017/05/04/pep8/&quot;&gt;블로그&lt;/a&gt;를 참조하자.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;PEP8 가이드에 대해 정리가 잘 된 &lt;a href=&quot;https://wayhome25.github.io/python/2017/05/04/pep8/&quot;&gt;블로그&lt;/a&gt;를 참조하자.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;공통의 스타일을 사용함으로써 협업을 용이하게 할 수 있다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;일관적인 스타일의 사용은 추후 자신의 코드 수정을 용이하게 한다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;공통의 스타일을 사용함으로써 협업을 용이하게 할 수 있다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;일관적인 스타일의 사용은 추후 자신의 코드 수정을 용이하게 한다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt;의 차이를 알자.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt;의 차이를 알자.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;bytes: 8-bit values    &lt;br /&gt;
-str: Unicode cdoe points&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;헬퍼 함수(개발자의 편의를 위한 함수)를 이용해서 원하는 문자 시퀀스 타입을 리턴하도록 하자.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt; 인스턴스는 서로 연산할 수 없다 (&amp;gt;, ==, +, % 등).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;바이너리 데이터를 읽고 쓰기 위해서는 ‘rb’, ‘wb’ 모드에서 파일을 &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt;한다.
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'wb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;bytes: 8-bit values    &lt;br /&gt;
+ str: Unicode cdoe points&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;헬퍼 함수(개발자의 편의를 위한 함수)를 이용해서 원하는 문자 시퀀스 타입을 리턴하도록 하자.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt; 인스턴스는 서로 연산할 수 없다 (&amp;gt;, ==, +, % 등).&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;바이너리 데이터를 읽고 쓰기 위해서는 ‘rb’, ‘wb’ 모드에서 파일을 &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt;한다.
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'wb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\xf1\xf2\xf3\xf4\xf5&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'rb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'rb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Unicode 데이터를 읽고 쓸 때에는 시스템의 디폴트 인코딩에 주의해라. encoding parameter를 명시적으로 전달하자. &lt;br /&gt;
-아래는 윈도우의 ‘cp1252’로 인코딩된 파일을 읽는 예시.
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp1252) as f:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Unicode 데이터를 읽고 쓸 때에는 시스템의 디폴트 인코딩에 주의해라. encoding parameter를 명시적으로 전달하자. &lt;br /&gt;
+ 아래는 윈도우의 ‘cp1252’로 인코딩된 파일을 읽는 예시.
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp1252) as f:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;  data = f.read()&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content>
 
