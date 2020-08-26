@@ -11,7 +11,7 @@
 
 
 
-    <title>All Posts</title>
+    <title>Python - Seung Joon's Blog</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -48,19 +48,19 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Personal Blog of Park Seung Joon" />
     <link rel="shortcut icon" href="https://soonjune.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://soonjune.github.io/archive" />
+    <link rel="canonical" href="https://soonjune.github.io/tag/python/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Seung Joon's Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="All Posts" />
+    <meta property="og:title" content="Python - Seung Joon's Blog" />
     <meta property="og:description" content="Personal Blog of Park Seung Joon" />
-    <meta property="og:url" content="https://soonjune.github.io/archive" />
+    <meta property="og:url" content="https://soonjune.github.io/tag/python/" />
     <meta property="og:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="All Posts" />
+    <meta name="twitter:title" content="Python - Seung Joon's Blog" />
     <meta name="twitter:description" content="Personal Blog of Park Seung Joon" />
     <meta name="twitter:url" content="https://soonjune.github.io/" />
     <meta name="twitter:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
@@ -80,7 +80,7 @@
         "name": "Seung Joon's Blog",
         "logo": "https://soonjune.github.io/"
     },
-    "url": "https://soonjune.github.io/archive",
+    "url": "https://soonjune.github.io/tag/python/",
     "image": {
         "@type": "ImageObject",
         "url": "https://soonjune.github.io/assets/images/blog-cover.jpg",
@@ -89,7 +89,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://soonjune.github.io/archive"
+        "@id": "https://soonjune.github.io/tag/python/"
     },
     "description": "Personal Blog of Park Seung Joon"
 }
@@ -104,20 +104,24 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="All Posts" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Tag Page" href="/feed.xml" />
 
 
 </head>
-<body class="page-template">
+<body class="tag-template">
 
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
+        <!-- default -->
+<!-- The tag above means - insert everything in this file into the {body} of the default.hbs template -->
 
 <!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer">
+<!-- #tag -->
+<!-- dynamically loading backgrounds for tags,  descriptions and page titles -->
+
+
+
+<header class="site-header outer no-cover">
     <div class="inner">
         <nav class="site-nav">
     <div class="site-nav-left">
@@ -151,166 +155,74 @@ into the {body} of the default.hbs template -->
     </div>
 </nav>
 
+        <div class="site-header-content">
+            <h1 class="site-title">Python</h1>
+            <h2 class="site-description">
+                
+    			    A collection of 1 posts
+                
+            </h2>
+        </div>
     </div>
 </header>
+<!-- tag -->
 
-<!-- Everything inside the #post tags pulls data from the post -->
-<!-- #post -->
-
+<!-- The main content area -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-
-        <article class="post-full  post page no-image">
-
-            <header class="post-full-header">
-                <h1 class="post-full-title">All Posts</h1>
-            </header>
-
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
             
 
-            <section class="post-full-content">
-                <div class="well article">
 
-    
-        <h2>2020</h2>
-        <ul>
-    
-    <li><span class="post-date">
+    <article class="post-card tag-template no-image">
         
-        2020-08-26 </span><a href="./Effective-Python" target="_blank">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</a></li>
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Effective-Python">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Python</span>
+                            
+                        
+                    
 
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-17 </span><a href="./AI-Review" target="_blank">면접 대비 - 인공지능, 기계학습 개념 복습</a></li>
+                    <h2 class="post-card-title">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.
 
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-12 </span><a href="./IO" target="_blank">IO speed - 입출력 속도 비교 및 자바 입출력 방법</a></li>
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/jdj-logo.jpg" alt="Park Seung Joon" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/soonjune/">Park Seung Joon</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
 
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-11 </span><a href="./Matrix-Algebra-1" target="_blank">2. Matrix Algebra (2)</a></li>
 
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-10 </span><a href="./Run-through-of-Java" target="_blank">자바 훑어보기: Run-through of Java Programming Language</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-09 </span><a href="./Linear-Equations-in-Linear-Algebra-2" target="_blank">1. Linear Equations in Linear Algebra (2)</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-08 </span><a href="./Linear-Equations-in-Linear-Algebra-1" target="_blank">1. Linear Equations in Linear Algebra (1)</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-07 </span><a href="./SMART-goal" target="_blank">SMART한 목표 설정하기</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-05 </span><a href="./rouge" target="_blank">Rouge 적용</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2020-08-01 </span><a href="./blog-opening" target="_blank">Blog Reopening - 블로그 운영 시작</a></li>
-
-    
-        
-        
-        
-            </ul>
-            <h3>2018</h3>
-            <ul>
-        
-    
-    <li><span class="post-date">
-        
-        2018-10-05 </span><a href="./Node.js-study" target="_blank">Node.js 잇몸으로 뽀개기 (studying Node.js)</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2018-10-05 </span><a href="./Vue.js" target="_blank">Vue.js 개괄</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2018-09-26 </span><a href="./welcome-to-jekyll" target="_blank">Welcome to Jekyll!</a></li>
-
-</ul>
-</div>
-
-            </section>
-
-        </article>
-
+        </div>
     </div>
 </main>
-
-<!-- /post -->
-
-<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
-<script>
-$(function() {
-    var $postContent = $(".post-full-content");
-    $postContent.fitVids();
-});
-</script>
-
 
 
         <!-- Previous/next page links - displayed on every page -->
@@ -387,7 +299,7 @@ $(function() {
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
     <!-- <script>
-        var maxPages = parseInt('');
+        var maxPages = parseInt('1');
     </script>
     <script src="/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
@@ -410,14 +322,6 @@ $(function() {
 
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
-    
-        <script>
-$(function() {
-    var $postContent = $(".post-full-content");
-    $postContent.fitVids();
-});
-</script>
-
     
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->

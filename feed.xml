@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-08-18T01:00:31+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">면접 대비 - 인공지능, 기계학습 개념 복습</title><link href="https://soonjune.github.io/AI-Review" rel="alternate" type="text/html" title="면접 대비 - 인공지능, 기계학습 개념 복습" /><published>2020-08-17T23:30:00+09:00</published><updated>2020-08-17T23:30:00+09:00</updated><id>https://soonjune.github.io/AI-Review</id><content type="html" xml:base="https://soonjune.github.io/AI-Review">&lt;p&gt;면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-08-26T23:56:14+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</title><link href="https://soonjune.github.io/Effective-Python" rel="alternate" type="text/html" title="Pythonic Thinking(1) 파이썬 효율적으로 사용하기" /><published>2020-08-26T23:30:00+09:00</published><updated>2020-08-26T23:30:00+09:00</updated><id>https://soonjune.github.io/Effective-Python</id><content type="html" xml:base="https://soonjune.github.io/Effective-Python">&lt;p&gt;유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.&lt;/p&gt;
+
+&lt;p&gt;첫번째 챕터는 Pythonic Thinking이다. Pythonic이라는 것이 형용사로 만들어질만큼 C나 Java와는 다른 특성을 지는 것을 알 수 있다. Pythonic의 정의를 찾아보니 Stack Overflow에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Exploiting the features of the Python language to produce code that is clear, concise and maintainable.&lt;/code&gt;이라는 설명이 나온다. 즉, 파이썬 코드의 간결하고 명확한 특성을 나타내는 말이다. Pythonic Thinking은 이러한 명확한 코드를 구현하기 위한 생각 방식이라고 볼 수 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;파이썬 버전을 알자
+최신 버전은 Python 3.8이다(2020년 8월 기준). 커맨드 또는 터미널에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 --version&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;python --version&lt;/code&gt;을 통해서 버전을 확인할 수 있다. 맥의 경우 python 2.7이 기본으로 설치되어 있는데 새로 Python 3을 설치해주자.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;명령 프롬트에서 올바른 버전의 파이썬이 설치되어 있는지 확인하자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;PEP8 스타일 가이드를 따르자&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;PEP8 가이드에 대해 정리가 잘 된 &lt;a href=&quot;https://wayhome25.github.io/python/2017/05/04/pep8/&quot;&gt;블로그&lt;/a&gt;를 참조하자.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;공통의 스타일을 사용함으로써 협업을 용이하게 할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;일관적인 스타일의 사용은 추후 자신의 코드 수정을 용이하게 한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt;의 차이를 알자.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;bytes: 8-bit values    &lt;br /&gt;
+str: Unicode cdoe points&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;헬퍼 함수(개발자의 편의를 위한 함수)를 이용해서 원하는 문자 시퀀스 타입을 리턴하도록 하자.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt; 인스턴스는 서로 연산할 수 없다 (&amp;gt;, ==, +, % 등).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;바이너리 데이터를 읽고 쓰기 위해서는 ‘rb’, ‘wb’ 모드에서 파일을 &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt;한다.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'wb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\xf1\xf2\xf3\xf4\xf5&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'rb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Unicode 데이터를 읽고 쓸 때에는 시스템의 디폴트 인코딩에 주의해라. encoding parameter를 명시적으로 전달하자. &lt;br /&gt;
+아래는 윈도우의 ‘cp1252’로 인코딩된 파일을 읽는 예시.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp1252) as f:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;  data = f.read()&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.</summary></entry><entry><title type="html">면접 대비 - 인공지능, 기계학습 개념 복습</title><link href="https://soonjune.github.io/AI-Review" rel="alternate" type="text/html" title="면접 대비 - 인공지능, 기계학습 개념 복습" /><published>2020-08-17T23:30:00+09:00</published><updated>2020-08-17T23:30:00+09:00</updated><id>https://soonjune.github.io/AI-Review</id><content type="html" xml:base="https://soonjune.github.io/AI-Review">&lt;p&gt;면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;1-machine-learning-정의&quot;&gt;1. Machine Learning 정의&lt;/h2&gt;
 &lt;h3 id=&quot;well-posed-learning-problem-by-tom-mitchell&quot;&gt;Well-posed learning problem by Tom Mitchell&lt;/h3&gt;
@@ -116,9 +176,9 @@ R, T를 모름&lt;/p&gt;
 &lt;h3 id=&quot;출력&quot;&gt;출력&lt;/h3&gt;
 &lt;p&gt;출력은 BufferedWriter를 쓰는것이 System.out.println(sb)을 쓰는 것보다 빠르나 차이가 미미하기 때문에 조금 더 편리한 System.out.println(sb)를 사용하는게 좋겠다.&lt;/p&gt;
 
-&lt;h3 id=&quot;cc의-경우&quot;&gt;C/C++의 경우&lt;/h3&gt;
-&lt;p&gt;C는 fread/fwrite이 빠르고 C++은 출력에서 cout « i « endl을 사용할 경우 시간 초과가 날 수 있다.
-그냥 scanf/printf를 사용하는 것이 무난할 것 같다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="algorithm" /><category term="java" /><summary type="html">오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.</summary></entry><entry><title type="html">2. Matrix Algebra (2)</title><link href="https://soonjune.github.io/Matrix-Algebra-1" rel="alternate" type="text/html" title="2. Matrix Algebra (2)" /><published>2020-08-11T22:00:00+09:00</published><updated>2020-08-11T22:00:00+09:00</updated><id>https://soonjune.github.io/Matrix-Algebra-1</id><content type="html" xml:base="https://soonjune.github.io/Matrix-Algebra-1">&lt;p&gt;선형대수 공부 3일차 - 행렬에 대해 알아보자&lt;/p&gt;
+&lt;h3 id=&quot;c의-경우&quot;&gt;C++의 경우&lt;/h3&gt;
+&lt;p&gt;C++은 출력에서 cout « i « endl을 사용할 경우 시간 초과가 날 수 있다. &lt;code class=&quot;highlighter-rouge&quot;&gt;endl&lt;/code&gt;대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;\n&quot;&lt;/code&gt;을 이용하자.    &lt;br /&gt;
+C++에서 빠른 입출력을 원할 경우 C 표준 입출력을 동기화하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;ios_bas::sync_with_stdio(false);&lt;/code&gt; 설정을 해주고 &lt;code class=&quot;highlighter-rouge&quot;&gt;cin.tie(null);&lt;/code&gt;을 통해 cin과 cout을 분리해준다. 물론 그냥 C의 표준입출력 scanf/printf를 사용해도 된다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="algorithm" /><category term="java" /><summary type="html">오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.</summary></entry><entry><title type="html">2. Matrix Algebra (2)</title><link href="https://soonjune.github.io/Matrix-Algebra-1" rel="alternate" type="text/html" title="2. Matrix Algebra (2)" /><published>2020-08-11T22:00:00+09:00</published><updated>2020-08-11T22:00:00+09:00</updated><id>https://soonjune.github.io/Matrix-Algebra-1</id><content type="html" xml:base="https://soonjune.github.io/Matrix-Algebra-1">&lt;p&gt;선형대수 공부 3일차 - 행렬에 대해 알아보자&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
 &lt;/script&gt;
@@ -491,26 +551,4 @@ span의 개념을 확인하자 - set of all possible linear combinations   &lt;b
  열심히 기록을 남겨 스스로를 되돌아보고 좋은 정보도 공유하고자 합니다.&lt;/p&gt;
 
 &lt;p&gt;블로그는 jekyll 기반의 static website이며 아래 자료를 참고했습니다. &lt;br /&gt;
-&lt;a href=&quot;https://moon9342.github.io/tag/jekyll/&quot;&gt;IT Technical Training&lt;/a&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="blog" /><summary type="html"></summary></entry><entry><title type="html">Node.js 잇몸으로 뽀개기 (studying Node.js)</title><link href="https://soonjune.github.io/Node.js-study" rel="alternate" type="text/html" title="Node.js 잇몸으로 뽀개기 (studying Node.js)" /><published>2018-10-05T21:22:00+09:00</published><updated>2018-10-05T21:22:00+09:00</updated><id>https://soonjune.github.io/Node.js-study</id><content type="html" xml:base="https://soonjune.github.io/Node.js-study">&lt;h2 id=&quot;왜-nodejs를-공부해야하는가&quot;&gt;왜 Node.js를 공부해야하는가&lt;/h2&gt;
-&lt;p&gt;Node.js의 가장 큰 장점은 방대한 npm 라이브러리다. 많은 사람들이 사용하고 있기 때문에 리소스도 풍부하고 내가 필요한 기능은 이미 다른 사람이 개발해 놓은 경우가 왕왕 있다고 한다. 일종의 네트워크 효과라고 보면 되겠다.
-또 다른 장점은 입출력(I/O)을 기다리는 방식에서 볼 수 있다. Node.js는 non-blocking 방식을 택하고 있는데 이는 데이터를 주고 받는 과정 동안 멈추지 않고 다른 일을 처리하는 것을 말한다. Rails 같은 blocking 방식을 택한 경우, 입출력 하나 하나씩 기다리느라 오랜 시간이 소요된다.&lt;/p&gt;
-
-&lt;p&gt;아래 사진을 보면 확실히 이해가 된다. Non-blocking 방식이 자원을 훨씬 효율적으로 활용하고 결과도 빨리 받아볼 수 있다.
-&lt;img src=&quot;http://i.imgur.com/iSafBIF.png&quot; alt=&quot;blocking vs. nonblocking&quot; /&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;nodejs란-무엇인가&quot;&gt;Node.js란 무엇인가&lt;/h2&gt;
-&lt;p&gt;내가 이해한 바로는 C++로 작성한 V8 Engine을 통해서 Javascript로 작성한 코드가 Machine Code로 작동하는 것이라고 한다. Node.js를 런타임이라고 하는데 런타임 단순히 말하면 프로그래밍 언어가 구동되는 환경이라고 이해하면 된다고 한다&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. 명확하게 이해는 안되지만 Node.js는 자바스크립트로 작성된 코드가 실행될 수 있도록 도와주는 환경인 것 같다.&lt;/p&gt;
-
-&lt;h2 id=&quot;향후-일정&quot;&gt;향후 일정&lt;/h2&gt;
-&lt;p&gt;유데미에서 맥스와 함께 자바스크립트 공부를 차근차근 해 나간다. 궁극적으로 모바일 서버를 운영할 수 있는 실력을 갖추고 싶다.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/ &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;http://asfirstalways.tistory.com/99 &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">왜 Node.js를 공부해야하는가 Node.js의 가장 큰 장점은 방대한 npm 라이브러리다. 많은 사람들이 사용하고 있기 때문에 리소스도 풍부하고 내가 필요한 기능은 이미 다른 사람이 개발해 놓은 경우가 왕왕 있다고 한다. 일종의 네트워크 효과라고 보면 되겠다. 또 다른 장점은 입출력(I/O)을 기다리는 방식에서 볼 수 있다. Node.js는 non-blocking 방식을 택하고 있는데 이는 데이터를 주고 받는 과정 동안 멈추지 않고 다른 일을 처리하는 것을 말한다. Rails 같은 blocking 방식을 택한 경우, 입출력 하나 하나씩 기다리느라 오랜 시간이 소요된다.</summary></entry></feed>
+&lt;a href=&quot;https://moon9342.github.io/tag/jekyll/&quot;&gt;IT Technical Training&lt;/a&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="blog" /><summary type="html"></summary></entry></feed>

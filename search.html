@@ -179,6 +179,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "effective-python": {
+        "title": "Pythonic Thinking(1) 파이썬 효율적으로 사용하기",
+            "author": "soonjune",
+            "category": "",
+            "content": "유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.첫번째 챕터는 Pythonic Thinking이다. Pythonic이라는 것이 형용사로 만들어질만큼 C나 Java와는 다른 특성을 지는 것을 알 수 있다. Pythonic의 정의를 찾아보니 Stack Overflow에서는 Exploiting the features of the Python language to produce code that is clear, concise and maintainable.이라는 설명이 나온다. 즉, 파이썬 코드의 간결하고 명확한 특성을 나타내는 말이다. Pythonic Thinking은 이러한 명확한 코드를 구현하기 위한 생각 방식이라고 볼 수 있다.  파이썬 버전을 알자최신 버전은 Python 3.8이다(2020년 8월 기준). 커맨드 또는 터미널에서 python3 --version 또는 python --version을 통해서 버전을 확인할 수 있다. 맥의 경우 python 2.7이 기본으로 설치되어 있는데 새로 Python 3을 설치해주자.  명령 프롬트에서 올바른 버전의 파이썬이 설치되어 있는지 확인하자.  PEP8 스타일 가이드를 따르자      PEP8 가이드에 대해 정리가 잘 된 블로그를 참조하자.        공통의 스타일을 사용함으로써 협업을 용이하게 할 수 있다.        일관적인 스타일의 사용은 추후 자신의 코드 수정을 용이하게 한다.    bytes와 str의 차이를 알자.      bytes: 8-bit values    str: Unicode cdoe points        헬퍼 함수(개발자의 편의를 위한 함수)를 이용해서 원하는 문자 시퀀스 타입을 리턴하도록 하자.        bytes와 str 인스턴스는 서로 연산할 수 없다 (&gt;, ==, +, % 등).    바이너리 데이터를 읽고 쓰기 위해서는 ‘rb’, ‘wb’ 모드에서 파일을 open한다.    with open('data.bin', 'wb') as f:  f.write(b'\\xf1\\xf2\\xf3\\xf4\\xf5')        with open('data.bin', 'rb') as f:  data = f.read()        Unicode 데이터를 읽고 쓸 때에는 시스템의 디폴트 인코딩에 주의해라. encoding parameter를 명시적으로 전달하자. 아래는 윈도우의 ‘cp1252’로 인코딩된 파일을 읽는 예시.    with open('data.bin', 'r', encoding='cp1252) as f:  data = f.read()      출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.",
+        "url": "/Effective-Python"
+    }
+    ,
+    
     "ai-review": {
         "title": "면접 대비 - 인공지능, 기계학습 개념 복습",
             "author": "soonjune",
@@ -192,7 +201,7 @@ into the {body} of the default.hbs template -->
         "title": "IO speed - 입출력 속도 비교 및 자바 입출력 방법",
             "author": "soonjune",
             "category": "",
-            "content": "오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다.   백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자.  입력 속도 비교 / 출력 속도 비교입력입력은 자바 기준으로 Scanner보다 BufferedReader와 Integer.parseInt를 사용하는게 약 7배 빠른 것을 알 수 있다.  문제 풀이를 위한 한 줄 라인 입력은 아래와 같이 받을 수 있다.BufferedReader br = new BufferedReader(new inputStreamReader(System.in));// 한 줄에 integer input 하나인 경우int input = Integer.parseInt(br.readLine());// 한 줄에 여러 input이 공백을 구분자로 두고 있는 경우StringTokenizer st = new StringTokenizer(br.readLine());int number1 = Integer.parseInt(st.nextToken());출력출력은 BufferedWriter를 쓰는것이 System.out.println(sb)을 쓰는 것보다 빠르나 차이가 미미하기 때문에 조금 더 편리한 System.out.println(sb)를 사용하는게 좋겠다.C/C++의 경우C는 fread/fwrite이 빠르고 C++은 출력에서 cout « i « endl을 사용할 경우 시간 초과가 날 수 있다.그냥 scanf/printf를 사용하는 것이 무난할 것 같다.",
+            "content": "오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다.   백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자.  입력 속도 비교 / 출력 속도 비교입력입력은 자바 기준으로 Scanner보다 BufferedReader와 Integer.parseInt를 사용하는게 약 7배 빠른 것을 알 수 있다.  문제 풀이를 위한 한 줄 라인 입력은 아래와 같이 받을 수 있다.BufferedReader br = new BufferedReader(new inputStreamReader(System.in));// 한 줄에 integer input 하나인 경우int input = Integer.parseInt(br.readLine());// 한 줄에 여러 input이 공백을 구분자로 두고 있는 경우StringTokenizer st = new StringTokenizer(br.readLine());int number1 = Integer.parseInt(st.nextToken());출력출력은 BufferedWriter를 쓰는것이 System.out.println(sb)을 쓰는 것보다 빠르나 차이가 미미하기 때문에 조금 더 편리한 System.out.println(sb)를 사용하는게 좋겠다.C++의 경우C++은 출력에서 cout « i « endl을 사용할 경우 시간 초과가 날 수 있다. endl대신 \"\\n\"을 이용하자.    C++에서 빠른 입출력을 원할 경우 C 표준 입출력을 동기화하는 ios_bas::sync_with_stdio(false); 설정을 해주고 cin.tie(null);을 통해 cin과 cout을 분리해준다. 물론 그냥 C의 표준입출력 scanf/printf를 사용해도 된다.",
         "url": "/IO"
     }
     ,
