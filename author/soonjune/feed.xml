@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/author/soonjune/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-27T00:01:28+09:00</updated>
+  <updated>2020-08-28T00:30:47+09:00</updated>
   <id>https://soonjune.github.io/author/soonjune/feed.xml</id>
 
   
@@ -30,6 +30,91 @@
   
   
 
+  
+    <entry>
+      <title type="html">Pythonic Thinking(2) 파이썬 효율적으로 사용하기</title>
+      <link href="https://soonjune.github.io/Effective-Python" rel="alternate" type="text/html" title="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" />
+      <published>2020-08-27T23:30:00+09:00</published>
+      <updated>2020-08-27T23:30:00+09:00</updated>
+      <id>https://soonjune.github.io/Effective-Python</id>
+      <content type="html" xml:base="https://soonjune.github.io/Effective-Python">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;F-String을 C-Style Format, str.format보다 우선해서 사용하자.
+ Formatting은 미리 정의된 텍스트와 데이터 값을 사람이 이해할 수 있게 합쳐서 하나의 문자열로 표현하는 과정을 말한다.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b10111011&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xc5f&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Binary is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d, hex is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;위 코드에서 % 옆의 부분을 format string이라고 부르며, %d 부분을 오른쪽의 값들이 대체한다. %는 C의 &lt;code class=&quot;highlighter-rouge&quot;&gt;printf&lt;/code&gt; 함수로부터 유래한다. 따라서 이러한 format을 C-style format이라 부른다. C 언어를 사용하던 프로그래머라면 이러한 C-style format string을 사용하지만 네가지 문제가 존재한다.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;데이터의 타입이 바뀌면 에러를 발생시킨다.&lt;/li&gt;
+      &lt;li&gt;읽기 어려워 수정이 쉽지 않다.&lt;/li&gt;
+      &lt;li&gt;똑같은 format string을 여러번 사용하고 싶을 때, 오른쪽의 tuple을 반복해야 한다.&lt;/li&gt;
+      &lt;li&gt;3번 문제 해결을 위해 dictionary를 이용할 수 있지만 오른쪽의 key를 최소 두번 지정해줘야 한다.(오른쪽의 format specifier에서 한번, dictionary에서 한번)&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;Python3에서부터 str.format을 이용하여 &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt; 대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;{}&lt;/code&gt;을 placeholder로 사용할 수 있게 됐다.   &lt;br /&gt;
+ 하지만 이 또한 위의 2번, 4번 문제를 해결하지 못한다는 문제가 있다.&lt;/p&gt;
+
+    &lt;p&gt;따라서 간결하면서도 강력한 f-string을 사용하자. f-string을 이용하면 아래와 같이 format specifier 안에 직접 파이썬 표현을 추가할 수 있어 유용하다.&lt;/p&gt;
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pantry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'#{i+1}: '&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'{item.title():&amp;lt;10s} = '&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'{round(count)}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;복잡한 표현 대신 헬퍼 함수를 사용하자.
+    &lt;ul&gt;
+      &lt;li&gt;한 줄로 된 복잡한 코드보다는 반복 사용되는 로직인 경우 헬퍼 함수를 사용하는 것이 명확하다.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if/else&lt;/code&gt;를 하용하는 것이 Boolean &lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;and&lt;/code&gt;를 사용하는 것보다 가독성을 높인다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Multiple Assignment Unpacking을 Indexing 대신 사용하자.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Peanut butter'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Jelly'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;c&quot;&gt;# Indexing 예시&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'and'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;c&quot;&gt;# Mulitple Assignment Unpacking 예시&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'and'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Unpacking을 통해 &lt;code class=&quot;highlighter-rouge&quot;&gt;a, b = b, a&lt;/code&gt;와 같이 swap하는 것도 유용하다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;list, str, tuple 같은 모든 iterable에 unpacking을 사용할 수 있다. (iterable 안에 iterable에 대해서도 사용 가능)&lt;/li&gt;
+      &lt;li&gt;Indexing 대신 unpacking을 사용해서 코드의 명확성을 높이자.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</title>
@@ -864,52 +949,6 @@ span의 개념을 확인하자 - set of all possible linear combinations   &lt;b
 
       
         <summary type="html">Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.1 https://medium.com/@vilcins/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda &amp;#8617;</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Blog Reopening - 블로그 운영 시작</title>
-      <link href="https://soonjune.github.io/blog-opening" rel="alternate" type="text/html" title="Blog Reopening - 블로그 운영 시작" />
-      <published>2020-08-01T18:00:00+09:00</published>
-      <updated>2020-08-01T18:00:00+09:00</updated>
-      <id>https://soonjune.github.io/blog-opening</id>
-      <content type="html" xml:base="https://soonjune.github.io/blog-opening">&lt;!-- &lt;span class=&quot;table-of-contents-list&quot;&gt;블로그 목차 내역&lt;/span&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./blog-opening&quot;&gt;블로그 목차 추가&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=acVpibElHZ8&amp;t=99s&quot;&gt;목차 추가시 참고 영상&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt; --&gt;
-
-&lt;p&gt;블로그 재운영&lt;/p&gt;
-
-&lt;p&gt;개설만 해놓고 흐지부지 됐던 블로그를 다시 운영하기로 했습니다. 공부, 일상 등 잡다한 내용을 다룰 예정입니다.
- 열심히 기록을 남겨 스스로를 되돌아보고 좋은 정보도 공유하고자 합니다.&lt;/p&gt;
-
-&lt;p&gt;블로그는 jekyll 기반의 static website이며 아래 자료를 참고했습니다. &lt;br /&gt;
-&lt;a href=&quot;https://moon9342.github.io/tag/jekyll/&quot;&gt;IT Technical Training&lt;/a&gt;&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Park Seung Joon</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="blog" />
-      
-
-      
-        <summary type="html"></summary>
       
 
       
