@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/author/soonjune/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-28T00:30:47+09:00</updated>
+  <updated>2020-08-30T23:40:59+09:00</updated>
   <id>https://soonjune.github.io/author/soonjune/feed.xml</id>
 
   
@@ -32,6 +32,71 @@
 
   
     <entry>
+      <title type="html">Pythonic Thinking(3) 파이썬 효율적으로 사용하기</title>
+      <link href="https://soonjune.github.io/Effective-Python" rel="alternate" type="text/html" title="Pythonic Thinking(3) 파이썬 효율적으로 사용하기" />
+      <published>2020-08-30T23:30:00+09:00</published>
+      <updated>2020-08-30T23:30:00+09:00</updated>
+      <id>https://soonjune.github.io/Effective-Python</id>
+      <content type="html" xml:base="https://soonjune.github.io/Effective-Python">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Range 대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;Enumerate&lt;/code&gt;를 쓰자.
+    &lt;ul&gt;
+      &lt;li&gt;간결하게 iterator와 index를 이용할 수 있다.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;range&lt;/code&gt;를 이용해서 loop를 돌면서 indexing을 하기보다 &lt;code class=&quot;highlighter-rouge&quot;&gt;enumerate&lt;/code&gt;를 사용하자.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;enumerate&lt;/code&gt;의 두번째 파라미터를 이용해서 0 이외의 숫자부터 indexing할 수 있다. 아래 예시
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flavor&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flavor_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'{i}: {flavor}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Iterator들을 병렬적으로 처리하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;zip&lt;/code&gt;을 사용하자.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;enumerate&lt;/code&gt;와 마찬가지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;zip&lt;/code&gt;이라는 기본 함수를 사용해서 여러 iterator들을 병렬적으로 처리할 수 있다.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;zip&lt;/code&gt;은 iterator의 다음 값에 해당하는 값들을 tuple의 형태로 그때 그때 하나씩 생성한다(lazy generator). 따라서 메모리 걱정 없이 무한정 긴 iterator를 처리할 수 있다.&lt;/li&gt;
+      &lt;li&gt;비교하는 두 iterator의 길이가 다르면 작은 쪽까지만 tuple을 생성하고 멈춘다.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;itertools&lt;/code&gt; 모듈의 &lt;code class=&quot;highlighter-rouge&quot;&gt;zip_longest&lt;/code&gt;를 사용하면 길이가 긴 iterator에 맞춰서 tuple을 생성할 수 있다(짧은 쪽의 값엔 None이 default로 들어간다).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt;문 다음에는 &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt; 사용을 지양하자.
+    &lt;ul&gt;
+      &lt;li&gt;for나 while문 뒤에 else가 오게되면 어떻게 되는지 알자.&lt;/li&gt;
+      &lt;li&gt;break를 사용하게 되면 뒤에 else가 실행되지 않는다.&lt;/li&gt;
+      &lt;li&gt;따라서 헷갈리고 비직관적인 반복문 뒤 &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt; 사용을 지양하자.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Pythonic Thinking(2) 파이썬 효율적으로 사용하기</title>
       <link href="https://soonjune.github.io/Effective-Python" rel="alternate" type="text/html" title="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" />
       <published>2020-08-27T23:30:00+09:00</published>
@@ -46,7 +111,7 @@
  &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xc5f&lt;/span&gt;
  &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Binary is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d, hex is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;위 코드에서 % 옆의 부분을 format string이라고 부르며, %d 부분을 오른쪽의 값들이 대체한다. %는 C의 &lt;code class=&quot;highlighter-rouge&quot;&gt;printf&lt;/code&gt; 함수로부터 유래한다. 따라서 이러한 format을 C-style format이라 부른다. C 언어를 사용하던 프로그래머라면 이러한 C-style format string을 사용하지만 네가지 문제가 존재한다.&lt;/p&gt;
+    &lt;p&gt;위 코드에서 % 옆의 부분을 format string이라고 부르며, %d 부분을 오른쪽의 값들이 대체한다. %는 C의 &lt;code class=&quot;highlighter-rouge&quot;&gt;printf&lt;/code&gt; 함수로부터 유래한다. 따라서 이러한 format을 C-style format이라 부른다. C 언어를 사용하던 프로그래머라면 이러한 C-style format string을 사용하는데 익숙하겠지만 네가지 문제가 존재한다.&lt;/p&gt;
     &lt;ol&gt;
       &lt;li&gt;데이터의 타입이 바뀌면 에러를 발생시킨다.&lt;/li&gt;
       &lt;li&gt;읽기 어려워 수정이 쉽지 않다.&lt;/li&gt;
@@ -884,71 +949,6 @@ span의 개념을 확인하자 - set of all possible linear combinations   &lt;b
 
       
         <summary type="html">우연히 마이크로소프트에서 하는 Virtual Intership 코스에 등록하게 되었다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Rouge 적용</title>
-      <link href="https://soonjune.github.io/rouge" rel="alternate" type="text/html" title="Rouge 적용" />
-      <published>2020-08-05T17:00:00+09:00</published>
-      <updated>2020-08-05T17:00:00+09:00</updated>
-      <id>https://soonjune.github.io/rouge</id>
-      <content type="html" xml:base="https://soonjune.github.io/rouge">&lt;p&gt;Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;```이용
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JavaScript is a simple language for javatpoint learners&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;~~~javascript로 열고 닫을 때
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JavaScript is a simple language for javatpoint learners&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syntaxHighlight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Hello World'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;%highlight javascript %로 열고 % endhighlight % 닫을 때 중간에 코드가 들어가서 list ordering이 다시 1부터 시작하는 문제가 있었다.
-마크다운 중간에 삽입하기 위해서는  &lt;br /&gt;
-(1) html layout에서 아래와 같이 css style을 불러오고&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/built/syntax.css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;(2) 코드 블럭(Code Blocks) 추가 - ``` 혹은 ~~~ 이용
-코드 첫 줄과 마지막 줄에 Back quote ( ` ) 또는 물결( ~ ) 3개 삽입해서 추가하자.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://medium.com/@vilcins/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda&quot;&gt;https://medium.com/@vilcins/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Park Seung Joon</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="blog" />
-      
-
-      
-        <summary type="html">Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.1 https://medium.com/@vilcins/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda &amp;#8617;</summary>
       
 
       
