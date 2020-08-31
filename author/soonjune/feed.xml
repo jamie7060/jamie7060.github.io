@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/author/soonjune/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-08-31T23:32:35+09:00</updated>
+  <updated>2020-08-31T23:35:21+09:00</updated>
   <id>https://soonjune.github.io/author/soonjune/feed.xml</id>
 
   
@@ -30,6 +30,62 @@
   
   
 
+  
+    <entry>
+      <title type="html">부자되기 도서 2개 소개</title>
+      <link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" />
+      <published>2020-08-31T23:30:00+09:00</published>
+      <updated>2020-08-31T23:30:00+09:00</updated>
+      <id>https://soonjune.github.io/how-to-become-rich</id>
+      <content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-get-rich-one-of-the-worlds-greatest-entrepreneurs-shares-his-secrets&quot;&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/1837402.How_to_Get_Rich&quot;&gt;How to Get Rich: One of the World’s Greatest Entrepreneurs Shares His Secrets&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;세계적인 잡지 맥심의 설립자인 Felix Dennis의 전기적인 책이다. 부자가 되는 법을 자세히 소개하고 있는데 맨 마지막 엑기스만 소개한다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;너의 필요를 분석하라. 욕구로는 부족하다. 충동은 필수적이다.&lt;/li&gt;
+  &lt;li&gt;부정적인 영향을 미치는 것들로부터 벗어나라. 포기하지 마라. 목표를 향해 나아가라.&lt;/li&gt;
+  &lt;li&gt;“대단한 아이디어”는 무시해라. 행동이 중요하다.&lt;/li&gt;
+  &lt;li&gt;집중해라. 돈은 도처에 널려있다.&lt;/li&gt;
+  &lt;li&gt;너보다 똑똑한 사람에게 일을 위임해라. 성과를 공유해라.&lt;/li&gt;
+  &lt;li&gt;소유권은 비밀 비법이다. (회사를) 소유할 수 있을만큼 소유해라.&lt;/li&gt;
+  &lt;li&gt;(회사를) 팔아야할 때가 오기 전 또는 재미가 없어지면 팔아라. 협상을 할 때에는 머리를 비워라.&lt;/li&gt;
+  &lt;li&gt;아무것도 두려워 하지 마라. 부자가 돼라. 베풀어라.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;위 내용을 저자의 경험을 기반으로 주장한다. 또 다른 책은 위와는 맥락이 조금 다르다.&lt;/p&gt;
+
+&lt;h3 id=&quot;이웃집-백만장자-변하지-않는-부의-법칙--흔들리지-않는-부는-어떻게-축적되는가&quot;&gt;이웃집 백만장자 변하지 않는 부의 법칙 : 흔들리지 않는 부는 어떻게 축적되는가&lt;/h3&gt;
+&lt;p&gt;위 아버지 대부터 부자들을 연구해온 토머스 스탠리 박사가 통계를 기반으로 부자에 관한 내용을 설명한다.
+부를 축적하는 자들과 그렇지 못한 두 부류로 나누어 설명하고 있다. 상세한 내용은 &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Millionaire_Next_Door&quot;&gt;위키백과&lt;/a&gt;에도 있으니 참조하면 된다.&lt;/p&gt;
+
+&lt;p&gt;다만, 앞서 소개한 책과의 차이를 저축과 근검함을 강조하고 있다는 것에서 볼 수 있다. 부자가 되는 것에 답은 없지만 결국 돈이라는 것도 행복해지기 위한 수단임을 명심하자.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="book-review" />
+      
+
+      
+        <summary type="html">이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Pythonic Thinking(3) 파이썬 효율적으로 사용하기</title>
@@ -90,62 +146,6 @@
 
       
         <summary type="html">첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">부자되기 도서 2개 소개</title>
-      <link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" />
-      <published>2020-08-30T23:30:00+09:00</published>
-      <updated>2020-08-30T23:30:00+09:00</updated>
-      <id>https://soonjune.github.io/how-to-become-rich</id>
-      <content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-get-rich-one-of-the-worlds-greatest-entrepreneurs-shares-his-secrets&quot;&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/1837402.How_to_Get_Rich&quot;&gt;How to Get Rich: One of the World’s Greatest Entrepreneurs Shares His Secrets&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;세계적인 잡지 맥심의 설립자인 Felix Dennis의 전기적인 책이다. 부자가 되는 법을 자세히 소개하고 있는데 맨 마지막 엑기스만 소개한다.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;너의 필요를 분석하라. 욕구로는 부족하다. 충동은 필수적이다.&lt;/li&gt;
-  &lt;li&gt;부정적인 영향을 미치는 것들로부터 벗어나라. 포기하지 마라. 목표를 향해 나아가라.&lt;/li&gt;
-  &lt;li&gt;“대단한 아이디어”는 무시해라. 행동이 중요하다.&lt;/li&gt;
-  &lt;li&gt;집중해라. 돈은 도처에 널려있다.&lt;/li&gt;
-  &lt;li&gt;너보다 똑똑한 사람에게 일을 위임해라. 성과를 공유해라.&lt;/li&gt;
-  &lt;li&gt;소유권은 비밀 비법이다. (회사를) 소유할 수 있을만큼 소유해라.&lt;/li&gt;
-  &lt;li&gt;(회사를) 팔아야할 때가 오기 전 또는 재미가 없어지면 팔아라. 협상을 할 때에는 머리를 비워라.&lt;/li&gt;
-  &lt;li&gt;아무것도 두려워 하지 마라. 부자가 돼라. 베풀어라.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;위 내용을 저자의 경험을 기반으로 주장한다. 또 다른 책은 위와는 맥락이 조금 다르다.&lt;/p&gt;
-
-&lt;h2 id=&quot;이웃집-백만장자-변하지-않는-부의-법칙--흔들리지-않는-부는-어떻게-축적되는가&quot;&gt;이웃집 백만장자 변하지 않는 부의 법칙 : 흔들리지 않는 부는 어떻게 축적되는가&lt;/h2&gt;
-&lt;p&gt;위 아버지 대부터 부자들을 연구해온 토머스 스탠리 박사가 통계를 기반으로 부자에 관한 내용을 설명한다.
-부를 축적하는 자들과 그렇지 못한 두 부류로 나누어 설명하고 있다. 상세한 내용은 &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Millionaire_Next_Door&quot;&gt;위키백과&lt;/a&gt;에도 있으니 참조하면 된다.&lt;/p&gt;
-
-&lt;p&gt;다만, 앞서 소개한 책과의 차이를 저축과 근검함을 강조하고 있다는 것에서 볼 수 있다. 부자가 되는 것에 답은 없지만 결국 돈이라는 것도 행복해지기 위한 수단임을 명심하자.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Park Seung Joon</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="book-review" />
-      
-
-      
-        <summary type="html">이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.</summary>
       
 
       
