@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-09-01T23:04:35+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">부자되기 도서 2개 소개</title><link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" /><published>2020-08-31T23:30:00+09:00</published><updated>2020-08-31T23:30:00+09:00</updated><id>https://soonjune.github.io/how-to-become-rich</id><content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-10-05T00:23:38+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">3. Determinant</title><link href="https://soonjune.github.io/Determinants" rel="alternate" type="text/html" title="3. Determinant" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>https://soonjune.github.io/Determinants</id><content type="html" xml:base="https://soonjune.github.io/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
+판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다.
+유명한 &lt;a href=&quot;https://www.youtube.com/watch?v=srxexLishgY&quot;&gt;Gilbert Strang 선생님의 MIT 강의&lt;/a&gt;를 나만의 말로 정리해 보았다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;판별식의-성질&quot;&gt;판별식의 성질&lt;/h3&gt;
+&lt;p&gt;1) det I = 1 &lt;br /&gt;
+2) 두 행을 바꾼 행렬의 판별식은 부호가 반대다. &lt;br /&gt;
+3a) 한 행에 t를 곱하면 전체에 본래 판별식에 t를 곱한 것과 같다. &lt;br /&gt;
+3b) 한 행에만 임의 값을 더해주면 본래 판별식에 더해주는 값을 분리한 행렬(나머지 행의 값은 동일)의 판별식의 합과 같다. &lt;br /&gt;
+Determinant is Linear Each Row &lt;br /&gt;
+4) 두 행의 값이 같으면 =&amp;gt; 판별식은 0이다.(2로부터 유도) &lt;br /&gt;
+5) 한 행을 곱해서 다른 행에서 빼도 판별식이 달라지지 않는다.(3b, 3a, 4로부터 유도) &lt;br /&gt;
+6) 한 행의 원소가 모두 0이라면 판별식도 0이다.(3a 또는 3b로 유도) &lt;br /&gt;
+7) 삼각행렬의 판별식은 대각선에 위치한 원소들의 곱이다. (소프트웨어에서 판별식을 구하는 방식 -&amp;gt; 삼각행렬도 만들어서 대각선 곱한다. 3a를 이용해서 행마다 factor out하면 대각선 곱과 1이 남는다.)&lt;br /&gt;
+8) 행렬의 역행렬이 존재하지 않으면 판별식은 0이다. &lt;br /&gt;
+9) det AB = (det A) * (det B) &lt;br /&gt;
+10) &lt;script type=&quot;math/tex&quot;&gt;detA^T = detA&lt;/script&gt; =&amp;gt; 열이 다 0이어도 판별식은 0이다를 보일 수 있다. (증명은 &lt;script type=&quot;math/tex&quot;&gt;|U^T||L^T| = |L||U|&lt;/script&gt; 보임으로써 할 수 있다.) &lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;판별식-공식&quot;&gt;판별식 공식&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/b5300123cfe333f7a1e78d8dab5eb044d0be1548&quot; /&gt;
+소행렬식(Minor) &lt;script type=&quot;math/tex&quot;&gt;M_(ij)&lt;/script&gt;는 i행과 j열을 제외한 행렬식이다.
+아래서 보듯, cofactor는 i+j가 짝수이면 양수 i+j가 홀수이면 음수를 앞에 곱한다.
+&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/279a8d3f0f8f1338b8d2a4f80f1323f514edf60d&quot; /&gt;
+&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/089ce40623558856f6cd09a7c0dc23fded7d1e08&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cofactor를-이용한-역행렬-구하기&quot;&gt;Cofactor를 이용한 역행렬 구하기&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/0651000d4523a0563cd016ae064f75011e0d8702&quot; /&gt;
+&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/5b076e517a662a54fe32bfcd7ca2ec8a1998b139&quot; /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;AC^T = (detA)I&lt;/script&gt;임을 보이면 된다. 행렬곱의 대각선은 detA가 되고 나머지는 0이 된다는 것을 알 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;cramers-rule&quot;&gt;Cramer’s Rule&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/4b063cb0d9acc0aed7f58ad881d845a2e2598e7f&quot; /&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자. 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다. 유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.</summary></entry><entry><title type="html">부자되기 도서 2개 소개</title><link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" /><published>2020-08-31T23:30:00+09:00</published><updated>2020-08-31T23:30:00+09:00</updated><id>https://soonjune.github.io/how-to-become-rich</id><content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;how-to-get-rich-one-of-the-worlds-greatest-entrepreneurs-shares-his-secrets&quot;&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/1837402.How_to_Get_Rich&quot;&gt;How to Get Rich: One of the World’s Greatest Entrepreneurs Shares His Secrets&lt;/a&gt;&lt;/h3&gt;
 
@@ -526,47 +560,4 @@ ii. T(cu) = cT(u) for all scalars c   &lt;br /&gt;
 
 &lt;p&gt;오늘 정리로 챕터1을 마쳤다. 중간고사도 여기까지가 범위인 것 같다. 이틀만에 중간고사 범위까지 공부해서 기분이 좋다(?).&lt;/p&gt;
 
-&lt;p&gt;[1] 출처: http://faculty.bard.edu/~belk/math213f15/Notes10.pdf&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자</summary></entry><entry><title type="html">1. Linear Equations in Linear Algebra (1)</title><link href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (1)" /><published>2020-08-08T22:00:00+09:00</published><updated>2020-08-08T22:00:00+09:00</updated><id>https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</id><content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1">&lt;p&gt;오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 &lt;a href=&quot;https://www.youtube.com/watch?v=3bTr91fLHOg&amp;amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6&quot;&gt;강의&lt;/a&gt;와 수업에 사용한 &lt;a href=&quot;https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X&quot;&gt;교과서&lt;/a&gt;를 참고했다.
-간단히 오늘 배운 내용을 정리해보자.&lt;/p&gt;
-
-&lt;p&gt;오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자.&lt;/p&gt;
-
-&lt;h2 id=&quot;11-systems-of-linear-equations&quot;&gt;1.1 Systems of Linear Equations&lt;/h2&gt;
-&lt;p&gt;1) &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_equation&quot;&gt;linear equation의 정의&lt;/a&gt; &lt;br /&gt;
-=&amp;gt; 이러한 linear equation(s)의 집합을 &lt;a href=&quot;https://en.wikipedia.org/wiki/System_of_linear_equations&quot;&gt;systems of linear equations&lt;/a&gt; 라 한다.   &lt;br /&gt;
-2) &lt;a href=&quot;https://en.wikipedia.org/wiki/Consistent_and_inconsistent_equations&quot;&gt;consistent&lt;/a&gt; - 하나 이상의 해가 존재하는 경우 / 그 반대로 해가 없는 경우는 inconsistent   &lt;br /&gt;
-3) 선형방정식을 행렬로 나타낼 수 있다. (coefficient matrix, augmented matrix)   &lt;br /&gt;
-4) linear system을 푸는 가장 기본적인 방법은 triangular form으로 만들어 주는 것이다. 이때 아래의 3가지 기본 row operation을 사용한다.&lt;br /&gt;
-=&amp;gt; Replacement, Interchange, Scaling &lt;br /&gt;
-세가지 row operation을 통해 만들 수 있는 행렬들은 row equivalent하다고 표현한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;12-row-reduction-and-echelon-forms&quot;&gt;1.2 Row Reduction and Echelon Forms&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/3743aca294b2e5346c167819fd9ee0bcb79ef22c&quot; align=&quot;left&quot; /&gt;    
-&lt;/p&gt;
-
-&lt;p&gt;위와 같은 모양을 지닌 행렬의 형태를 &lt;a href=&quot;https://en.wikipedia.org/wiki/Row_echelon_form&quot;&gt;echelon form&lt;/a&gt; 이라고 한다.  &lt;br /&gt;
-여기서 각 행의 맨 앞의 0이 아닌 수를 leading entry라고 한다. (여기서는 1, 2, 1)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/0cbe2a26712d3e37787d46b087e97748740b553e&quot; align=&quot;left&quot; /&gt;
-&lt;/p&gt;
-&lt;p&gt;위와 같이 leading entry가 1이고 leading entry 밑뿐만 아니라 위의 원소들도 0이면 reduced echelon form이라고 부른다.&lt;/p&gt;
-
-&lt;h3 id=&quot;theorem-1-uniqueness-of-the-reduced-echelon-form&quot;&gt;Theorem 1: Uniqueness of the Reduced Echelon Form&lt;/h3&gt;
-&lt;p&gt;우선, 모든 행렬은 (reduced) echelon form으로 변환할 수 있다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Echelon form인 행렬의 leading entry를 pivot position이라고 한다.  &lt;br /&gt;
-각 행에 pivot position이 존재하느냐의 여부에 따라이 해당 열이 basic variable인지 free variable인지 결정된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;theorem-2-existence-and-uniqueness-theorem&quot;&gt;Theorem 2: Existence and Uniqueness Theorem&lt;/h3&gt;
-&lt;p&gt;Echelon form의 행렬에서 [0, …, b] 꼴로 나오는 행(b는 0이 아닌 실수)이 존재하면 해가 없다.&lt;/p&gt;
-
-&lt;h2 id=&quot;13-vector-equations&quot;&gt;1.3 Vector Equations&lt;/h2&gt;
-&lt;p&gt;교환 법칙, 결합 법칙 등이 성립한다. &lt;br /&gt;
-span의 개념을 확인하자 - set of all possible linear combinations   &lt;br /&gt;
-&lt;a href=&quot;https://www.youtube.com/watch?v=k7RM-ot2NWY&quot;&gt;등장개념 영상&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;14-the-matrix-equation-ax--b&quot;&gt;1.4 The Matrix Equation Ax = b&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/1mgvPjG.png&quot; alt=&quot;theorem 3 and 4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;공부를 하면서 최근에 본 물리학자인 &lt;a href=&quot;https://youtu.be/8n80LX2LGjY?t=90&quot;&gt;파인만의 영상&lt;/a&gt;이 떠올랐다. 선형대수도 직관이 더해지면 더 오래 기억하고 의미있게 활용할 수 있을 것이다. 단순히 해를 구하는 것은 컴퓨터가 더 잘하니 숨겨진 의의를 찾는데 집중하면 좋을 것 같다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 강의와 수업에 사용한 교과서를 참고했다. 간단히 오늘 배운 내용을 정리해보자.</summary></entry></feed>
+&lt;p&gt;[1] 출처: http://faculty.bard.edu/~belk/math213f15/Notes10.pdf&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자</summary></entry></feed>

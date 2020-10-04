@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/tag/math/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-09-01T23:04:35+09:00</updated>
+  <updated>2020-10-05T00:23:38+09:00</updated>
   <id>https://soonjune.github.io/tag/math/feed.xml</id>
 
   
@@ -30,6 +30,76 @@
   
   
 
+  
+    <entry>
+      <title type="html">3. Determinant</title>
+      <link href="https://soonjune.github.io/Determinants" rel="alternate" type="text/html" title="3. Determinant" />
+      <published>2020-10-04T22:00:00+09:00</published>
+      <updated>2020-10-04T22:00:00+09:00</updated>
+      <id>https://soonjune.github.io/Determinants</id>
+      <content type="html" xml:base="https://soonjune.github.io/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
+판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다.
+유명한 &lt;a href=&quot;https://www.youtube.com/watch?v=srxexLishgY&quot;&gt;Gilbert Strang 선생님의 MIT 강의&lt;/a&gt;를 나만의 말로 정리해 보았다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;판별식의-성질&quot;&gt;판별식의 성질&lt;/h3&gt;
+&lt;p&gt;1) det I = 1 &lt;br /&gt;
+2) 두 행을 바꾼 행렬의 판별식은 부호가 반대다. &lt;br /&gt;
+3a) 한 행에 t를 곱하면 전체에 본래 판별식에 t를 곱한 것과 같다. &lt;br /&gt;
+3b) 한 행에만 임의 값을 더해주면 본래 판별식에 더해주는 값을 분리한 행렬(나머지 행의 값은 동일)의 판별식의 합과 같다. &lt;br /&gt;
+Determinant is Linear Each Row &lt;br /&gt;
+4) 두 행의 값이 같으면 =&amp;gt; 판별식은 0이다.(2로부터 유도) &lt;br /&gt;
+5) 한 행을 곱해서 다른 행에서 빼도 판별식이 달라지지 않는다.(3b, 3a, 4로부터 유도) &lt;br /&gt;
+6) 한 행의 원소가 모두 0이라면 판별식도 0이다.(3a 또는 3b로 유도) &lt;br /&gt;
+7) 삼각행렬의 판별식은 대각선에 위치한 원소들의 곱이다. (소프트웨어에서 판별식을 구하는 방식 -&amp;gt; 삼각행렬도 만들어서 대각선 곱한다. 3a를 이용해서 행마다 factor out하면 대각선 곱과 1이 남는다.)&lt;br /&gt;
+8) 행렬의 역행렬이 존재하지 않으면 판별식은 0이다. &lt;br /&gt;
+9) det AB = (det A) * (det B) &lt;br /&gt;
+10) &lt;script type=&quot;math/tex&quot;&gt;detA^T = detA&lt;/script&gt; =&amp;gt; 열이 다 0이어도 판별식은 0이다를 보일 수 있다. (증명은 &lt;script type=&quot;math/tex&quot;&gt;|U^T||L^T| = |L||U|&lt;/script&gt; 보임으로써 할 수 있다.) &lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;판별식-공식&quot;&gt;판별식 공식&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/b5300123cfe333f7a1e78d8dab5eb044d0be1548&quot; /&gt;
+소행렬식(Minor) &lt;script type=&quot;math/tex&quot;&gt;M_(ij)&lt;/script&gt;는 i행과 j열을 제외한 행렬식이다.
+아래서 보듯, cofactor는 i+j가 짝수이면 양수 i+j가 홀수이면 음수를 앞에 곱한다.
+&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/279a8d3f0f8f1338b8d2a4f80f1323f514edf60d&quot; /&gt;
+&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/089ce40623558856f6cd09a7c0dc23fded7d1e08&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cofactor를-이용한-역행렬-구하기&quot;&gt;Cofactor를 이용한 역행렬 구하기&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/0651000d4523a0563cd016ae064f75011e0d8702&quot; /&gt;
+&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/5b076e517a662a54fe32bfcd7ca2ec8a1998b139&quot; /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;AC^T = (detA)I&lt;/script&gt;임을 보이면 된다. 행렬곱의 대각선은 detA가 되고 나머지는 0이 된다는 것을 알 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;cramers-rule&quot;&gt;Cramer’s Rule&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/4b063cb0d9acc0aed7f58ad881d845a2e2598e7f&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linear-algebra" />
+      
+        <category term="math" />
+      
+
+      
+        <summary type="html">오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자. 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다. 유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">2. Matrix Algebra (2)</title>
