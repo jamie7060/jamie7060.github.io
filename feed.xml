@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-10-05T00:23:38+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">3. Determinant</title><link href="https://soonjune.github.io/Determinants" rel="alternate" type="text/html" title="3. Determinant" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>https://soonjune.github.io/Determinants</id><content type="html" xml:base="https://soonjune.github.io/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-10-10T23:47:34+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">3. Determinant</title><link href="https://soonjune.github.io/Determinants" rel="alternate" type="text/html" title="3. Determinant" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>https://soonjune.github.io/Determinants</id><content type="html" xml:base="https://soonjune.github.io/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다.
 유명한 &lt;a href=&quot;https://www.youtube.com/watch?v=srxexLishgY&quot;&gt;Gilbert Strang 선생님의 MIT 강의&lt;/a&gt;를 나만의 말로 정리해 보았다.&lt;/p&gt;
 
@@ -32,7 +32,77 @@ Determinant is Linear Each Row &lt;br /&gt;
 &lt;script type=&quot;math/tex&quot;&gt;AC^T = (detA)I&lt;/script&gt;임을 보이면 된다. 행렬곱의 대각선은 detA가 되고 나머지는 0이 된다는 것을 알 수 있다.&lt;/p&gt;
 
 &lt;h3 id=&quot;cramers-rule&quot;&gt;Cramer’s Rule&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/4b063cb0d9acc0aed7f58ad881d845a2e2598e7f&quot; /&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자. 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다. 유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.</summary></entry><entry><title type="html">부자되기 도서 2개 소개</title><link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" /><published>2020-08-31T23:30:00+09:00</published><updated>2020-08-31T23:30:00+09:00</updated><id>https://soonjune.github.io/how-to-become-rich</id><content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/4b063cb0d9acc0aed7f58ad881d845a2e2598e7f&quot; /&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자. 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다. 유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.</summary></entry><entry><title type="html">3. Subspace</title><link href="https://soonjune.github.io/Subspace" rel="alternate" type="text/html" title="3. Subspace" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>https://soonjune.github.io/Subspace</id><content type="html" xml:base="https://soonjune.github.io/Subspace">&lt;p&gt;오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;i-4-fundamental-subspaces&quot;&gt;I. 4 Fundamental Subspaces&lt;/h3&gt;
+&lt;p&gt;A is m x n&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;columnspace C(A) in &lt;script type=&quot;math/tex&quot;&gt;R^m&lt;/script&gt;  &lt;br /&gt;
+dimension of C(A) = # of pivot columns = rank r&lt;/li&gt;
+  &lt;li&gt;nullspace N(A) in &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt;  &lt;br /&gt;
+dimension of N(A) = # of free variables = n - r&lt;/li&gt;
+  &lt;li&gt;rowspace = all combs of rows = all combs of columns = &lt;script type=&quot;math/tex&quot;&gt;A^T = C(A^T)&lt;/script&gt;  &lt;br /&gt;
+same dimension as columnspace&lt;/li&gt;
+  &lt;li&gt;nullspace of &lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt; N(&lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt;) = left nullspace of A &lt;br /&gt;
+dimension = m - r
+left nullspace라는 이름은 row벡터로 만들면 왼쪽에 오기 때문 (&lt;script type=&quot;math/tex&quot;&gt;y^TA = O&lt;/script&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ii-orthogonal-vectors-and-subspaces&quot;&gt;II. Orthogonal Vectors and Subspaces&lt;/h3&gt;
+&lt;p&gt;1) Test for orthogonality: dot product is zero(&lt;script type=&quot;math/tex&quot;&gt;X^Ty = 0&lt;/script&gt;) &lt;br /&gt;
+orthogonal한 벡터 간에는 피타고라스 정리가 성립한다. &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;X^TX + Y^TY = (X+Y)^T(X+Y)&lt;/script&gt; &lt;br /&gt;
+2) Subspace S와 T가 orthogonal하다는 것의 의미 &lt;br /&gt;
+S에 속한 모든 벡터가 T에 속한 모든 벡터와 orthogonal하다. &lt;br /&gt;
+=&amp;gt; Rowspace is Orthogonal to nullspace - 이유
+&lt;script type=&quot;math/tex&quot;&gt;Ax = O&lt;/script&gt; &lt;br /&gt;
+=&amp;gt; Rowspace and Nullspace are orthogonal complements in &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt; // 둘의 dimension을 더하면 n 
+Nullspace contains all vectors perpendicular to rowspace&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;Ax = b&lt;/script&gt; =&amp;gt; 양쪽변에 &lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt;를 곱해준다.
+How to “solve” the equation when there is no solution? &lt;br /&gt;
+m &amp;gt; n&lt;br /&gt;
+실생활에서 noise 때문에 A를 제대로 알 수 없는 경우 - noise를 제거해야.&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt;: square, symmetric, invertible?
+&lt;script type=&quot;math/tex&quot;&gt;N(A^TA) = N(A)&lt;/script&gt; &lt;br /&gt;
+rank of &lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt; = rank of A &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt; is invertible exactly if A has independent columns&lt;/p&gt;
+
+&lt;h3 id=&quot;iii-projections-onto-subspaces&quot;&gt;III. Projections onto Subspaces&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Projection Matrix (P) &lt;br /&gt;
+projp = Pb   P = &lt;script type=&quot;math/tex&quot;&gt;(aa^T) / (a^Ta)&lt;/script&gt; &lt;br /&gt;
+columnspace of C(P) = line through a &lt;br /&gt;
+rank(P) = 1 &lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;P is symmetric&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P^2 = P&lt;/script&gt; &lt;br /&gt;
+Projection이 필요한 이유? Ax=b의 해가 없을 수도 있어서
+가장 비슷한 문제를 푼다. =&amp;gt; Solve Ax = p(proj of b onto columnspace)
+Key: b-Ax is perpendicular to plane
+&lt;script type=&quot;math/tex&quot;&gt;(a_1)^T(b-Ax)=0, (a_2)^T(b-Ax)=0&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;A^T(b-Ax) = O&lt;/script&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What subsapce is error vector e(b-Ax) in?&lt;br /&gt;
+e is in &lt;script type=&quot;math/tex&quot;&gt;N(A^T)&lt;/script&gt;  =&amp;gt;
+e is perpendicular to C(A) &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;A^TAx = A^Tb&lt;/script&gt;
+$$ x = (A^TA)^(-1)A^Tb 
+P = Ax = A(A^TA)^(-1)A^Tb&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;P^T = P&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;P^2 = P&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.</summary></entry><entry><title type="html">부자되기 도서 2개 소개</title><link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" /><published>2020-08-31T23:30:00+09:00</published><updated>2020-08-31T23:30:00+09:00</updated><id>https://soonjune.github.io/how-to-become-rich</id><content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;how-to-get-rich-one-of-the-worlds-greatest-entrepreneurs-shares-his-secrets&quot;&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/1837402.How_to_Get_Rich&quot;&gt;How to Get Rich: One of the World’s Greatest Entrepreneurs Shares His Secrets&lt;/a&gt;&lt;/h3&gt;
 
@@ -498,66 +568,4 @@ Eclipse IDE에서는 &lt;code&gt;syso&lt;/code&gt;를 타입한 뒤 &lt;kbd&gt;C
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="java" /><category term="algorithm" /><summary type="html">삼성 SDS 대학생 알고리즘 특강이 시작됐다. 1주일간은 자바, 1주일 간은 C++로 배운다고 한다. 자바를 거의 안 다뤄서 Codecademy에서 자바 부분을 쭉 훑었다. 주요 내용을 정리해보고자 한다.</summary></entry><entry><title type="html">1. Linear Equations in Linear Algebra (2)</title><link href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (2)" /><published>2020-08-09T21:00:00+09:00</published><updated>2020-08-09T21:00:00+09:00</updated><id>https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2</id><content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2">&lt;p&gt;선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자&lt;/p&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
-&lt;/script&gt;
-
-&lt;h2 id=&quot;15-solution-sets-of-linear-systems&quot;&gt;1.5 Solution Sets of Linear Systems&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;homogeneous: A linear equation is called homogeneous if its constant term is zero. Such an equation has the form&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p style=&quot;text-align: center; margin: 0; padding: 0;&quot;&gt; $$a_1x_1 + a_2x_2 + ... + a_nx_n = 0$$ &lt;/p&gt;
-&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;a_1, a_2, . . . , a_n&lt;/script&gt; are constants and &lt;script type=&quot;math/tex&quot;&gt;x_1, x_2, . . . , x_n&lt;/script&gt; are variables.
-A homogeneous linear system is a linear system whose equations are all homogeneous. For example,&lt;/p&gt;
-&lt;p style=&quot;text-align: center; margin: 0; padding: 0;&quot;&gt;
-$$3x_1 − 9x_2 − 9x_3 − 6x_4 = 0$$
-$$2x_1 − 8x_2 − 6x_3 + 2x_4 = 0$$
-$$−2x_1 + 3x_2 + 8x_3 + 7x_4 = 0$$
-&lt;/p&gt;
-
-&lt;p&gt;is a homogeneous linear system.[1]&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;즉, 행렬을 사용해서 Ax = 0 꼴로 쓸 수 있으면 최소 하나의 해를 x가 영벡터인 최소 하나의 해를 가지며 이를 trivial solution이라 한다.  &lt;br /&gt;
-non-trivial한 해를 갖기 위해서는 방정식이 최소 하나의 free variable을 가져야한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;16-applications-of-linear-systems&quot;&gt;1.6 Applications of Linear Systems&lt;/h2&gt;
-&lt;p&gt;경제, network flow 등 다양하게 활용이 가능하다.&lt;/p&gt;
-
-&lt;h2 id=&quot;17-linear-indepence&quot;&gt;1.7 Linear Indepence&lt;/h2&gt;
-&lt;p&gt;선형 독립이라는 말이 나오며 앞서 본 방정식이 trivial solution을 가질 때 독립이라 한다.
-벡터의 해가 되는 계수들이 모두 0이어야 하며 그렇지 않은 경우가 하나라도 있으면 linearly dependent하다.&lt;/p&gt;
-&lt;h3 id=&quot;theorem-7-characterization-of-linearly-dependent-sets&quot;&gt;Theorem 7: Characterization of Linearly Dependent Sets&lt;/h3&gt;
-&lt;p&gt;집합 S에 속한 벡터들 중 하나라도 다른 벡터의 선형 결합으로 표현할 수 있다면 linearly dependent하다.  &lt;br /&gt;
-벡터를 하나씩 추가해 가면서 linearly dependent한지 여부를 확인할 수 있다. &lt;br /&gt;
-추가된 벡터를 앞선 벡터들의 linear combination으로 표현할 수 있는지 확인하면 된다.&lt;/p&gt;
-&lt;h3 id=&quot;theorem-8&quot;&gt;Theorem 8&lt;/h3&gt;
-&lt;p&gt;If a set contains more vectors than there are entries in each vector, then the set is linearly dependent. That is, any set &lt;script type=&quot;math/tex&quot;&gt;{v_1,...,v_p}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt; is linearly dependent if p &amp;gt; n.
-즉 행렬의 열의 개수가 행의 개수보다 많다면 linearly dependent하다고 할 수 있다.  &lt;br /&gt;
-그 반대 p &amp;lt; n인 경우는 상황에 따라 다르기 때문에 일반화할 수 없다.&lt;/p&gt;
-&lt;h3 id=&quot;theorem-9&quot;&gt;Theorem 9&lt;/h3&gt;
-&lt;p&gt;If a set S D &lt;script type=&quot;math/tex&quot;&gt;{v_1,..., v_p}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt; contains the zero vector, then the set is linearly dependent.   &lt;br /&gt;
-Zero vector가 존재하면 linearly dependent하다.&lt;/p&gt;
-
-&lt;h2 id=&quot;18-introduction-to-linear-transformations&quot;&gt;1.8 Introduction to Linear Transformations&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_map&quot;&gt;transformation&lt;/a&gt;은 function, mapping과 같은 말이다.
-&lt;script type=&quot;math/tex&quot;&gt;T: R^n -&gt; R^m&lt;/script&gt;인 linear transformation에 대하여&lt;/li&gt;
-  &lt;li&gt;domain(정의역) - &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;codomain(공역) - &lt;script type=&quot;math/tex&quot;&gt;R^m&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;range(치역) / image - T(x)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;로 정의한다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Linear Transformation은 아래 두 조건을 만족해야 한다.  &lt;br /&gt;
-i. T(u+v) = T(u) + T(v)    &lt;br /&gt;
-ii. T(cu) = cT(u) for all scalars c   &lt;br /&gt;
-위 조건으로부터 T(0) = 0이 유도된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;오늘 정리로 챕터1을 마쳤다. 중간고사도 여기까지가 범위인 것 같다. 이틀만에 중간고사 범위까지 공부해서 기분이 좋다(?).&lt;/p&gt;
-
-&lt;p&gt;[1] 출처: http://faculty.bard.edu/~belk/math213f15/Notes10.pdf&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="java" /><category term="algorithm" /><summary type="html">삼성 SDS 대학생 알고리즘 특강이 시작됐다. 1주일간은 자바, 1주일 간은 C++로 배운다고 한다. 자바를 거의 안 다뤄서 Codecademy에서 자바 부분을 쭉 훑었다. 주요 내용을 정리해보고자 한다.</summary></entry></feed>
