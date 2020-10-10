@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-10-10T23:47:34+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">3. Determinant</title><link href="https://soonjune.github.io/Determinants" rel="alternate" type="text/html" title="3. Determinant" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>https://soonjune.github.io/Determinants</id><content type="html" xml:base="https://soonjune.github.io/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-10-10T23:51:24+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">3. Subspace</title><link href="https://soonjune.github.io/Subspace" rel="alternate" type="text/html" title="3. Subspace" /><published>2020-10-10T22:00:00+09:00</published><updated>2020-10-10T22:00:00+09:00</updated><id>https://soonjune.github.io/Subspace</id><content type="html" xml:base="https://soonjune.github.io/Subspace">&lt;p&gt;오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;i-4-fundamental-subspaces&quot;&gt;I. 4 Fundamental Subspaces&lt;/h3&gt;
+&lt;p&gt;A is m x n&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;columnspace C(A) in &lt;script type=&quot;math/tex&quot;&gt;R^m&lt;/script&gt;  &lt;br /&gt;
+dimension of C(A) = # of pivot columns = rank r&lt;/li&gt;
+  &lt;li&gt;nullspace N(A) in &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt;  &lt;br /&gt;
+dimension of N(A) = # of free variables = n - r&lt;/li&gt;
+  &lt;li&gt;rowspace = all combs of rows = all combs of columns = &lt;script type=&quot;math/tex&quot;&gt;A^T = C(A^T)&lt;/script&gt;  &lt;br /&gt;
+same dimension as columnspace&lt;/li&gt;
+  &lt;li&gt;nullspace of &lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt; N(&lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt;) = left nullspace of A &lt;br /&gt;
+dimension = m - r
+left nullspace라는 이름은 row벡터로 만들면 왼쪽에 오기 때문 (&lt;script type=&quot;math/tex&quot;&gt;y^TA = O&lt;/script&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ii-orthogonal-vectors-and-subspaces&quot;&gt;II. Orthogonal Vectors and Subspaces&lt;/h3&gt;
+&lt;p&gt;1) Test for orthogonality: dot product is zero(&lt;script type=&quot;math/tex&quot;&gt;X^Ty = 0&lt;/script&gt;) &lt;br /&gt;
+orthogonal한 벡터 간에는 피타고라스 정리가 성립한다. &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;X^TX + Y^TY = (X+Y)^T(X+Y)&lt;/script&gt; &lt;br /&gt;
+2) Subspace S와 T가 orthogonal하다는 것의 의미 &lt;br /&gt;
+S에 속한 모든 벡터가 T에 속한 모든 벡터와 orthogonal하다. &lt;br /&gt;
+=&amp;gt; Rowspace is Orthogonal to nullspace - 이유
+&lt;script type=&quot;math/tex&quot;&gt;Ax = O&lt;/script&gt; &lt;br /&gt;
+=&amp;gt; Rowspace and Nullspace are orthogonal complements in &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt; // 둘의 dimension을 더하면 n 
+Nullspace contains all vectors perpendicular to rowspace&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;Ax = b&lt;/script&gt; =&amp;gt; 양쪽변에 &lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt;를 곱해준다.
+How to “solve” the equation when there is no solution?  &lt;br /&gt;
+m &amp;gt; n&lt;br /&gt;
+실생활에서 noise 때문에 A를 제대로 알 수 없는 경우 - noise를 제거해야.&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt;: square, symmetric, invertible?
+&lt;script type=&quot;math/tex&quot;&gt;N(A^TA) = N(A)&lt;/script&gt; &lt;br /&gt;
+rank of &lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt; = rank of A &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt; is invertible exactly if A has independent columns&lt;/p&gt;
+
+&lt;h3 id=&quot;iii-projections-onto-subspaces&quot;&gt;III. Projections onto Subspaces&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Projection Matrix (P) &lt;br /&gt;
+projp = Pb   P = &lt;script type=&quot;math/tex&quot;&gt;(aa^T) / (a^Ta)&lt;/script&gt; &lt;br /&gt;
+columnspace of C(P) = line through a &lt;br /&gt;
+rank(P) = 1 &lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;P is symmetric&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P^2 = P&lt;/script&gt; &lt;br /&gt;
+Projection이 필요한 이유? Ax=b의 해가 없을 수도 있어서
+가장 비슷한 문제를 푼다. =&amp;gt; Solve Ax = p(proj of b onto columnspace)
+Key: b-Ax is perpendicular to plane
+&lt;script type=&quot;math/tex&quot;&gt;(a_1)^T(b-Ax)=0, (a_2)^T(b-Ax)=0&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;A^T(b-Ax) = O&lt;/script&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What subsapce is error vector e(b-Ax) in?&lt;br /&gt;
+e is in &lt;script type=&quot;math/tex&quot;&gt;N(A^T)&lt;/script&gt;  =&amp;gt;
+e is perpendicular to C(A) &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;A^TAx = A^Tb&lt;/script&gt; &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;x = (A^TA)^(-1)A^Tb&lt;/script&gt;
+P = Ax = A(A^TA)^(-1)A^Tb&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;P^T = P&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P^2 = P&lt;/script&gt; &lt;br /&gt;
+Application: Least squares fitting by a line &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.</summary></entry><entry><title type="html">3. Determinant</title><link href="https://soonjune.github.io/Determinants" rel="alternate" type="text/html" title="3. Determinant" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>https://soonjune.github.io/Determinants</id><content type="html" xml:base="https://soonjune.github.io/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다.
 유명한 &lt;a href=&quot;https://www.youtube.com/watch?v=srxexLishgY&quot;&gt;Gilbert Strang 선생님의 MIT 강의&lt;/a&gt;를 나만의 말로 정리해 보았다.&lt;/p&gt;
 
@@ -32,77 +101,7 @@ Determinant is Linear Each Row &lt;br /&gt;
 &lt;script type=&quot;math/tex&quot;&gt;AC^T = (detA)I&lt;/script&gt;임을 보이면 된다. 행렬곱의 대각선은 detA가 되고 나머지는 0이 된다는 것을 알 수 있다.&lt;/p&gt;
 
 &lt;h3 id=&quot;cramers-rule&quot;&gt;Cramer’s Rule&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/4b063cb0d9acc0aed7f58ad881d845a2e2598e7f&quot; /&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자. 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다. 유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.</summary></entry><entry><title type="html">3. Subspace</title><link href="https://soonjune.github.io/Subspace" rel="alternate" type="text/html" title="3. Subspace" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>https://soonjune.github.io/Subspace</id><content type="html" xml:base="https://soonjune.github.io/Subspace">&lt;p&gt;오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.&lt;/p&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
-&lt;/script&gt;
-
-&lt;h3 id=&quot;i-4-fundamental-subspaces&quot;&gt;I. 4 Fundamental Subspaces&lt;/h3&gt;
-&lt;p&gt;A is m x n&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;columnspace C(A) in &lt;script type=&quot;math/tex&quot;&gt;R^m&lt;/script&gt;  &lt;br /&gt;
-dimension of C(A) = # of pivot columns = rank r&lt;/li&gt;
-  &lt;li&gt;nullspace N(A) in &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt;  &lt;br /&gt;
-dimension of N(A) = # of free variables = n - r&lt;/li&gt;
-  &lt;li&gt;rowspace = all combs of rows = all combs of columns = &lt;script type=&quot;math/tex&quot;&gt;A^T = C(A^T)&lt;/script&gt;  &lt;br /&gt;
-same dimension as columnspace&lt;/li&gt;
-  &lt;li&gt;nullspace of &lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt; N(&lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt;) = left nullspace of A &lt;br /&gt;
-dimension = m - r
-left nullspace라는 이름은 row벡터로 만들면 왼쪽에 오기 때문 (&lt;script type=&quot;math/tex&quot;&gt;y^TA = O&lt;/script&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;ii-orthogonal-vectors-and-subspaces&quot;&gt;II. Orthogonal Vectors and Subspaces&lt;/h3&gt;
-&lt;p&gt;1) Test for orthogonality: dot product is zero(&lt;script type=&quot;math/tex&quot;&gt;X^Ty = 0&lt;/script&gt;) &lt;br /&gt;
-orthogonal한 벡터 간에는 피타고라스 정리가 성립한다. &lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;X^TX + Y^TY = (X+Y)^T(X+Y)&lt;/script&gt; &lt;br /&gt;
-2) Subspace S와 T가 orthogonal하다는 것의 의미 &lt;br /&gt;
-S에 속한 모든 벡터가 T에 속한 모든 벡터와 orthogonal하다. &lt;br /&gt;
-=&amp;gt; Rowspace is Orthogonal to nullspace - 이유
-&lt;script type=&quot;math/tex&quot;&gt;Ax = O&lt;/script&gt; &lt;br /&gt;
-=&amp;gt; Rowspace and Nullspace are orthogonal complements in &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt; // 둘의 dimension을 더하면 n 
-Nullspace contains all vectors perpendicular to rowspace&lt;/p&gt;
-
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;Ax = b&lt;/script&gt; =&amp;gt; 양쪽변에 &lt;script type=&quot;math/tex&quot;&gt;A^T&lt;/script&gt;를 곱해준다.
-How to “solve” the equation when there is no solution? &lt;br /&gt;
-m &amp;gt; n&lt;br /&gt;
-실생활에서 noise 때문에 A를 제대로 알 수 없는 경우 - noise를 제거해야.&lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt;: square, symmetric, invertible?
-&lt;script type=&quot;math/tex&quot;&gt;N(A^TA) = N(A)&lt;/script&gt; &lt;br /&gt;
-rank of &lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt; = rank of A &lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;A^TA&lt;/script&gt; is invertible exactly if A has independent columns&lt;/p&gt;
-
-&lt;h3 id=&quot;iii-projections-onto-subspaces&quot;&gt;III. Projections onto Subspaces&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Projection Matrix (P) &lt;br /&gt;
-projp = Pb   P = &lt;script type=&quot;math/tex&quot;&gt;(aa^T) / (a^Ta)&lt;/script&gt; &lt;br /&gt;
-columnspace of C(P) = line through a &lt;br /&gt;
-rank(P) = 1 &lt;br /&gt;
-    &lt;ul&gt;
-      &lt;li&gt;P is symmetric&lt;/li&gt;
-      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P^2 = P&lt;/script&gt; &lt;br /&gt;
-Projection이 필요한 이유? Ax=b의 해가 없을 수도 있어서
-가장 비슷한 문제를 푼다. =&amp;gt; Solve Ax = p(proj of b onto columnspace)
-Key: b-Ax is perpendicular to plane
-&lt;script type=&quot;math/tex&quot;&gt;(a_1)^T(b-Ax)=0, (a_2)^T(b-Ax)=0&lt;/script&gt;&lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;A^T(b-Ax) = O&lt;/script&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;What subsapce is error vector e(b-Ax) in?&lt;br /&gt;
-e is in &lt;script type=&quot;math/tex&quot;&gt;N(A^T)&lt;/script&gt;  =&amp;gt;
-e is perpendicular to C(A) &lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;A^TAx = A^Tb&lt;/script&gt;
-$$ x = (A^TA)^(-1)A^Tb 
-P = Ax = A(A^TA)^(-1)A^Tb&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;P^T = P&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;P^2 = P&lt;/script&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.</summary></entry><entry><title type="html">부자되기 도서 2개 소개</title><link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" /><published>2020-08-31T23:30:00+09:00</published><updated>2020-08-31T23:30:00+09:00</updated><id>https://soonjune.github.io/how-to-become-rich</id><content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/4b063cb0d9acc0aed7f58ad881d845a2e2598e7f&quot; /&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자. 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다. 유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.</summary></entry><entry><title type="html">부자되기 도서 2개 소개</title><link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" /><published>2020-08-31T23:30:00+09:00</published><updated>2020-08-31T23:30:00+09:00</updated><id>https://soonjune.github.io/how-to-become-rich</id><content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;how-to-get-rich-one-of-the-worlds-greatest-entrepreneurs-shares-his-secrets&quot;&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/1837402.How_to_Get_Rich&quot;&gt;How to Get Rich: One of the World’s Greatest Entrepreneurs Shares His Secrets&lt;/a&gt;&lt;/h3&gt;
 

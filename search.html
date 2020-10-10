@@ -179,21 +179,21 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "subspace": {
+        "title": "3. Subspace",
+            "author": "soonjune",
+            "category": "",
+            "content": "오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.I. 4 Fundamental SubspacesA is m x n  columnspace C(A) in   dimension of C(A) = # of pivot columns = rank r  nullspace N(A) in   dimension of N(A) = # of free variables = n - r  rowspace = all combs of rows = all combs of columns =   same dimension as columnspace  nullspace of  N() = left nullspace of A dimension = m - rleft nullspace라는 이름은 row벡터로 만들면 왼쪽에 오기 때문 ()II. Orthogonal Vectors and Subspaces1) Test for orthogonality: dot product is zero() orthogonal한 벡터 간에는 피타고라스 정리가 성립한다.  2) Subspace S와 T가 orthogonal하다는 것의 의미 S에 속한 모든 벡터가 T에 속한 모든 벡터와 orthogonal하다. =&gt; Rowspace is Orthogonal to nullspace - 이유 =&gt; Rowspace and Nullspace are orthogonal complements in  // 둘의 dimension을 더하면 n Nullspace contains all vectors perpendicular to rowspace =&gt; 양쪽변에 를 곱해준다.How to “solve” the equation when there is no solution?  m &gt; n실생활에서 noise 때문에 A를 제대로 알 수 없는 경우 - noise를 제거해야.: square, symmetric, invertible? rank of  = rank of A  is invertible exactly if A has independent columnsIII. Projections onto Subspaces  Projection Matrix (P) projp = Pb   P =  columnspace of C(P) = line through a rank(P) = 1           P is symmetric       Projection이 필요한 이유? Ax=b의 해가 없을 수도 있어서가장 비슷한 문제를 푼다. =&gt; Solve Ax = p(proj of b onto columnspace)Key: b-Ax is perpendicular to plane      What subsapce is error vector e(b-Ax) in?e is in   =&gt;e is perpendicular to C(A)  P = Ax = A(A^TA)^(-1)A^Tb           Application: Least squares fitting by a line ",
+        "url": "/Subspace"
+    }
+    ,
+    
     "determinants": {
         "title": "3. Determinant",
             "author": "soonjune",
             "category": "",
             "content": "오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다.유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.판별식의 성질1) det I = 1 2) 두 행을 바꾼 행렬의 판별식은 부호가 반대다. 3a) 한 행에 t를 곱하면 전체에 본래 판별식에 t를 곱한 것과 같다. 3b) 한 행에만 임의 값을 더해주면 본래 판별식에 더해주는 값을 분리한 행렬(나머지 행의 값은 동일)의 판별식의 합과 같다. Determinant is Linear Each Row 4) 두 행의 값이 같으면 =&gt; 판별식은 0이다.(2로부터 유도) 5) 한 행을 곱해서 다른 행에서 빼도 판별식이 달라지지 않는다.(3b, 3a, 4로부터 유도) 6) 한 행의 원소가 모두 0이라면 판별식도 0이다.(3a 또는 3b로 유도) 7) 삼각행렬의 판별식은 대각선에 위치한 원소들의 곱이다. (소프트웨어에서 판별식을 구하는 방식 -&gt; 삼각행렬도 만들어서 대각선 곱한다. 3a를 이용해서 행마다 factor out하면 대각선 곱과 1이 남는다.)8) 행렬의 역행렬이 존재하지 않으면 판별식은 0이다. 9) det AB = (det A) * (det B) 10)  =&gt; 열이 다 0이어도 판별식은 0이다를 보일 수 있다. (증명은  보임으로써 할 수 있다.) 판별식 공식소행렬식(Minor) 는 i행과 j열을 제외한 행렬식이다.아래서 보듯, cofactor는 i+j가 짝수이면 양수 i+j가 홀수이면 음수를 앞에 곱한다.Cofactor를 이용한 역행렬 구하기임을 보이면 된다. 행렬곱의 대각선은 detA가 되고 나머지는 0이 된다는 것을 알 수 있다.Cramer’s Rule",
         "url": "/Determinants"
-    }
-    ,
-    
-    "subspace": {
-        "title": "3. Subspace",
-            "author": "soonjune",
-            "category": "",
-            "content": "오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.I. 4 Fundamental SubspacesA is m x n  columnspace C(A) in   dimension of C(A) = # of pivot columns = rank r  nullspace N(A) in   dimension of N(A) = # of free variables = n - r  rowspace = all combs of rows = all combs of columns =   same dimension as columnspace  nullspace of  N() = left nullspace of A dimension = m - rleft nullspace라는 이름은 row벡터로 만들면 왼쪽에 오기 때문 ()II. Orthogonal Vectors and Subspaces1) Test for orthogonality: dot product is zero() orthogonal한 벡터 간에는 피타고라스 정리가 성립한다.  2) Subspace S와 T가 orthogonal하다는 것의 의미 S에 속한 모든 벡터가 T에 속한 모든 벡터와 orthogonal하다. =&gt; Rowspace is Orthogonal to nullspace - 이유 =&gt; Rowspace and Nullspace are orthogonal complements in  // 둘의 dimension을 더하면 n Nullspace contains all vectors perpendicular to rowspace =&gt; 양쪽변에 를 곱해준다.How to “solve” the equation when there is no solution? m &gt; n실생활에서 noise 때문에 A를 제대로 알 수 없는 경우 - noise를 제거해야.: square, symmetric, invertible? rank of  = rank of A  is invertible exactly if A has independent columnsIII. Projections onto Subspaces  Projection Matrix (P) projp = Pb   P =  columnspace of C(P) = line through a rank(P) = 1           P is symmetric       Projection이 필요한 이유? Ax=b의 해가 없을 수도 있어서가장 비슷한 문제를 푼다. =&gt; Solve Ax = p(proj of b onto columnspace)Key: b-Ax is perpendicular to plane      What subsapce is error vector e(b-Ax) in?e is in   =&gt;e is perpendicular to C(A) $$ x = (A^TA)^(-1)A^Tb P = Ax = A(A^TA)^(-1)A^Tb                ",
-        "url": "/Subspace"
     }
     ,
     

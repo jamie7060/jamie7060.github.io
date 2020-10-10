@@ -60,8 +60,8 @@
     <meta property="og:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-10-04T22:00:00+09:00" />
-    <meta property="article:modified_time" content="2020-10-04T22:00:00+09:00" />
+    <meta property="article:published_time" content="2020-10-10T22:00:00+09:00" />
+    <meta property="article:modified_time" content="2020-10-10T22:00:00+09:00" />
     <meta property="article:tag" content="Linear-algebra" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="3. Subspace" />
@@ -170,7 +170,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 4 October 2020"> 4 October 2020</time>
+                    <time class="post-full-meta-date" datetime="10 October 2020">10 October 2020</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -222,7 +222,7 @@ S에 속한 모든 벡터가 T에 속한 모든 벡터와 orthogonal하다. <br 
 Nullspace contains all vectors perpendicular to rowspace</p>
 
 <p><script type="math/tex">Ax = b</script> =&gt; 양쪽변에 <script type="math/tex">A^T</script>를 곱해준다.
-How to “solve” the equation when there is no solution? <br />
+How to “solve” the equation when there is no solution?  <br />
 m &gt; n<br />
 실생활에서 noise 때문에 A를 제대로 알 수 없는 경우 - noise를 제거해야.<br />
 <script type="math/tex">A^TA</script>: square, symmetric, invertible?
@@ -251,16 +251,15 @@ Key: b-Ax is perpendicular to plane
 <p>What subsapce is error vector e(b-Ax) in?<br />
 e is in <script type="math/tex">N(A^T)</script>  =&gt;
 e is perpendicular to C(A) <br />
-<script type="math/tex">A^TAx = A^Tb</script>
-$$ x = (A^TA)^(-1)A^Tb 
+<script type="math/tex">A^TAx = A^Tb</script> <br />
+<script type="math/tex">x = (A^TA)^(-1)A^Tb</script>
 P = Ax = A(A^TA)^(-1)A^Tb</p>
 <ul>
   <li>
     <script type="math/tex; mode=display">P^T = P</script>
   </li>
-  <li>
-    <script type="math/tex; mode=display">P^2 = P</script>
-  </li>
+  <li><script type="math/tex">P^2 = P</script> <br />
+Application: Least squares fitting by a line <br /></li>
 </ul>
 
                 </div>
@@ -372,14 +371,14 @@ P = Ax = A(A^TA)^(-1)A^Tb</p>
                                 
                                   
                                     
+                                  
+                                
+                                  
+                                    
                                         
                                         
                                             <li><a href="/Determinants">3. Determinant</a></li>
                                         
-                                    
-                                  
-                                
-                                  
                                     
                                   
                                 
@@ -449,6 +448,9 @@ P = Ax = A(A^TA)^(-1)A^Tb</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
                 
 
     <article class="post-card post-template no-image">
@@ -469,54 +471,6 @@ P = Ax = A(A^TA)^(-1)A^Tb</p>
                     
 
                     <h2 class="post-card-title">3. Determinant</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/jdj-logo.jpg" alt="Park Seung Joon" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/soonjune/">Park Seung Joon</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
-
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card post-template no-image">
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/how-to-become-rich">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Book-review</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">부자되기 도서 2개 소개</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
