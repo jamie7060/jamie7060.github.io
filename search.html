@@ -180,7 +180,7 @@ into the {body} of the default.hbs template -->
     window.store = {
     
     "subspace": {
-        "title": "3. Subspace",
+        "title": "4. Subspace",
             "author": "soonjune",
             "category": "",
             "content": "오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.I. 4 Fundamental SubspacesA is m x n  columnspace C(A) in   dimension of C(A) = # of pivot columns = rank r  nullspace N(A) in   dimension of N(A) = # of free variables = n - r  rowspace = all combs of rows = all combs of columns =   same dimension as columnspace  nullspace of  N() = left nullspace of A dimension = m - rleft nullspace라는 이름은 row벡터로 만들면 왼쪽에 오기 때문 ()II. Orthogonal Vectors and Subspaces1) Test for orthogonality: dot product is zero() orthogonal한 벡터 간에는 피타고라스 정리가 성립한다.  2) Subspace S와 T가 orthogonal하다는 것의 의미 S에 속한 모든 벡터가 T에 속한 모든 벡터와 orthogonal하다. =&gt; Rowspace is Orthogonal to nullspace - 이유 =&gt; Rowspace and Nullspace are orthogonal complements in  // 둘의 dimension을 더하면 n Nullspace contains all vectors perpendicular to rowspace =&gt; 양쪽변에 를 곱해준다.How to “solve” the equation when there is no solution?  m &gt; n실생활에서 noise 때문에 A를 제대로 알 수 없는 경우 - noise를 제거해야.: square, symmetric, invertible? rank of  = rank of A  is invertible exactly if A has independent columnsIII. Projections onto Subspaces  Projection Matrix (P) projp = Pb   P =  columnspace of C(P) = line through a rank(P) = 1           P is symmetric       Projection이 필요한 이유? Ax=b의 해가 없을 수도 있어서가장 비슷한 문제를 푼다. =&gt; Solve Ax = p(proj of b onto columnspace)Key: b-Ax is perpendicular to plane      What subsapce is error vector e(b-Ax) in?e is in   =&gt;e is perpendicular to C(A)  P = Ax = A(A^TA)^(-1)A^Tb           Application: Least squares fitting by a line ",
