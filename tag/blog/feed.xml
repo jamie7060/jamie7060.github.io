@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/blog/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-01-05T23:35:08+09:00</updated>
-  <id>http://localhost:4000/tag/blog/feed.xml</id>
+  <link href="https://soonjune.github.io/tag/blog/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-01-05T23:35:57+09:00</updated>
+  <id>https://soonjune.github.io/tag/blog/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Rouge 적용</title>
-      <link href="http://localhost:4000/rouge" rel="alternate" type="text/html" title="Rouge 적용" />
+      <link href="https://soonjune.github.io/rouge" rel="alternate" type="text/html" title="Rouge 적용" />
       <published>2020-08-05T17:00:00+09:00</published>
       <updated>2020-08-05T17:00:00+09:00</updated>
-      <id>http://localhost:4000/rouge</id>
-      <content type="html" xml:base="http://localhost:4000/rouge">&lt;p&gt;Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+      <id>https://soonjune.github.io/rouge</id>
+      <content type="html" xml:base="https://soonjune.github.io/rouge">&lt;p&gt;Rouge를 이용하면 코드 부분을 highlight해서 표현할 수 있다.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;```이용
@@ -98,11 +98,11 @@
   
     <entry>
       <title type="html">Blog Reopening - 블로그 운영 시작</title>
-      <link href="http://localhost:4000/blog-opening" rel="alternate" type="text/html" title="Blog Reopening - 블로그 운영 시작" />
+      <link href="https://soonjune.github.io/blog-opening" rel="alternate" type="text/html" title="Blog Reopening - 블로그 운영 시작" />
       <published>2020-08-01T18:00:00+09:00</published>
       <updated>2020-08-01T18:00:00+09:00</updated>
-      <id>http://localhost:4000/blog-opening</id>
-      <content type="html" xml:base="http://localhost:4000/blog-opening">&lt;!-- &lt;span class=&quot;table-of-contents-list&quot;&gt;블로그 목차 내역&lt;/span&gt;
+      <id>https://soonjune.github.io/blog-opening</id>
+      <content type="html" xml:base="https://soonjune.github.io/blog-opening">&lt;!-- &lt;span class=&quot;table-of-contents-list&quot;&gt;블로그 목차 내역&lt;/span&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./blog-opening&quot;&gt;블로그 목차 추가&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=acVpibElHZ8&amp;t=99s&quot;&gt;목차 추가시 참고 영상&lt;/a&gt;&lt;/li&gt;

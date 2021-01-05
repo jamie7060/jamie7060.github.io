@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/personal/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-01-05T23:35:08+09:00</updated>
-  <id>http://localhost:4000/tag/personal/feed.xml</id>
+  <link href="https://soonjune.github.io/tag/personal/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-01-05T23:35:57+09:00</updated>
+  <id>https://soonjune.github.io/tag/personal/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">SMART한 목표 설정하기</title>
-      <link href="http://localhost:4000/SMART-goal" rel="alternate" type="text/html" title="SMART한 목표 설정하기" />
+      <link href="https://soonjune.github.io/SMART-goal" rel="alternate" type="text/html" title="SMART한 목표 설정하기" />
       <published>2020-08-07T20:00:00+09:00</published>
       <updated>2020-08-07T20:00:00+09:00</updated>
-      <id>http://localhost:4000/SMART-goal</id>
-      <content type="html" xml:base="http://localhost:4000/SMART-goal">&lt;p&gt;우연히 마이크로소프트에서 하는 &lt;a href=&quot;https://www.insidesherpa.com/virtual-internships/prototype/ms2CK9b2SCWGXwPMS/Engineering%3A%20Undergraduate%20%26%20Masters%20Virtual%20Internship%20Platform&quot;&gt;Virtual Intership&lt;/a&gt; 코스에 등록하게 되었다.&lt;/p&gt;
+      <id>https://soonjune.github.io/SMART-goal</id>
+      <content type="html" xml:base="https://soonjune.github.io/SMART-goal">&lt;p&gt;우연히 마이크로소프트에서 하는 &lt;a href=&quot;https://www.insidesherpa.com/virtual-internships/prototype/ms2CK9b2SCWGXwPMS/Engineering%3A%20Undergraduate%20%26%20Masters%20Virtual%20Internship%20Platform&quot;&gt;Virtual Intership&lt;/a&gt; 코스에 등록하게 되었다.&lt;/p&gt;
 
 &lt;p&gt;간단하게 인턴십 소개를 들었다. 기술적인 내용을 가르친다기 보다는 마이크로소프트가 어떻게 일하고 전반적인 기술 트렌드를 소개하기 위한 프로그램이라는 느낌이 들었다. 단순한 소개인 Module 1을 마무리 하고 Module 2에서는 SMART한 목표설정을 다뤘다.&lt;/p&gt;
 

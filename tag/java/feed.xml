@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/java/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-01-05T23:35:08+09:00</updated>
-  <id>http://localhost:4000/tag/java/feed.xml</id>
+  <link href="https://soonjune.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-01-05T23:35:57+09:00</updated>
+  <id>https://soonjune.github.io/tag/java/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">IO speed - 입출력 속도 비교 및 자바 입출력 방법</title>
-      <link href="http://localhost:4000/IO" rel="alternate" type="text/html" title="IO speed - 입출력 속도 비교 및 자바 입출력 방법" />
+      <link href="https://soonjune.github.io/IO" rel="alternate" type="text/html" title="IO speed - 입출력 속도 비교 및 자바 입출력 방법" />
       <published>2020-08-12T23:30:00+09:00</published>
       <updated>2020-08-12T23:30:00+09:00</updated>
-      <id>http://localhost:4000/IO</id>
-      <content type="html" xml:base="http://localhost:4000/IO">&lt;p&gt;오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.&lt;/p&gt;
+      <id>https://soonjune.github.io/IO</id>
+      <content type="html" xml:base="https://soonjune.github.io/IO">&lt;p&gt;오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.&lt;/p&gt;
 
 &lt;p&gt;알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다.   &lt;br /&gt;
 백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자.  &lt;br /&gt;
@@ -91,11 +91,11 @@ C++에서 빠른 입출력을 원할 경우 C 표준 입출력을 동기화하�
   
     <entry>
       <title type="html">자바 훑어보기: Run-through of Java Programming Language</title>
-      <link href="http://localhost:4000/Run-through-of-Java" rel="alternate" type="text/html" title="자바 훑어보기: Run-through of Java Programming Language" />
+      <link href="https://soonjune.github.io/Run-through-of-Java" rel="alternate" type="text/html" title="자바 훑어보기: Run-through of Java Programming Language" />
       <published>2020-08-10T20:00:00+09:00</published>
       <updated>2020-08-10T20:00:00+09:00</updated>
-      <id>http://localhost:4000/Run-through-of-Java</id>
-      <content type="html" xml:base="http://localhost:4000/Run-through-of-Java">&lt;p&gt;삼성 SDS 대학생 알고리즘 특강이 시작됐다. 1주일간은 자바, 1주일 간은 C++로 배운다고 한다. 자바를 거의 안 다뤄서 Codecademy에서 자바 부분을 쭉 훑었다. 주요 내용을 정리해보고자 한다.&lt;/p&gt;
+      <id>https://soonjune.github.io/Run-through-of-Java</id>
+      <content type="html" xml:base="https://soonjune.github.io/Run-through-of-Java">&lt;p&gt;삼성 SDS 대학생 알고리즘 특강이 시작됐다. 1주일간은 자바, 1주일 간은 C++로 배운다고 한다. 자바를 거의 안 다뤄서 Codecademy에서 자바 부분을 쭉 훑었다. 주요 내용을 정리해보고자 한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;i-introduction&quot;&gt;I. Introduction&lt;/h2&gt;
 &lt;ol&gt;
