@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2020-10-12T13:03:31+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">4. Subspace</title><link href="https://soonjune.github.io/Subspace" rel="alternate" type="text/html" title="4. Subspace" /><published>2020-10-10T22:00:00+09:00</published><updated>2020-10-10T22:00:00+09:00</updated><id>https://soonjune.github.io/Subspace</id><content type="html" xml:base="https://soonjune.github.io/Subspace">&lt;p&gt;오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-05T23:22:05+09:00</updated><id>http://localhost:4000/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">4. Subspace</title><link href="http://localhost:4000/Linear-Algebra" rel="alternate" type="text/html" title="4. Subspace" /><published>2020-10-10T22:00:00+09:00</published><updated>2020-10-10T22:00:00+09:00</updated><id>http://localhost:4000/Linear-Algebra</id><content type="html" xml:base="http://localhost:4000/Linear-Algebra">&lt;p&gt;서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 &lt;a href=&quot;https://mml-book.github.io/book/mml-book.pdf&quot;&gt;Mathematics for Machine Learning&lt;/a&gt;이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-책-소개-intro&quot;&gt;I. 책 소개 (Intro)&lt;/h3&gt;
+&lt;p&gt;교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;프로그래밍 언어 및 데이터 분석 도구&lt;/li&gt;
+  &lt;li&gt;대규모 컴퓨팅 및 그와 관련된 프레임워크&lt;/li&gt;
+  &lt;li&gt;수학, 통계 지식
+이 책에서는 마지막 부분, 즉 수학과 연관된 부분을 다룬다. 모델 자체의 알고리즘에 초점을 맞추기보다는 수학적인 개념과 실용적인 궁금증을 해결하고자 노력했다고 저자는 밝히고 있다.
+    &lt;h4 id=&quot;핵심-단어-데이터data-모델model-학습learning&quot;&gt;핵심 단어: 데이터(data), 모델(model), 학습(learning)&lt;/h4&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ii-선형대수-linear-algebra&quot;&gt;II. 선형대수 (Linear Algebra)&lt;/h3&gt;
+&lt;p&gt;(1) Geometric vectors / Polynomials =&amp;gt; They are both vectors. Audio signals, elements of $R^n are vectors.
+(2) Closure(닫힘) - 그 집합의 원소와 관계가 있는 원소가 항상 그 집합에 속한다는 성질이다.
+&lt;img src=&quot;https://miro.medium.com/max/4800/1*5haUfmOWQUh9N353hMy9KQ.png&quot; alt=&quot;mind-map&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;21-연립-일차-방정식-systems-of-linear-equations&quot;&gt;2.1 연립 일차 방정식 (Systems of Linear Equations)&lt;/h3&gt;
+&lt;p&gt;해는 없거나 / 하나만 존재하거나 / 무수히 많을 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;22-행렬-matrices&quot;&gt;2.2 행렬 (Matrices)&lt;/h3&gt;
+&lt;p&gt;연립 일차 방정식을 행렬을 이용해서 간결하게 표현할 수 있다. &lt;br /&gt;
+행렬은 또한 선형 변환(Linear mapping)이라는 함수를 표현할 수 있다. &lt;br /&gt;
+행렬의 덧셈과 곱셈 정의. 곱셈에 대하여 교환법칙이 성립하지 않는다.&lt;/p&gt;
+
+&lt;h5 id=&quot;cf-아인슈타인-표기법&quot;&gt;cf. 아인슈타인 표기법&lt;/h5&gt;
+&lt;p&gt;np.einsum을 이용해서 나타낼 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;222-역행렬과-전치행렬-inverse-and-transpose&quot;&gt;2.2.2 역행렬과 전치행렬 (Inverse and Transpose)&lt;/h3&gt;
+&lt;p&gt;행렬 A의 역행렬이 존재하는 경우 regular/invertible/nonsingular라고 부름. &lt;br /&gt;
+역행렬이 존재하면 고유(unique)하다.&lt;/p&gt;
+
+&lt;p&gt;Theorem 증명&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;(Uniqueness of Inverse Matrix) If B and C are both inverses of an n × n matrix A, then B = C.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$ B = B I_n = B(A C) = (B A)C =I_nC = C.$
+결합 법칙을 이용해서 증명이 가능하다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If $AB = I$ then $BA = I$
+A, B를 n 정사각행렬이라 하고 n-dimensional 벡터 공간을 정의하면 AB의 range는 full space. 따라서 B의 range도 dimension n이다. &lt;br /&gt;
+$𝐵=𝐵𝐼=𝐵(𝐴𝐵)=(𝐵𝐴)𝐵$. By the distributive law, $(𝐼−𝐵𝐴)𝐵=0$. B는 full range이므로 I-BA가 영행렬이 되어야 한다. 따라서 I = BA.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;=&amp;gt; full rank이면 invertible하다. &lt;a href=&quot;https://sharmaeklavya2.github.io/theoremdep/nodes/linear-algebra/matrices/full-rank-inv.html&quot;&gt;증명&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;이외에도 augmented matrix를 Gaussian eliminiation을 통해서 Row-Echelon Form으로 변환한 뒤 연랍 일차 방정식을 푸는 방법에 대해서 공부하였다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 Mathematics for Machine Learning이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.</summary></entry><entry><title type="html">4. Subspace</title><link href="http://localhost:4000/Subspace" rel="alternate" type="text/html" title="4. Subspace" /><published>2020-10-10T22:00:00+09:00</published><updated>2020-10-10T22:00:00+09:00</updated><id>http://localhost:4000/Subspace</id><content type="html" xml:base="http://localhost:4000/Subspace">&lt;p&gt;오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
 &lt;/script&gt;
@@ -67,7 +116,7 @@ P = Ax = A(A^TA)^(-1)A^Tb&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P^2 = P&lt;/script&gt; &lt;br /&gt;
 Application: Least squares fitting by a line &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.</summary></entry><entry><title type="html">3. Determinant</title><link href="https://soonjune.github.io/Determinants" rel="alternate" type="text/html" title="3. Determinant" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>https://soonjune.github.io/Determinants</id><content type="html" xml:base="https://soonjune.github.io/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
+&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.</summary></entry><entry><title type="html">3. Determinant</title><link href="http://localhost:4000/Determinants" rel="alternate" type="text/html" title="3. Determinant" /><published>2020-10-04T22:00:00+09:00</published><updated>2020-10-04T22:00:00+09:00</updated><id>http://localhost:4000/Determinants</id><content type="html" xml:base="http://localhost:4000/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다.
 유명한 &lt;a href=&quot;https://www.youtube.com/watch?v=srxexLishgY&quot;&gt;Gilbert Strang 선생님의 MIT 강의&lt;/a&gt;를 나만의 말로 정리해 보았다.&lt;/p&gt;
 
@@ -101,7 +150,7 @@ Determinant is Linear Each Row &lt;br /&gt;
 &lt;script type=&quot;math/tex&quot;&gt;AC^T = (detA)I&lt;/script&gt;임을 보이면 된다. 행렬곱의 대각선은 detA가 되고 나머지는 0이 된다는 것을 알 수 있다.&lt;/p&gt;
 
 &lt;h3 id=&quot;cramers-rule&quot;&gt;Cramer’s Rule&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/4b063cb0d9acc0aed7f58ad881d845a2e2598e7f&quot; /&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자. 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다. 유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.</summary></entry><entry><title type="html">Pythonic Thinking(4) 파이썬 효율적으로 사용하기</title><link href="https://soonjune.github.io/Effective-Python1_4" rel="alternate" type="text/html" title="Pythonic Thinking(4) 파이썬 효율적으로 사용하기" /><published>2020-09-01T23:30:00+09:00</published><updated>2020-09-01T23:30:00+09:00</updated><id>https://soonjune.github.io/Effective-Python1_4</id><content type="html" xml:base="https://soonjune.github.io/Effective-Python1_4">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 10번 팁을 간단하게 요약해보자. 개학도 해서 일찍 자야하고 10번 팁이 긴 편이라 하나만 정리하자.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/4b063cb0d9acc0aed7f58ad881d845a2e2598e7f&quot; /&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자. 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다. 유명한 Gilbert Strang 선생님의 MIT 강의를 나만의 말로 정리해 보았다.</summary></entry><entry><title type="html">Pythonic Thinking(4) 파이썬 효율적으로 사용하기</title><link href="http://localhost:4000/Effective-Python1_4" rel="alternate" type="text/html" title="Pythonic Thinking(4) 파이썬 효율적으로 사용하기" /><published>2020-09-01T23:30:00+09:00</published><updated>2020-09-01T23:30:00+09:00</updated><id>http://localhost:4000/Effective-Python1_4</id><content type="html" xml:base="http://localhost:4000/Effective-Python1_4">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 10번 팁을 간단하게 요약해보자. 개학도 해서 일찍 자야하고 10번 팁이 긴 편이라 하나만 정리하자.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;할당(Assignment; =) 표현으로 인한 반복을 피해라 (Python 3.8)&lt;/li&gt;
@@ -133,7 +182,7 @@ Determinant is Linear Each Row &lt;br /&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">첫번째 챕터 Pythonic Thinking의 10번 팁을 간단하게 요약해보자. 개학도 해서 일찍 자야하고 10번 팁이 긴 편이라 하나만 정리하자.</summary></entry><entry><title type="html">부자되기 도서 2개 소개</title><link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" /><published>2020-08-31T23:30:00+09:00</published><updated>2020-08-31T23:30:00+09:00</updated><id>https://soonjune.github.io/how-to-become-rich</id><content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">첫번째 챕터 Pythonic Thinking의 10번 팁을 간단하게 요약해보자. 개학도 해서 일찍 자야하고 10번 팁이 긴 편이라 하나만 정리하자.</summary></entry><entry><title type="html">부자되기 도서 2개 소개</title><link href="http://localhost:4000/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" /><published>2020-08-31T23:30:00+09:00</published><updated>2020-08-31T23:30:00+09:00</updated><id>http://localhost:4000/how-to-become-rich</id><content type="html" xml:base="http://localhost:4000/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;how-to-get-rich-one-of-the-worlds-greatest-entrepreneurs-shares-his-secrets&quot;&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/1837402.How_to_Get_Rich&quot;&gt;How to Get Rich: One of the World’s Greatest Entrepreneurs Shares His Secrets&lt;/a&gt;&lt;/h3&gt;
 
@@ -155,7 +204,7 @@ Determinant is Linear Each Row &lt;br /&gt;
 &lt;p&gt;위 아버지 대부터 부자들을 연구해온 토머스 스탠리 박사가 통계를 기반으로 부자에 관한 내용을 설명한다.
 부를 축적하는 자들과 그렇지 못한 두 부류로 나누어 설명하고 있다. 상세한 내용은 &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Millionaire_Next_Door&quot;&gt;위키백과&lt;/a&gt;에도 있으니 참조하면 된다.&lt;/p&gt;
 
-&lt;p&gt;다만, 앞서 소개한 책과의 차이를 저축과 근검함을 강조하고 있다는 것에서 볼 수 있다. 부자가 되는 것에 답은 없지만 결국 돈이라는 것도 행복해지기 위한 수단임을 명심하자.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="book-review" /><summary type="html">이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.</summary></entry><entry><title type="html">Pythonic Thinking(3) 파이썬 효율적으로 사용하기</title><link href="https://soonjune.github.io/Effective-Python1_3" rel="alternate" type="text/html" title="Pythonic Thinking(3) 파이썬 효율적으로 사용하기" /><published>2020-08-30T23:30:00+09:00</published><updated>2020-08-30T23:30:00+09:00</updated><id>https://soonjune.github.io/Effective-Python1_3</id><content type="html" xml:base="https://soonjune.github.io/Effective-Python1_3">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.&lt;/p&gt;
+&lt;p&gt;다만, 앞서 소개한 책과의 차이를 저축과 근검함을 강조하고 있다는 것에서 볼 수 있다. 부자가 되는 것에 답은 없지만 결국 돈이라는 것도 행복해지기 위한 수단임을 명심하자.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="book-review" /><summary type="html">이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.</summary></entry><entry><title type="html">Pythonic Thinking(3) 파이썬 효율적으로 사용하기</title><link href="http://localhost:4000/Effective-Python1_3" rel="alternate" type="text/html" title="Pythonic Thinking(3) 파이썬 효율적으로 사용하기" /><published>2020-08-30T23:30:00+09:00</published><updated>2020-08-30T23:30:00+09:00</updated><id>http://localhost:4000/Effective-Python1_3</id><content type="html" xml:base="http://localhost:4000/Effective-Python1_3">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Range 대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;Enumerate&lt;/code&gt;를 쓰자.
@@ -186,7 +235,7 @@ Determinant is Linear Each Row &lt;br /&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.</summary></entry><entry><title type="html">Pythonic Thinking(2) 파이썬 효율적으로 사용하기</title><link href="https://soonjune.github.io/Effective-Python1_2" rel="alternate" type="text/html" title="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" /><published>2020-08-27T23:30:00+09:00</published><updated>2020-08-27T23:30:00+09:00</updated><id>https://soonjune.github.io/Effective-Python1_2</id><content type="html" xml:base="https://soonjune.github.io/Effective-Python1_2">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.</summary></entry><entry><title type="html">Pythonic Thinking(2) 파이썬 효율적으로 사용하기</title><link href="http://localhost:4000/Effective-Python1_2" rel="alternate" type="text/html" title="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" /><published>2020-08-27T23:30:00+09:00</published><updated>2020-08-27T23:30:00+09:00</updated><id>http://localhost:4000/Effective-Python1_2</id><content type="html" xml:base="http://localhost:4000/Effective-Python1_2">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;F-String을 C-Style Format, str.format보다 우선해서 사용하자.
@@ -237,7 +286,7 @@ Determinant is Linear Each Row &lt;br /&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.</summary></entry><entry><title type="html">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</title><link href="https://soonjune.github.io/Effective-Python1_1" rel="alternate" type="text/html" title="Pythonic Thinking(1) 파이썬 효율적으로 사용하기" /><published>2020-08-26T23:30:00+09:00</published><updated>2020-08-26T23:30:00+09:00</updated><id>https://soonjune.github.io/Effective-Python1_1</id><content type="html" xml:base="https://soonjune.github.io/Effective-Python1_1">&lt;p&gt;유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.</summary></entry><entry><title type="html">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</title><link href="http://localhost:4000/Effective-Python1_1" rel="alternate" type="text/html" title="Pythonic Thinking(1) 파이썬 효율적으로 사용하기" /><published>2020-08-26T23:30:00+09:00</published><updated>2020-08-26T23:30:00+09:00</updated><id>http://localhost:4000/Effective-Python1_1</id><content type="html" xml:base="http://localhost:4000/Effective-Python1_1">&lt;p&gt;유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.&lt;/p&gt;
 
 &lt;p&gt;첫번째 챕터는 Pythonic Thinking이다. Pythonic이라는 것이 형용사로 만들어질만큼 C나 Java와는 다른 특성을 지는 것을 알 수 있다. Pythonic의 정의를 찾아보니 Stack Overflow에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Exploiting the features of the Python language to produce code that is clear, concise and maintainable.&lt;/code&gt;이라는 설명이 나온다. 즉, 파이썬 코드의 간결하고 명확한 특성을 나타내는 말이다. Pythonic Thinking은 이러한 명확한 코드를 구현하기 위한 생각 방식이라고 볼 수 있다.&lt;/p&gt;
 
@@ -279,7 +328,7 @@ Determinant is Linear Each Row &lt;br /&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.</summary></entry><entry><title type="html">면접 대비 - 인공지능, 기계학습 개념 복습</title><link href="https://soonjune.github.io/AI-Review" rel="alternate" type="text/html" title="면접 대비 - 인공지능, 기계학습 개념 복습" /><published>2020-08-17T23:30:00+09:00</published><updated>2020-08-17T23:30:00+09:00</updated><id>https://soonjune.github.io/AI-Review</id><content type="html" xml:base="https://soonjune.github.io/AI-Review">&lt;p&gt;면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.</summary></entry><entry><title type="html">면접 대비 - 인공지능, 기계학습 개념 복습</title><link href="http://localhost:4000/AI-Review" rel="alternate" type="text/html" title="면접 대비 - 인공지능, 기계학습 개념 복습" /><published>2020-08-17T23:30:00+09:00</published><updated>2020-08-17T23:30:00+09:00</updated><id>http://localhost:4000/AI-Review</id><content type="html" xml:base="http://localhost:4000/AI-Review">&lt;p&gt;면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;1-machine-learning-정의&quot;&gt;1. Machine Learning 정의&lt;/h2&gt;
 &lt;h3 id=&quot;well-posed-learning-problem-by-tom-mitchell&quot;&gt;Well-posed learning problem by Tom Mitchell&lt;/h3&gt;
@@ -377,7 +426,7 @@ R, T를 모름&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;RNN - A recurrent neural network (RNN) is a class of artificial neural networks where connections between nodes form a directed graph along a temporal sequence.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="interview" /><summary type="html">면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.</summary></entry><entry><title type="html">IO speed - 입출력 속도 비교 및 자바 입출력 방법</title><link href="https://soonjune.github.io/IO" rel="alternate" type="text/html" title="IO speed - 입출력 속도 비교 및 자바 입출력 방법" /><published>2020-08-12T23:30:00+09:00</published><updated>2020-08-12T23:30:00+09:00</updated><id>https://soonjune.github.io/IO</id><content type="html" xml:base="https://soonjune.github.io/IO">&lt;p&gt;오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="interview" /><summary type="html">면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.</summary></entry><entry><title type="html">IO speed - 입출력 속도 비교 및 자바 입출력 방법</title><link href="http://localhost:4000/IO" rel="alternate" type="text/html" title="IO speed - 입출력 속도 비교 및 자바 입출력 방법" /><published>2020-08-12T23:30:00+09:00</published><updated>2020-08-12T23:30:00+09:00</updated><id>http://localhost:4000/IO</id><content type="html" xml:base="http://localhost:4000/IO">&lt;p&gt;오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.&lt;/p&gt;
 
 &lt;p&gt;알고리즘 문제를 풀다보면 입출력으로 인해 시간 초과가 발생하는 경우가 있다.   &lt;br /&gt;
 백준 사이트에서 입출력 속도를 비교한 것을 보고 어떤 입출력을 사용하는 것이 속도 측면에서 나은지 살펴보자.  &lt;br /&gt;
@@ -399,54 +448,4 @@ R, T를 모름&lt;/p&gt;
 
 &lt;h3 id=&quot;c의-경우&quot;&gt;C++의 경우&lt;/h3&gt;
 &lt;p&gt;C++은 출력에서 cout « i « endl을 사용할 경우 시간 초과가 날 수 있다. &lt;code class=&quot;highlighter-rouge&quot;&gt;endl&lt;/code&gt;대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;\n&quot;&lt;/code&gt;을 이용하자.    &lt;br /&gt;
-C++에서 빠른 입출력을 원할 경우 C 표준 입출력을 동기화하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;ios_bas::sync_with_stdio(false);&lt;/code&gt; 설정을 해주고 &lt;code class=&quot;highlighter-rouge&quot;&gt;cin.tie(null);&lt;/code&gt;을 통해 cin과 cout을 분리해준다. 물론 그냥 C의 표준입출력 scanf/printf를 사용해도 된다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="algorithm" /><category term="java" /><summary type="html">오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.</summary></entry><entry><title type="html">2. Matrix Algebra (2)</title><link href="https://soonjune.github.io/Matrix-Algebra-1" rel="alternate" type="text/html" title="2. Matrix Algebra (2)" /><published>2020-08-11T22:00:00+09:00</published><updated>2020-08-11T22:00:00+09:00</updated><id>https://soonjune.github.io/Matrix-Algebra-1</id><content type="html" xml:base="https://soonjune.github.io/Matrix-Algebra-1">&lt;p&gt;선형대수 공부 3일차 - 행렬에 대해 알아보자&lt;/p&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
-&lt;/script&gt;
-
-&lt;h2 id=&quot;21-matrix-operations&quot;&gt;2.1 Matrix Operations&lt;/h2&gt;
-&lt;h3 id=&quot;theorem-1&quot;&gt;Theorem 1&lt;/h3&gt;
-&lt;p&gt;덧셈, 뺄셈, scalar multiple은 교환, 결합, 분배 법칙이 성립한다.&lt;/p&gt;
-
-&lt;p&gt;행렬의 곱셈은 조금 다른데, linear transformation, function으로 이해할 수 있다.  &lt;br /&gt;
-따라서 곱할 수록 span을 작아진다. 즉, span(A)가 span(AB)를 포함한다.&lt;/p&gt;
-&lt;h3 id=&quot;theorem-2&quot;&gt;Theorem 2&lt;/h3&gt;
-&lt;p&gt;곱셈은 결합법칙, 오른쪽/왼쪽 분배 법칙이 성립하나 교환법칙은 성립하지 않는다. 즉, AB와 BA는 같지 않을 수 있다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Powers of a Matrix  &lt;br /&gt;
-A가 &lt;script type=&quot;math/tex&quot;&gt;nXn&lt;/script&gt; 행렬이라면 &lt;script type=&quot;math/tex&quot;&gt;A^n&lt;/script&gt;과 같이 행렬의 거듭제곱을 정의할 수 있다. &lt;script type=&quot;math/tex&quot;&gt;A^0 = I&lt;/script&gt;로 정의한다.&lt;/li&gt;
-  &lt;li&gt;Transpose  &lt;br /&gt;
-행렬의 열과 행을 뒤바꾼 것이라 보면 된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;a. &lt;script type=&quot;math/tex&quot;&gt;(A^T)^T = A&lt;/script&gt;    &lt;br /&gt;
-b. &lt;script type=&quot;math/tex&quot;&gt;(A + B)^T = A^T + B^T&lt;/script&gt;   &lt;br /&gt;
-c. For any scalar &lt;script type=&quot;math/tex&quot;&gt;r, (rA)^T = rA^T&lt;/script&gt;   &lt;br /&gt;
-d. &lt;script type=&quot;math/tex&quot;&gt;(AB)^T = B^TA^T&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;22-the-inverse-of-a-matrix&quot;&gt;2.2 The Inverse of a Matrix&lt;/h2&gt;
-&lt;h3 id=&quot;theorem-4&quot;&gt;Theorem 4&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Invertible_matrix#Inversion_of_2_%C3%97_2_matrices&quot;&gt;2X2 행렬의 역행렬 공식&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;theorem-5&quot;&gt;Theorem 5&lt;/h3&gt;
-&lt;p&gt;Ax = b이고 A가 역행렬이 존재하면 하나의 유일해 &lt;script type=&quot;math/tex&quot;&gt;x=A^{-1}b&lt;/script&gt;를 지닌다.&lt;/p&gt;
-
-&lt;p&gt;참고) at least 1 solution &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-&lt;=&gt; %]]&gt;&lt;/script&gt; no free variable&lt;/p&gt;
-&lt;h3 id=&quot;theorem-6&quot;&gt;Theorem 6&lt;/h3&gt;
-&lt;p&gt;a. &lt;script type=&quot;math/tex&quot;&gt;(A^{-1})^{-1} = A&lt;/script&gt;   &lt;br /&gt;
-b. &lt;script type=&quot;math/tex&quot;&gt;(AB)^{-1} = B^{-1}A{-1}&lt;/script&gt;   &lt;br /&gt;
-c. &lt;script type=&quot;math/tex&quot;&gt;(A^T)^{-1} = (A^{-1})^T&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;theorem-7&quot;&gt;Theorem 7&lt;/h3&gt;
-&lt;p&gt;nXn 행렬이 &lt;script type=&quot;math/tex&quot;&gt;I_n&lt;/script&gt;과 row equivalent, 즉 echelon row reduction을 통해 &lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt;로 만들 수 있다면 역행렬이 존재한다.  &lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;[A|I]&lt;/script&gt; -&amp;gt; &lt;script type=&quot;math/tex&quot;&gt;[I|C]&lt;/script&gt;로 row reduction을 거치면 C가 역행렬이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;23-characterizations-of-invertible-matrices&quot;&gt;2.3 Characterizations of Invertible Matrices&lt;/h2&gt;
-&lt;h3 id=&quot;theorem-8&quot;&gt;Theorem 8&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/YUK4bQv.png&quot; align=&quot;center&quot; sytle=&quot;height: 100px;&quot; /&gt;&lt;/p&gt;
-&lt;div&gt;
-&lt;img src=&quot;https://i.imgur.com/ulOSO1I.png&quot; align=&quot;left&quot; /&gt;
-&lt;img src=&quot;https://i.imgur.com/AwTwn4T.png&quot; align=&quot;right&quot; /&gt;
-&lt;/div&gt;
-&lt;p&gt;위와 같은 조건을 하나만 만족해도 역행렬이 존재하고 하나만 위배해도 역행렬이 존재하지 않는다. 마치 고리와 같이 상호 연결되어 있고 증명과정도 하나 하나 연결하면서 확인할 수 있다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">선형대수 공부 3일차 - 행렬에 대해 알아보자</summary></entry></feed>
+C++에서 빠른 입출력을 원할 경우 C 표준 입출력을 동기화하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;ios_bas::sync_with_stdio(false);&lt;/code&gt; 설정을 해주고 &lt;code class=&quot;highlighter-rouge&quot;&gt;cin.tie(null);&lt;/code&gt;을 통해 cin과 cout을 분리해준다. 물론 그냥 C의 표준입출력 scanf/printf를 사용해도 된다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="algorithm" /><category term="java" /><summary type="html">오늘은 간단히 입출력 방법에 대해 정리해보고자 한다.</summary></entry></feed>

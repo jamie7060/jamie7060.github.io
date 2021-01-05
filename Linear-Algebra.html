@@ -11,7 +11,7 @@
 
 
 
-    <title>Pythonic Thinking(2) 파이썬 효율적으로 사용하기</title>
+    <title>4. Subspace</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -48,30 +48,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Personal Blog of Park Seung Joon" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/Effective-Python1_2" />
+    <link rel="canonical" href="http://localhost:4000/Linear-Algebra" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Seung Joon's Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" />
-    <meta property="og:description" content="첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자. F-String을 C-Style Format, str.format보다 우선해서 사용하자. Formatting은 미리 정의된 텍스트와 데이터 값을 사람이 이해할 수 있게 합쳐서 하나의 문자열로 표현하는 과정을 말한다. a = 0b10111011 b = 0xc5f print('Binary is %d, hex is %d' % (a, b)) 위 코드에서 % 옆의 부분을" />
-    <meta property="og:url" content="http://localhost:4000/Effective-Python1_2" />
+    <meta property="og:title" content="4. Subspace" />
+    <meta property="og:description" content="서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 Mathematics for Machine Learning이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다. I. 책 소개 (Intro) 교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다. 프로그래밍 언어 및 데이터 분석" />
+    <meta property="og:url" content="http://localhost:4000/Linear-Algebra" />
     <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-08-27T23:30:00+09:00" />
-    <meta property="article:modified_time" content="2020-08-27T23:30:00+09:00" />
-    <meta property="article:tag" content="Python" />
+    <meta property="article:published_time" content="2020-10-10T22:00:00+09:00" />
+    <meta property="article:modified_time" content="2020-10-10T22:00:00+09:00" />
+    <meta property="article:tag" content="Linear-algebra" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" />
-    <meta name="twitter:description" content="첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자. F-String을 C-Style Format, str.format보다 우선해서 사용하자. Formatting은 미리 정의된 텍스트와 데이터 값을 사람이 이해할 수 있게 합쳐서 하나의 문자열로 표현하는 과정을 말한다. a = 0b10111011 b = 0xc5f print('Binary is %d, hex is %d' % (a, b)) 위 코드에서 % 옆의 부분을" />
+    <meta name="twitter:title" content="4. Subspace" />
+    <meta name="twitter:description" content="서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 Mathematics for Machine Learning이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다. I. 책 소개 (Intro) 교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다. 프로그래밍 언어 및 데이터 분석" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Seung Joon's Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Python" />
+    <meta name="twitter:data2" content="Linear-algebra" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -86,7 +86,7 @@
         "name": "Seung Joon's Blog",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/Effective-Python1_2",
+    "url": "http://localhost:4000/Linear-Algebra",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/assets/images/blog-cover.jpg",
@@ -95,9 +95,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/Effective-Python1_2"
+        "@id": "http://localhost:4000/Linear-Algebra"
     },
-    "description": "첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자. F-String을 C-Style Format, str.format보다 우선해서 사용하자. Formatting은 미리 정의된 텍스트와 데이터 값을 사람이 이해할 수 있게 합쳐서 하나의 문자열로 표현하는 과정을 말한다. a = 0b10111011 b = 0xc5f print('Binary is %d, hex is %d' % (a, b)) 위 코드에서 % 옆의 부분을"
+    "description": "서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 Mathematics for Machine Learning이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다. I. 책 소개 (Intro) 교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다. 프로그래밍 언어 및 데이터 분석"
 }
     </script>
 
@@ -110,7 +110,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="4. Subspace" href="/feed.xml" />
 
 
 </head>
@@ -166,79 +166,81 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-python post tag-python no-image">
+        <article class="post-full  tag-linear-algebra tag-math post tag-linear-algebra no-image">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="27 August 2020">27 August 2020</time>
+                    <time class="post-full-meta-date" datetime="10 October 2020">10 October 2020</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/python/'>PYTHON</a>
+                               <a href='/tag/linear-algebra/'>LINEAR-ALGEBRA</a>,
+                            
+                        
+                            
+                               <a href='/tag/math/'>MATH</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">Pythonic Thinking(2) 파이썬 효율적으로 사용하기</h1>
+                <h1 class="post-full-title">4. Subspace</h1>
             </header>
 
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.</p>
+                    <p>서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 <a href="https://mml-book.github.io/book/mml-book.pdf">Mathematics for Machine Learning</a>이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.</p>
 
-<ol>
-  <li>F-String을 C-Style Format, str.format보다 우선해서 사용하자.
- Formatting은 미리 정의된 텍스트와 데이터 값을 사람이 이해할 수 있게 합쳐서 하나의 문자열로 표현하는 과정을 말한다.
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="n">b10111011</span>
- <span class="n">b</span> <span class="o">=</span> <span class="mh">0xc5f</span>
- <span class="k">print</span><span class="p">(</span><span class="s">'Binary is </span><span class="si">%</span><span class="s">d, hex is </span><span class="si">%</span><span class="s">d'</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
-</code></pre></div>    </div>
-    <p>위 코드에서 % 옆의 부분을 format string이라고 부르며, %d 부분을 오른쪽의 값들이 대체한다. %는 C의 <code class="highlighter-rouge">printf</code> 함수로부터 유래한다. 따라서 이러한 format을 C-style format이라 부른다. C 언어를 사용하던 프로그래머라면 이러한 C-style format string을 사용하는데 익숙하겠지만 네가지 문제가 존재한다.</p>
-    <ol>
-      <li>데이터의 타입이 바뀌면 에러를 발생시킨다.</li>
-      <li>읽기 어려워 수정이 쉽지 않다.</li>
-      <li>똑같은 format string을 여러번 사용하고 싶을 때, 오른쪽의 tuple을 반복해야 한다.</li>
-      <li>3번 문제 해결을 위해 dictionary를 이용할 수 있지만 오른쪽의 key를 최소 두번 지정해줘야 한다.(오른쪽의 format specifier에서 한번, dictionary에서 한번)</li>
-    </ol>
-
-    <p>Python3에서부터 str.format을 이용하여 <code class="highlighter-rouge">%</code> 대신 <code class="highlighter-rouge">{}</code>을 placeholder로 사용할 수 있게 됐다.   <br />
- 하지만 이 또한 위의 2번, 4번 문제를 해결하지 못한다는 문제가 있다.</p>
-
-    <p>따라서 간결하면서도 강력한 f-string을 사용하자. f-string을 이용하면 아래와 같이 format specifier 안에 직접 파이썬 표현을 추가할 수 있어 유용하다.</p>
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pantry</span><span class="p">):</span>
-     <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'#{i+1}: '</span>
-     <span class="n">f</span><span class="s">'{item.title():&lt;10s} = '</span>
-     <span class="n">f</span><span class="s">'{round(count)}'</span><span class="p">)</span>
-</code></pre></div>    </div>
+<h3 id="i-책-소개-intro">I. 책 소개 (Intro)</h3>
+<p>교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다.</p>
+<ul>
+  <li>프로그래밍 언어 및 데이터 분석 도구</li>
+  <li>대규모 컴퓨팅 및 그와 관련된 프레임워크</li>
+  <li>수학, 통계 지식
+이 책에서는 마지막 부분, 즉 수학과 연관된 부분을 다룬다. 모델 자체의 알고리즘에 초점을 맞추기보다는 수학적인 개념과 실용적인 궁금증을 해결하고자 노력했다고 저자는 밝히고 있다.
+    <h4 id="핵심-단어-데이터data-모델model-학습learning">핵심 단어: 데이터(data), 모델(model), 학습(learning)</h4>
   </li>
-  <li>복잡한 표현 대신 헬퍼 함수를 사용하자.
-    <ul>
-      <li>한 줄로 된 복잡한 코드보다는 반복 사용되는 로직인 경우 헬퍼 함수를 사용하는 것이 명확하다.</li>
-      <li><code class="highlighter-rouge">if/else</code>를 하용하는 것이 Boolean <code class="highlighter-rouge">or</code> 또는 <code class="highlighter-rouge">and</code>를 사용하는 것보다 가독성을 높인다.</li>
-    </ul>
-  </li>
-  <li>Multiple Assignment Unpacking을 Indexing 대신 사용하자.
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">item</span> <span class="o">=</span> <span class="p">(</span><span class="s">'Peanut butter'</span><span class="p">,</span> <span class="s">'Jelly'</span><span class="p">)</span>
- <span class="c"># Indexing 예시</span>
- <span class="n">first</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
- <span class="n">second</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
- <span class="k">print</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="s">'and'</span><span class="p">,</span> <span class="n">second</span><span class="p">)</span>
- <span class="c"># Mulitple Assignment Unpacking 예시</span>
- <span class="n">first</span><span class="p">,</span> <span class="n">second</span> <span class="o">=</span> <span class="n">item</span>
- <span class="k">print</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="s">'and'</span><span class="p">,</span> <span class="n">second</span><span class="p">)</span>
-</code></pre></div>    </div>
-    <p>Unpacking을 통해 <code class="highlighter-rouge">a, b = b, a</code>와 같이 swap하는 것도 유용하다.</p>
-    <ul>
-      <li>list, str, tuple 같은 모든 iterable에 unpacking을 사용할 수 있다. (iterable 안에 iterable에 대해서도 사용 가능)</li>
-      <li>Indexing 대신 unpacking을 사용해서 코드의 명확성을 높이자.</li>
-    </ul>
-  </li>
-</ol>
+</ul>
 
-<p><em>출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.</em></p>
+<h3 id="ii-선형대수-linear-algebra">II. 선형대수 (Linear Algebra)</h3>
+<p>(1) Geometric vectors / Polynomials =&gt; They are both vectors. Audio signals, elements of $R^n are vectors.
+(2) Closure(닫힘) - 그 집합의 원소와 관계가 있는 원소가 항상 그 집합에 속한다는 성질이다.
+<img src="https://miro.medium.com/max/4800/1*5haUfmOWQUh9N353hMy9KQ.png" alt="mind-map" /></p>
+
+<h3 id="21-연립-일차-방정식-systems-of-linear-equations">2.1 연립 일차 방정식 (Systems of Linear Equations)</h3>
+<p>해는 없거나 / 하나만 존재하거나 / 무수히 많을 수 있다.</p>
+
+<h3 id="22-행렬-matrices">2.2 행렬 (Matrices)</h3>
+<p>연립 일차 방정식을 행렬을 이용해서 간결하게 표현할 수 있다. <br />
+행렬은 또한 선형 변환(Linear mapping)이라는 함수를 표현할 수 있다. <br />
+행렬의 덧셈과 곱셈 정의. 곱셈에 대하여 교환법칙이 성립하지 않는다.</p>
+
+<h5 id="cf-아인슈타인-표기법">cf. 아인슈타인 표기법</h5>
+<p>np.einsum을 이용해서 나타낼 수 있다.</p>
+
+<h3 id="222-역행렬과-전치행렬-inverse-and-transpose">2.2.2 역행렬과 전치행렬 (Inverse and Transpose)</h3>
+<p>행렬 A의 역행렬이 존재하는 경우 regular/invertible/nonsingular라고 부름. <br />
+역행렬이 존재하면 고유(unique)하다.</p>
+
+<p>Theorem 증명</p>
+<ul>
+  <li>(Uniqueness of Inverse Matrix) If B and C are both inverses of an n × n matrix A, then B = C.</li>
+</ul>
+
+<p>$ B = B I_n = B(A C) = (B A)C =I_nC = C.$
+결합 법칙을 이용해서 증명이 가능하다.</p>
+
+<ul>
+  <li>If $AB = I$ then $BA = I$
+A, B를 n 정사각행렬이라 하고 n-dimensional 벡터 공간을 정의하면 AB의 range는 full space. 따라서 B의 range도 dimension n이다. <br />
+$𝐵=𝐵𝐼=𝐵(𝐴𝐵)=(𝐵𝐴)𝐵$. By the distributive law, $(𝐼−𝐵𝐴)𝐵=0$. B는 full range이므로 I-BA가 영행렬이 되어야 한다. 따라서 I = BA.</li>
+</ul>
+
+<p>=&gt; full rank이면 invertible하다. <a href="https://sharmaeklavya2.github.io/theoremdep/nodes/linear-algebra/matrices/full-rank-inv.html">증명</a></p>
+
+<p>이외에도 augmented matrix를 Gaussian eliminiation을 통해서 Row-Echelon Form으로 변환한 뒤 연랍 일차 방정식을 푸는 방법에 대해서 공부하였다.</p>
 
 
                 </div>
@@ -303,9 +305,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'http://localhost:4000/Effective-Python1_2';
-                            this.page.identifier = '/Effective-Python1_2';
-                            this.page.title = 'Pythonic Thinking(2) 파이썬 효율적으로 사용하기';
+                            this.page.url = 'http://localhost:4000/Linear-Algebra';
+                            this.page.identifier = '/Linear-Algebra';
+                            this.page.title = '4. Subspace';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -339,7 +341,7 @@ into the {body} of the default.hbs template -->
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; Seung Joon's Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/python/">Python</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/linear-algebra/">Linear-algebra</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -349,28 +351,6 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/Effective-Python1_4">Pythonic Thinking(4) 파이썬 효율적으로 사용하기</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/Effective-Python1_3">Pythonic Thinking(3) 파이썬 효율적으로 사용하기</a></li>
-                                        
                                     
                                   
                                 
@@ -382,7 +362,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/Effective-Python1_1">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</a></li>
+                                            <li><a href="/Determinants">3. Determinant</a></li>
                                         
                                     
                                   
@@ -397,6 +377,35 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                 
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/Matrix-Algebra-1">2. Matrix Algebra</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/Linear-Equations-in-Linear-Algebra-2">1. Linear Equations in Linear Algebra (2)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
                                   
                                 
                                   
@@ -414,9 +423,9 @@ into the {body} of the default.hbs template -->
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/python/">
+                            <a href="/tag/linear-algebra/">
                                 
-                                    See all 3 posts  →
+                                    See all 5 posts  →
                                 
                             </a>
                         </footer>
@@ -426,51 +435,6 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template no-image">
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/Effective-Python1_3">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Python</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Pythonic Thinking(3) 파이썬 효율적으로 사용하기</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/jdj-logo.jpg" alt="Park Seung Joon" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/soonjune/">Park Seung Joon</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -479,17 +443,21 @@ into the {body} of the default.hbs template -->
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Effective-Python1_1">
+            <a class="post-card-content-link" href="/Subspace">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Python</span>
+                               <span class="post-card-tags">Linear-algebra</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Math</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</h2>
+                    <h2 class="post-card-title">4. Subspace</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -533,18 +501,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Pythonic Thinking(2) 파이썬 효율적으로 사용하기</div>
+    <div class="floating-header-title">4. Subspace</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Pythonic+Thinking%282%29+%ED%8C%8C%EC%9D%B4%EC%8D%AC+%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C+%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&amp;url=https://soonjune.github.io/Effective-Python1_2"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=4.+Subspace&amp;url=https://soonjune.github.io/Linear-Algebra"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://soonjune.github.io/Effective-Python1_2"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://soonjune.github.io/Linear-Algebra"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
