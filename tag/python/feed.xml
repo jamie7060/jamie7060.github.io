@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://soonjune.github.io/tag/python/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-05T23:26:23+09:00</updated>
-  <id>https://soonjune.github.io/tag/python/feed.xml</id>
+  <link href="http://localhost:4000/tag/python/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-01-05T23:35:08+09:00</updated>
+  <id>http://localhost:4000/tag/python/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Pythonic Thinking(4) 파이썬 효율적으로 사용하기</title>
-      <link href="https://soonjune.github.io/Effective-Python1_4" rel="alternate" type="text/html" title="Pythonic Thinking(4) 파이썬 효율적으로 사용하기" />
+      <link href="http://localhost:4000/Effective-Python1_4" rel="alternate" type="text/html" title="Pythonic Thinking(4) 파이썬 효율적으로 사용하기" />
       <published>2020-09-01T23:30:00+09:00</published>
       <updated>2020-09-01T23:30:00+09:00</updated>
-      <id>https://soonjune.github.io/Effective-Python1_4</id>
-      <content type="html" xml:base="https://soonjune.github.io/Effective-Python1_4">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 10번 팁을 간단하게 요약해보자. 개학도 해서 일찍 자야하고 10번 팁이 긴 편이라 하나만 정리하자.&lt;/p&gt;
+      <id>http://localhost:4000/Effective-Python1_4</id>
+      <content type="html" xml:base="http://localhost:4000/Effective-Python1_4">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 10번 팁을 간단하게 요약해보자. 개학도 해서 일찍 자야하고 10번 팁이 긴 편이라 하나만 정리하자.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;할당(Assignment; =) 표현으로 인한 반복을 피해라 (Python 3.8)&lt;/li&gt;
@@ -99,11 +99,11 @@
   
     <entry>
       <title type="html">Pythonic Thinking(3) 파이썬 효율적으로 사용하기</title>
-      <link href="https://soonjune.github.io/Effective-Python1_3" rel="alternate" type="text/html" title="Pythonic Thinking(3) 파이썬 효율적으로 사용하기" />
+      <link href="http://localhost:4000/Effective-Python1_3" rel="alternate" type="text/html" title="Pythonic Thinking(3) 파이썬 효율적으로 사용하기" />
       <published>2020-08-30T23:30:00+09:00</published>
       <updated>2020-08-30T23:30:00+09:00</updated>
-      <id>https://soonjune.github.io/Effective-Python1_3</id>
-      <content type="html" xml:base="https://soonjune.github.io/Effective-Python1_3">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.&lt;/p&gt;
+      <id>http://localhost:4000/Effective-Python1_3</id>
+      <content type="html" xml:base="http://localhost:4000/Effective-Python1_3">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 7-9번 팁을 간단하게 요약해보자.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Range 대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;Enumerate&lt;/code&gt;를 쓰자.
@@ -164,11 +164,11 @@
   
     <entry>
       <title type="html">Pythonic Thinking(2) 파이썬 효율적으로 사용하기</title>
-      <link href="https://soonjune.github.io/Effective-Python1_2" rel="alternate" type="text/html" title="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" />
+      <link href="http://localhost:4000/Effective-Python1_2" rel="alternate" type="text/html" title="Pythonic Thinking(2) 파이썬 효율적으로 사용하기" />
       <published>2020-08-27T23:30:00+09:00</published>
       <updated>2020-08-27T23:30:00+09:00</updated>
-      <id>https://soonjune.github.io/Effective-Python1_2</id>
-      <content type="html" xml:base="https://soonjune.github.io/Effective-Python1_2">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.&lt;/p&gt;
+      <id>http://localhost:4000/Effective-Python1_2</id>
+      <content type="html" xml:base="http://localhost:4000/Effective-Python1_2">&lt;p&gt;첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;F-String을 C-Style Format, str.format보다 우선해서 사용하자.
@@ -249,11 +249,11 @@
   
     <entry>
       <title type="html">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</title>
-      <link href="https://soonjune.github.io/Effective-Python1_1" rel="alternate" type="text/html" title="Pythonic Thinking(1) 파이썬 효율적으로 사용하기" />
+      <link href="http://localhost:4000/Effective-Python1_1" rel="alternate" type="text/html" title="Pythonic Thinking(1) 파이썬 효율적으로 사용하기" />
       <published>2020-08-26T23:30:00+09:00</published>
       <updated>2020-08-26T23:30:00+09:00</updated>
-      <id>https://soonjune.github.io/Effective-Python1_1</id>
-      <content type="html" xml:base="https://soonjune.github.io/Effective-Python1_1">&lt;p&gt;유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.&lt;/p&gt;
+      <id>http://localhost:4000/Effective-Python1_1</id>
+      <content type="html" xml:base="http://localhost:4000/Effective-Python1_1">&lt;p&gt;유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.&lt;/p&gt;
 
 &lt;p&gt;첫번째 챕터는 Pythonic Thinking이다. Pythonic이라는 것이 형용사로 만들어질만큼 C나 Java와는 다른 특성을 지는 것을 알 수 있다. Pythonic의 정의를 찾아보니 Stack Overflow에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Exploiting the features of the Python language to produce code that is clear, concise and maintainable.&lt;/code&gt;이라는 설명이 나온다. 즉, 파이썬 코드의 간결하고 명확한 특성을 나타내는 말이다. Pythonic Thinking은 이러한 명확한 코드를 구현하기 위한 생각 방식이라고 볼 수 있다.&lt;/p&gt;
 

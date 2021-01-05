@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://soonjune.github.io/tag/linear-algebra/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-05T23:26:23+09:00</updated>
-  <id>https://soonjune.github.io/tag/linear-algebra/feed.xml</id>
+  <link href="http://localhost:4000/tag/linear-algebra/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-01-05T23:35:08+09:00</updated>
+  <id>http://localhost:4000/tag/linear-algebra/feed.xml</id>
 
   
   
@@ -32,12 +32,102 @@
 
   
     <entry>
+      <title type="html">Mathematics for Machine Learning</title>
+      <link href="http://localhost:4000/Linear-Algebra" rel="alternate" type="text/html" title="Mathematics for Machine Learning" />
+      <published>2021-01-05T20:00:00+09:00</published>
+      <updated>2021-01-05T20:00:00+09:00</updated>
+      <id>http://localhost:4000/Linear-Algebra</id>
+      <content type="html" xml:base="http://localhost:4000/Linear-Algebra">&lt;p&gt;서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 &lt;a href=&quot;https://mml-book.github.io/book/mml-book.pdf&quot;&gt;Mathematics for Machine Learning&lt;/a&gt;이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-책-소개-intro&quot;&gt;I. 책 소개 (Intro)&lt;/h3&gt;
+&lt;p&gt;교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;프로그래밍 언어 및 데이터 분석 도구&lt;/li&gt;
+  &lt;li&gt;대규모 컴퓨팅 및 그와 관련된 프레임워크&lt;/li&gt;
+  &lt;li&gt;수학, 통계 지식
+이 책에서는 마지막 부분, 즉 수학과 연관된 부분을 다룬다. 모델 자체의 알고리즘에 초점을 맞추기보다는 수학적인 개념과 실용적인 궁금증을 해결하고자 노력했다고 저자는 밝히고 있다.
+    &lt;h4 id=&quot;핵심-단어-데이터data-모델model-학습learning&quot;&gt;핵심 단어: 데이터(data), 모델(model), 학습(learning)&lt;/h4&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;ii-선형대수-linear-algebra&quot;&gt;II. 선형대수 (Linear Algebra)&lt;/h3&gt;
+&lt;p&gt;(1) Geometric vectors / Polynomials =&amp;gt; They are both vectors. Audio signals, elements of &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt; are vectors.
+(2) Closure(닫힘) - 그 집합의 원소와 관계가 있는 원소가 항상 그 집합에 속한다는 성질이다.
+&lt;img src=&quot;https://miro.medium.com/max/4800/1*5haUfmOWQUh9N353hMy9KQ.png&quot; alt=&quot;mind-map&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;21-연립-일차-방정식-systems-of-linear-equations&quot;&gt;2.1 연립 일차 방정식 (Systems of Linear Equations)&lt;/h3&gt;
+&lt;p&gt;해는 없거나 / 하나만 존재하거나 / 무수히 많을 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;22-행렬-matrices&quot;&gt;2.2 행렬 (Matrices)&lt;/h3&gt;
+&lt;p&gt;연립 일차 방정식을 행렬을 이용해서 간결하게 표현할 수 있다. &lt;br /&gt;
+행렬은 또한 선형 변환(Linear mapping)이라는 함수를 표현할 수 있다. &lt;br /&gt;
+행렬의 덧셈과 곱셈 정의. 곱셈에 대하여 교환법칙이 성립하지 않는다.&lt;/p&gt;
+
+&lt;p&gt;cf . 아인슈타인 표기법
+np.einsum을 이용해서 나타낼 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;222-역행렬과-전치행렬-inverse-and-transpose&quot;&gt;2.2.2 역행렬과 전치행렬 (Inverse and Transpose)&lt;/h3&gt;
+&lt;p&gt;행렬 A의 역행렬이 존재하는 경우 regular/invertible/nonsingular라고 부름. &lt;br /&gt;
+역행렬이 존재하면 고유(unique)하다.&lt;/p&gt;
+
+&lt;p&gt;Theorem 증명&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;(Uniqueness of Inverse Matrix) If B and C are both inverses of an n × n matrix A, then B = C.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;B = B I_n = B(A C) = (B A)C =I_nC = C.&lt;/script&gt;
+
+&lt;p&gt;결합 법칙을 이용해서 증명이 가능하다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If &lt;script type=&quot;math/tex&quot;&gt;AB = I&lt;/script&gt; then &lt;script type=&quot;math/tex&quot;&gt;BA = I&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A, B를 n 정사각행렬이라 하고 n-dimensional 벡터 공간을 정의하면 AB의 range는 full space. 따라서 B의 range도 dimension n이다. &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;𝐵=𝐵𝐼=𝐵(𝐴𝐵)=(𝐵𝐴)𝐵&lt;/script&gt;. By the distributive law, &lt;script type=&quot;math/tex&quot;&gt;(𝐼−𝐵𝐴)𝐵=0&lt;/script&gt;. B는 full range이므로 I-BA가 영행렬이 되어야 한다. 따라서 I = BA.&lt;/p&gt;
+
+&lt;p&gt;=&amp;gt; full rank이면 invertible하다. &lt;a href=&quot;https://sharmaeklavya2.github.io/theoremdep/nodes/linear-algebra/matrices/full-rank-inv.html&quot;&gt;증명&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;이외에도 augmented matrix를 Gaussian eliminiation을 통해서 Row-Echelon Form으로 변환한 뒤 연랍 일차 방정식을 푸는 방법에 대해서 공부하였다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linear-algebra" />
+      
+        <category term="math" />
+      
+
+      
+        <summary type="html">서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 Mathematics for Machine Learning이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">4. Subspace</title>
-      <link href="https://soonjune.github.io/Subspace" rel="alternate" type="text/html" title="4. Subspace" />
+      <link href="http://localhost:4000/Subspace" rel="alternate" type="text/html" title="4. Subspace" />
       <published>2020-10-10T22:00:00+09:00</published>
       <updated>2020-10-10T22:00:00+09:00</updated>
-      <id>https://soonjune.github.io/Subspace</id>
-      <content type="html" xml:base="https://soonjune.github.io/Subspace">&lt;p&gt;오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.&lt;/p&gt;
+      <id>http://localhost:4000/Subspace</id>
+      <content type="html" xml:base="http://localhost:4000/Subspace">&lt;p&gt;오늘은 mit Gilbert Strang 선생님의 선형대수 Subspace에 관한 부분을 정리해 보았다.&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
 &lt;/script&gt;
@@ -138,11 +228,11 @@ Application: Least squares fitting by a line &lt;br /&gt;&lt;/li&gt;
   
     <entry>
       <title type="html">3. Determinant</title>
-      <link href="https://soonjune.github.io/Determinants" rel="alternate" type="text/html" title="3. Determinant" />
+      <link href="http://localhost:4000/Determinants" rel="alternate" type="text/html" title="3. Determinant" />
       <published>2020-10-04T22:00:00+09:00</published>
       <updated>2020-10-04T22:00:00+09:00</updated>
-      <id>https://soonjune.github.io/Determinants</id>
-      <content type="html" xml:base="https://soonjune.github.io/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
+      <id>http://localhost:4000/Determinants</id>
+      <content type="html" xml:base="http://localhost:4000/Determinants">&lt;p&gt;오랜만에 선형대수 정리를 다시 시작한다. 오늘은 판별식(Determinant)에 대해 알아보자.
 판별식은 고유값(eigenvalue)을 구하기 위해 필요한 식 중 하나다.
 유명한 &lt;a href=&quot;https://www.youtube.com/watch?v=srxexLishgY&quot;&gt;Gilbert Strang 선생님의 MIT 강의&lt;/a&gt;를 나만의 말로 정리해 보았다.&lt;/p&gt;
 
@@ -208,11 +298,11 @@ Determinant is Linear Each Row &lt;br /&gt;
   
     <entry>
       <title type="html">2. Matrix Algebra</title>
-      <link href="https://soonjune.github.io/Matrix-Algebra-1" rel="alternate" type="text/html" title="2. Matrix Algebra" />
+      <link href="http://localhost:4000/Matrix-Algebra-1" rel="alternate" type="text/html" title="2. Matrix Algebra" />
       <published>2020-08-11T22:00:00+09:00</published>
       <updated>2020-08-11T22:00:00+09:00</updated>
-      <id>https://soonjune.github.io/Matrix-Algebra-1</id>
-      <content type="html" xml:base="https://soonjune.github.io/Matrix-Algebra-1">&lt;p&gt;선형대수 공부 3일차 - 행렬에 대해 알아보자&lt;/p&gt;
+      <id>http://localhost:4000/Matrix-Algebra-1</id>
+      <content type="html" xml:base="http://localhost:4000/Matrix-Algebra-1">&lt;p&gt;선형대수 공부 3일차 - 행렬에 대해 알아보자&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
 &lt;/script&gt;
@@ -293,97 +383,12 @@ c. &lt;script type=&quot;math/tex&quot;&gt;(A^T)^{-1} = (A^{-1})^T&lt;/script&gt
     </entry>
   
     <entry>
-      <title type="html">Mathematics for Machine Learning</title>
-      <link href="https://soonjune.github.io/Linear-Algebra" rel="alternate" type="text/html" title="Mathematics for Machine Learning" />
-      <published>2020-08-10T20:00:00+09:00</published>
-      <updated>2020-08-10T20:00:00+09:00</updated>
-      <id>https://soonjune.github.io/Linear-Algebra</id>
-      <content type="html" xml:base="https://soonjune.github.io/Linear-Algebra">&lt;p&gt;서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 &lt;a href=&quot;https://mml-book.github.io/book/mml-book.pdf&quot;&gt;Mathematics for Machine Learning&lt;/a&gt;이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.&lt;/p&gt;
-
-&lt;h3 id=&quot;i-책-소개-intro&quot;&gt;I. 책 소개 (Intro)&lt;/h3&gt;
-&lt;p&gt;교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;프로그래밍 언어 및 데이터 분석 도구&lt;/li&gt;
-  &lt;li&gt;대규모 컴퓨팅 및 그와 관련된 프레임워크&lt;/li&gt;
-  &lt;li&gt;수학, 통계 지식
-이 책에서는 마지막 부분, 즉 수학과 연관된 부분을 다룬다. 모델 자체의 알고리즘에 초점을 맞추기보다는 수학적인 개념과 실용적인 궁금증을 해결하고자 노력했다고 저자는 밝히고 있다.
-    &lt;h4 id=&quot;핵심-단어-데이터data-모델model-학습learning&quot;&gt;핵심 단어: 데이터(data), 모델(model), 학습(learning)&lt;/h4&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ii-선형대수-linear-algebra&quot;&gt;II. 선형대수 (Linear Algebra)&lt;/h3&gt;
-&lt;p&gt;(1) Geometric vectors / Polynomials =&amp;gt; They are both vectors. Audio signals, elements of $R^n are vectors.
-(2) Closure(닫힘) - 그 집합의 원소와 관계가 있는 원소가 항상 그 집합에 속한다는 성질이다.
-&lt;img src=&quot;https://miro.medium.com/max/4800/1*5haUfmOWQUh9N353hMy9KQ.png&quot; alt=&quot;mind-map&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;21-연립-일차-방정식-systems-of-linear-equations&quot;&gt;2.1 연립 일차 방정식 (Systems of Linear Equations)&lt;/h3&gt;
-&lt;p&gt;해는 없거나 / 하나만 존재하거나 / 무수히 많을 수 있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;22-행렬-matrices&quot;&gt;2.2 행렬 (Matrices)&lt;/h3&gt;
-&lt;p&gt;연립 일차 방정식을 행렬을 이용해서 간결하게 표현할 수 있다. &lt;br /&gt;
-행렬은 또한 선형 변환(Linear mapping)이라는 함수를 표현할 수 있다. &lt;br /&gt;
-행렬의 덧셈과 곱셈 정의. 곱셈에 대하여 교환법칙이 성립하지 않는다.&lt;/p&gt;
-
-&lt;h5 id=&quot;cf-아인슈타인-표기법&quot;&gt;cf. 아인슈타인 표기법&lt;/h5&gt;
-&lt;p&gt;np.einsum을 이용해서 나타낼 수 있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;222-역행렬과-전치행렬-inverse-and-transpose&quot;&gt;2.2.2 역행렬과 전치행렬 (Inverse and Transpose)&lt;/h3&gt;
-&lt;p&gt;행렬 A의 역행렬이 존재하는 경우 regular/invertible/nonsingular라고 부름. &lt;br /&gt;
-역행렬이 존재하면 고유(unique)하다.&lt;/p&gt;
-
-&lt;p&gt;Theorem 증명&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;(Uniqueness of Inverse Matrix) If B and C are both inverses of an n × n matrix A, then B = C.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;$ B = B I_n = B(A C) = (B A)C =I_nC = C.$
-결합 법칙을 이용해서 증명이 가능하다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If $AB = I$ then $BA = I$
-A, B를 n 정사각행렬이라 하고 n-dimensional 벡터 공간을 정의하면 AB의 range는 full space. 따라서 B의 range도 dimension n이다. &lt;br /&gt;
-$𝐵=𝐵𝐼=𝐵(𝐴𝐵)=(𝐵𝐴)𝐵$. By the distributive law, $(𝐼−𝐵𝐴)𝐵=0$. B는 full range이므로 I-BA가 영행렬이 되어야 한다. 따라서 I = BA.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;=&amp;gt; full rank이면 invertible하다. &lt;a href=&quot;https://sharmaeklavya2.github.io/theoremdep/nodes/linear-algebra/matrices/full-rank-inv.html&quot;&gt;증명&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;이외에도 augmented matrix를 Gaussian eliminiation을 통해서 Row-Echelon Form으로 변환한 뒤 연랍 일차 방정식을 푸는 방법에 대해서 공부하였다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Park Seung Joon</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="linear-algebra" />
-      
-        <category term="math" />
-      
-
-      
-        <summary type="html">서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 Mathematics for Machine Learning이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">1. Linear Equations in Linear Algebra (2)</title>
-      <link href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (2)" />
+      <link href="http://localhost:4000/Linear-Equations-in-Linear-Algebra-2" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (2)" />
       <published>2020-08-09T21:00:00+09:00</published>
       <updated>2020-08-09T21:00:00+09:00</updated>
-      <id>https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2</id>
-      <content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2">&lt;p&gt;선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자&lt;/p&gt;
+      <id>http://localhost:4000/Linear-Equations-in-Linear-Algebra-2</id>
+      <content type="html" xml:base="http://localhost:4000/Linear-Equations-in-Linear-Algebra-2">&lt;p&gt;선형대수 공부 2일차 - 오늘 배운 내용을 간단히 정리해보자&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
 &lt;/script&gt;
@@ -477,11 +482,11 @@ ii. T(cu) = cT(u) for all scalars c   &lt;br /&gt;
   
     <entry>
       <title type="html">1. Linear Equations in Linear Algebra (1)</title>
-      <link href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (1)" />
+      <link href="http://localhost:4000/Linear-Equations-in-Linear-Algebra-1" rel="alternate" type="text/html" title="1. Linear Equations in Linear Algebra (1)" />
       <published>2020-08-08T22:00:00+09:00</published>
       <updated>2020-08-08T22:00:00+09:00</updated>
-      <id>https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</id>
-      <content type="html" xml:base="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1">&lt;p&gt;오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 &lt;a href=&quot;https://www.youtube.com/watch?v=3bTr91fLHOg&amp;amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6&quot;&gt;강의&lt;/a&gt;와 수업에 사용한 &lt;a href=&quot;https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X&quot;&gt;교과서&lt;/a&gt;를 참고했다.
+      <id>http://localhost:4000/Linear-Equations-in-Linear-Algebra-1</id>
+      <content type="html" xml:base="http://localhost:4000/Linear-Equations-in-Linear-Algebra-1">&lt;p&gt;오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 &lt;a href=&quot;https://www.youtube.com/watch?v=3bTr91fLHOg&amp;amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6&quot;&gt;강의&lt;/a&gt;와 수업에 사용한 &lt;a href=&quot;https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X&quot;&gt;교과서&lt;/a&gt;를 참고했다.
 간단히 오늘 배운 내용을 정리해보자.&lt;/p&gt;
 
 &lt;p&gt;오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자.&lt;/p&gt;
