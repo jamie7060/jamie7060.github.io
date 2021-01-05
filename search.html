@@ -47,8 +47,8 @@
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Personal Blog of Park Seung Joon" />
-    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/search" />
+    <link rel="shortcut icon" href="https://soonjune.github.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://soonjune.github.io/search" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -56,14 +56,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Search Result" />
     <meta property="og:description" content="Personal Blog of Park Seung Joon" />
-    <meta property="og:url" content="http://localhost:4000/search" />
-    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
+    <meta property="og:url" content="https://soonjune.github.io/search" />
+    <meta property="og:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Search Result" />
     <meta name="twitter:description" content="Personal Blog of Park Seung Joon" />
-    <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
+    <meta name="twitter:url" content="https://soonjune.github.io/" />
+    <meta name="twitter:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Seung Joon's Blog" />
     <meta name="twitter:site" content="@" />
@@ -78,18 +78,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "Seung Joon's Blog",
-        "logo": "http://localhost:4000/"
+        "logo": "https://soonjune.github.io/"
     },
-    "url": "http://localhost:4000/search",
+    "url": "https://soonjune.github.io/search",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
+        "url": "https://soonjune.github.io/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/search"
+        "@id": "https://soonjune.github.io/search"
     },
     "description": "Personal Blog of Park Seung Joon"
 }
@@ -123,7 +123,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="http://localhost:4000/">Seung Joon's Blog</a>
+                <a class="site-nav-logo" href="https://soonjune.github.io/">Seung Joon's Blog</a>
             
         
         
@@ -178,15 +178,6 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
-    
-    "linear-algebra": {
-        "title": "4. Subspace",
-            "author": "soonjune",
-            "category": "",
-            "content": "서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 Mathematics for Machine Learning이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.I. 책 소개 (Intro)교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다.  프로그래밍 언어 및 데이터 분석 도구  대규모 컴퓨팅 및 그와 관련된 프레임워크  수학, 통계 지식이 책에서는 마지막 부분, 즉 수학과 연관된 부분을 다룬다. 모델 자체의 알고리즘에 초점을 맞추기보다는 수학적인 개념과 실용적인 궁금증을 해결하고자 노력했다고 저자는 밝히고 있다.    핵심 단어: 데이터(data), 모델(model), 학습(learning)  II. 선형대수 (Linear Algebra)(1) Geometric vectors / Polynomials =&gt; They are both vectors. Audio signals, elements of $R^n are vectors.(2) Closure(닫힘) - 그 집합의 원소와 관계가 있는 원소가 항상 그 집합에 속한다는 성질이다.2.1 연립 일차 방정식 (Systems of Linear Equations)해는 없거나 / 하나만 존재하거나 / 무수히 많을 수 있다.2.2 행렬 (Matrices)연립 일차 방정식을 행렬을 이용해서 간결하게 표현할 수 있다. 행렬은 또한 선형 변환(Linear mapping)이라는 함수를 표현할 수 있다. 행렬의 덧셈과 곱셈 정의. 곱셈에 대하여 교환법칙이 성립하지 않는다.cf. 아인슈타인 표기법np.einsum을 이용해서 나타낼 수 있다.2.2.2 역행렬과 전치행렬 (Inverse and Transpose)행렬 A의 역행렬이 존재하는 경우 regular/invertible/nonsingular라고 부름. 역행렬이 존재하면 고유(unique)하다.Theorem 증명  (Uniqueness of Inverse Matrix) If B and C are both inverses of an n × n matrix A, then B = C.$ B = B I_n = B(A C) = (B A)C =I_nC = C.$결합 법칙을 이용해서 증명이 가능하다.  If $AB = I$ then $BA = I$A, B를 n 정사각행렬이라 하고 n-dimensional 벡터 공간을 정의하면 AB의 range는 full space. 따라서 B의 range도 dimension n이다. $𝐵=𝐵𝐼=𝐵(𝐴𝐵)=(𝐵𝐴)𝐵$. By the distributive law, $(𝐼−𝐵𝐴)𝐵=0$. B는 full range이므로 I-BA가 영행렬이 되어야 한다. 따라서 I = BA.=&gt; full rank이면 invertible하다. 증명이외에도 augmented matrix를 Gaussian eliminiation을 통해서 Row-Echelon Form으로 변환한 뒤 연랍 일차 방정식을 푸는 방법에 대해서 공부하였다.",
-        "url": "/Linear-Algebra"
-    }
-    ,
     
     "subspace": {
         "title": "4. Subspace",
@@ -278,8 +269,17 @@ into the {body} of the default.hbs template -->
     }
     ,
     
-    "run-through-of-java": {
+    "linear-algebra": {
         "title": "Mathematics for Machine Learning",
+            "author": "soonjune",
+            "category": "",
+            "content": "서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 Mathematics for Machine Learning이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.I. 책 소개 (Intro)교재에서는 머신러닝을 위한 기초적인 지식으로 3가지롤 꼽고 있다.  프로그래밍 언어 및 데이터 분석 도구  대규모 컴퓨팅 및 그와 관련된 프레임워크  수학, 통계 지식이 책에서는 마지막 부분, 즉 수학과 연관된 부분을 다룬다. 모델 자체의 알고리즘에 초점을 맞추기보다는 수학적인 개념과 실용적인 궁금증을 해결하고자 노력했다고 저자는 밝히고 있다.    핵심 단어: 데이터(data), 모델(model), 학습(learning)  II. 선형대수 (Linear Algebra)(1) Geometric vectors / Polynomials =&gt; They are both vectors. Audio signals, elements of $R^n are vectors.(2) Closure(닫힘) - 그 집합의 원소와 관계가 있는 원소가 항상 그 집합에 속한다는 성질이다.2.1 연립 일차 방정식 (Systems of Linear Equations)해는 없거나 / 하나만 존재하거나 / 무수히 많을 수 있다.2.2 행렬 (Matrices)연립 일차 방정식을 행렬을 이용해서 간결하게 표현할 수 있다. 행렬은 또한 선형 변환(Linear mapping)이라는 함수를 표현할 수 있다. 행렬의 덧셈과 곱셈 정의. 곱셈에 대하여 교환법칙이 성립하지 않는다.cf. 아인슈타인 표기법np.einsum을 이용해서 나타낼 수 있다.2.2.2 역행렬과 전치행렬 (Inverse and Transpose)행렬 A의 역행렬이 존재하는 경우 regular/invertible/nonsingular라고 부름. 역행렬이 존재하면 고유(unique)하다.Theorem 증명  (Uniqueness of Inverse Matrix) If B and C are both inverses of an n × n matrix A, then B = C.$ B = B I_n = B(A C) = (B A)C =I_nC = C.$결합 법칙을 이용해서 증명이 가능하다.  If $AB = I$ then $BA = I$A, B를 n 정사각행렬이라 하고 n-dimensional 벡터 공간을 정의하면 AB의 range는 full space. 따라서 B의 range도 dimension n이다. $𝐵=𝐵𝐼=𝐵(𝐴𝐵)=(𝐵𝐴)𝐵$. By the distributive law, $(𝐼−𝐵𝐴)𝐵=0$. B는 full range이므로 I-BA가 영행렬이 되어야 한다. 따라서 I = BA.=&gt; full rank이면 invertible하다. 증명이외에도 augmented matrix를 Gaussian eliminiation을 통해서 Row-Echelon Form으로 변환한 뒤 연랍 일차 방정식을 푸는 방법에 대해서 공부하였다.",
+        "url": "/Linear-Algebra"
+    }
+    ,
+    
+    "run-through-of-java": {
+        "title": "자바 훑어보기: Run-through of Java Programming Language",
             "author": "soonjune",
             "category": "",
             "content": "삼성 SDS 대학생 알고리즘 특강이 시작됐다. 1주일간은 자바, 1주일 간은 C++로 배운다고 한다. 자바를 거의 안 다뤄서 Codecademy에서 자바 부분을 쭉 훑었다. 주요 내용을 정리해보고자 한다.I. Introduction      Class - a single concept클래스는 객체 지향 언어에서 많이 등장하는 개념이다. 자바는 프로그램 파일명과 동일한 최소 하나의 클래스를 지녀야 한다(예: Person.java - Person 클라스). 클래스는 주로 대문자로 시작한다.    main() Method모든 자바 프로그램은 아래와 같이 main() method를 포함해야 한다.    public class Person {  public static void main(String[] args) { System.out.println(\"Hello, world!\");  }}                  Print LineSystem.out.println()을 이용한다.  Eclipse IDE에서는 syso를 타입한 뒤 CTRL+Space를 누르면 자동 완성된다.      Comments              Single line: //      Multi-line: /*   */      * ; - 코드는 ;로 끝나야 한다;        Compilation(javac 명령어)프로그램을 컴파일하면 각각의 클래스들이 .class 파일로 변환된다. 변환된 java byte code는 JVM에 의해 실행된다.II. Variables      Primitive Data Typesint, char, boolean, byte, long, short, double, float, null    String - use \" \"          String끼리 같은지 비교는 .equals() 사용      Concatenation: + 사용 =&gt; new를 사용하기 때문에 매우 느리다. 따라서 List를 사용해서 넣다 빼거나 StringBuilder를 사용하여 효율성을 높인다.        Statice Typing - 변수 선언 type과 value가 다를 경우 bug 발생III. 기타 빠르게 정리  Array(정적인 배열) / ArrayList(동적 할당 - add()와 remove() 사용)  Loop          for와 for-each      for는 C와 유사하고 for-each는 아래와 같이 수행      // array of numbersint[] numbers = {1, 2, 3, 4, 5};// for-each loop that prints each number in numbers// int num is the handle while numbers is the source arrayfor (int num : numbers) {  \tSystem.out.println(num);}  String Methods          length() - 길이      concat() - 두 String 연결      equals() - 앞에서 설명. true/false 반환      indexOf() - 특정 substring의 시작 index를 반환한다. 없을 경우 -1 반환.      charAt(int index) - String의 index번째(0부터 시작) character를 반환한다. index는 0부터 length-1까지.      toUpperCase() / toLowerCase() - String의 character를 모두 대문자 / 소문자로 바꾼 값을 반환한다.        클래스 상속(Inheritance) - parent class / child class          child class는 extends로 정의 / super로 child의 속성 override        다형성(Polymorphism) - 하나의 메소드나 클래스가 있을 때 이것들이 다양한 방법으로 동작하는 것(아래 예시 코드 참조)    // Parent classclass Animal {public void greeting() {  System.out.println(\"The animal greets you.\");}}// Child classclass Cat extends Animal {public void greeting() {  System.out.println(\"The cat meows.\");}}class MainClass {public static void main(String[] args) {  Animal animal1 = new Animal();  // Animal object  Animal cat1 = new Cat();  // Cat object  animal1.greeting(); // prints \"The animal greets you.\"  cat1.greeting(); // prints \"The cat meows.\"}}        Eclipse IDE 기능       클래스 내부에서 Alt+Shift+S를 눌러서 생성자 또는 출력 toString() 코드를 바로 생성할 수 있다.  비교 및 sort 방법    List&lt;CustomClass&gt; list = new ArrayList();// 정의대로 정렬Collections.sort(list);=Collections.sort(list, new Comparator&lt;CustomClass&gt;{  @Override  public int compare(CustomClass o1, CustomClass o2){      // 임의의 기준 설정      return 0;  }});CustomClass implements Comparable&lt;CustomClass&gt; {  int a;  int b;  @Override  public int compareTo(CustomClass arg0){      // -1: 원하는 순서, 0: 둘이 같다, 1:원하지 않는 순서 -&gt; swap      // a에 대해 오름차순으로 정렬       if(a &lt; arg0.a){          return -1;      } else if(a == arg0.a) {          // 둘이 같은 경우 b에 대해 내림차순 정렬          if(b &gt; arg0.b){              return -1;          } else if(b == arg0.b){              return 0;          } else{              return 1;          }      } else {          return 1;      }  }}      ",
@@ -388,7 +388,7 @@ $(function() {
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/">Seung Joon's Blog</a> &copy; 2021</section>
+                <section class="copyright"><a href="https://soonjune.github.io/">Seung Joon's Blog</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

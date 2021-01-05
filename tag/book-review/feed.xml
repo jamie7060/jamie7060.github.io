@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/book-review/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-01-05T23:24:30+09:00</updated>
-  <id>http://localhost:4000/tag/book-review/feed.xml</id>
+  <link href="https://soonjune.github.io/tag/book-review/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-01-05T23:26:23+09:00</updated>
+  <id>https://soonjune.github.io/tag/book-review/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">부자되기 도서 2개 소개</title>
-      <link href="http://localhost:4000/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" />
+      <link href="https://soonjune.github.io/how-to-become-rich" rel="alternate" type="text/html" title="부자되기 도서 2개 소개" />
       <published>2020-08-31T23:30:00+09:00</published>
       <updated>2020-08-31T23:30:00+09:00</updated>
-      <id>http://localhost:4000/how-to-become-rich</id>
-      <content type="html" xml:base="http://localhost:4000/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
+      <id>https://soonjune.github.io/how-to-become-rich</id>
+      <content type="html" xml:base="https://soonjune.github.io/how-to-become-rich">&lt;p&gt;이번 방학기간 동안 읽은 부자학(?) 관련 서적 2개를 소개하고자 한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;how-to-get-rich-one-of-the-worlds-greatest-entrepreneurs-shares-his-secrets&quot;&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/1837402.How_to_Get_Rich&quot;&gt;How to Get Rich: One of the World’s Greatest Entrepreneurs Shares His Secrets&lt;/a&gt;&lt;/h3&gt;
 

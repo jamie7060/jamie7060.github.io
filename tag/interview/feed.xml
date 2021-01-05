@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/interview/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-01-05T23:24:30+09:00</updated>
-  <id>http://localhost:4000/tag/interview/feed.xml</id>
+  <link href="https://soonjune.github.io/tag/interview/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-01-05T23:26:23+09:00</updated>
+  <id>https://soonjune.github.io/tag/interview/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">면접 대비 - 인공지능, 기계학습 개념 복습</title>
-      <link href="http://localhost:4000/AI-Review" rel="alternate" type="text/html" title="면접 대비 - 인공지능, 기계학습 개념 복습" />
+      <link href="https://soonjune.github.io/AI-Review" rel="alternate" type="text/html" title="면접 대비 - 인공지능, 기계학습 개념 복습" />
       <published>2020-08-17T23:30:00+09:00</published>
       <updated>2020-08-17T23:30:00+09:00</updated>
-      <id>http://localhost:4000/AI-Review</id>
-      <content type="html" xml:base="http://localhost:4000/AI-Review">&lt;p&gt;면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.&lt;/p&gt;
+      <id>https://soonjune.github.io/AI-Review</id>
+      <content type="html" xml:base="https://soonjune.github.io/AI-Review">&lt;p&gt;면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;1-machine-learning-정의&quot;&gt;1. Machine Learning 정의&lt;/h2&gt;
 &lt;h3 id=&quot;well-posed-learning-problem-by-tom-mitchell&quot;&gt;Well-posed learning problem by Tom Mitchell&lt;/h3&gt;

@@ -4,22 +4,7 @@
     <title> - Articles</title>
     <description>Personal Blog of Park Seung Joon</description>
     <link>
-    http://localhost:4000</link>
-    
-      
-      <item>
-        <title>4. Subspace</title>
-        
-          <description>&lt;p&gt;서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 &lt;a href=&quot;https://mml-book.github.io/book/mml-book.pdf&quot;&gt;Mathematics for Machine Learning&lt;/a&gt;이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sat, 10 Oct 2020 22:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/Linear-Algebra</link>
-        <guid isPermaLink="true">http://localhost:4000/Linear-Algebra</guid>
-      </item>
-      
+    https://soonjune.github.io</link>
     
       
       <item>
@@ -31,8 +16,8 @@
         
         <pubDate>Sat, 10 Oct 2020 22:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Subspace</link>
-        <guid isPermaLink="true">http://localhost:4000/Subspace</guid>
+        https://soonjune.github.io/Subspace</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Subspace</guid>
       </item>
       
     
@@ -48,8 +33,8 @@
         
         <pubDate>Sun, 04 Oct 2020 22:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Determinants</link>
-        <guid isPermaLink="true">http://localhost:4000/Determinants</guid>
+        https://soonjune.github.io/Determinants</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Determinants</guid>
       </item>
       
     
@@ -63,8 +48,8 @@
         
         <pubDate>Tue, 01 Sep 2020 23:30:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Effective-Python1_4</link>
-        <guid isPermaLink="true">http://localhost:4000/Effective-Python1_4</guid>
+        https://soonjune.github.io/Effective-Python1_4</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Effective-Python1_4</guid>
       </item>
       
     
@@ -78,8 +63,8 @@
         
         <pubDate>Mon, 31 Aug 2020 23:30:00 +0900</pubDate>
         <link>
-        http://localhost:4000/how-to-become-rich</link>
-        <guid isPermaLink="true">http://localhost:4000/how-to-become-rich</guid>
+        https://soonjune.github.io/how-to-become-rich</link>
+        <guid isPermaLink="true">https://soonjune.github.io/how-to-become-rich</guid>
       </item>
       
     
@@ -93,8 +78,8 @@
         
         <pubDate>Sun, 30 Aug 2020 23:30:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Effective-Python1_3</link>
-        <guid isPermaLink="true">http://localhost:4000/Effective-Python1_3</guid>
+        https://soonjune.github.io/Effective-Python1_3</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Effective-Python1_3</guid>
       </item>
       
     
@@ -108,8 +93,8 @@
         
         <pubDate>Thu, 27 Aug 2020 23:30:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Effective-Python1_2</link>
-        <guid isPermaLink="true">http://localhost:4000/Effective-Python1_2</guid>
+        https://soonjune.github.io/Effective-Python1_2</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Effective-Python1_2</guid>
       </item>
       
     
@@ -123,8 +108,8 @@
         
         <pubDate>Wed, 26 Aug 2020 23:30:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Effective-Python1_1</link>
-        <guid isPermaLink="true">http://localhost:4000/Effective-Python1_1</guid>
+        https://soonjune.github.io/Effective-Python1_1</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Effective-Python1_1</guid>
       </item>
       
     
@@ -138,8 +123,8 @@
         
         <pubDate>Mon, 17 Aug 2020 23:30:00 +0900</pubDate>
         <link>
-        http://localhost:4000/AI-Review</link>
-        <guid isPermaLink="true">http://localhost:4000/AI-Review</guid>
+        https://soonjune.github.io/AI-Review</link>
+        <guid isPermaLink="true">https://soonjune.github.io/AI-Review</guid>
       </item>
       
     
@@ -153,8 +138,8 @@
         
         <pubDate>Wed, 12 Aug 2020 23:30:00 +0900</pubDate>
         <link>
-        http://localhost:4000/IO</link>
-        <guid isPermaLink="true">http://localhost:4000/IO</guid>
+        https://soonjune.github.io/IO</link>
+        <guid isPermaLink="true">https://soonjune.github.io/IO</guid>
       </item>
       
     
@@ -168,8 +153,8 @@
         
         <pubDate>Tue, 11 Aug 2020 22:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Matrix-Algebra-1</link>
-        <guid isPermaLink="true">http://localhost:4000/Matrix-Algebra-1</guid>
+        https://soonjune.github.io/Matrix-Algebra-1</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Matrix-Algebra-1</guid>
       </item>
       
     
@@ -177,14 +162,29 @@
       <item>
         <title>Mathematics for Machine Learning</title>
         
+          <description>&lt;p&gt;서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 &lt;a href=&quot;https://mml-book.github.io/book/mml-book.pdf&quot;&gt;Mathematics for Machine Learning&lt;/a&gt;이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 10 Aug 2020 20:00:00 +0900</pubDate>
+        <link>
+        https://soonjune.github.io/Linear-Algebra</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Linear-Algebra</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>자바 훑어보기: Run-through of Java Programming Language</title>
+        
           <description>&lt;p&gt;삼성 SDS 대학생 알고리즘 특강이 시작됐다. 1주일간은 자바, 1주일 간은 C++로 배운다고 한다. 자바를 거의 안 다뤄서 Codecademy에서 자바 부분을 쭉 훑었다. 주요 내용을 정리해보고자 한다.&lt;/p&gt;
 
 </description>
         
         <pubDate>Mon, 10 Aug 2020 20:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Run-through-of-Java</link>
-        <guid isPermaLink="true">http://localhost:4000/Run-through-of-Java</guid>
+        https://soonjune.github.io/Run-through-of-Java</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Run-through-of-Java</guid>
       </item>
       
     
@@ -198,8 +198,8 @@
         
         <pubDate>Sun, 09 Aug 2020 21:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Linear-Equations-in-Linear-Algebra-2</link>
-        <guid isPermaLink="true">http://localhost:4000/Linear-Equations-in-Linear-Algebra-2</guid>
+        https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-2</guid>
       </item>
       
     
@@ -214,8 +214,8 @@
         
         <pubDate>Sat, 08 Aug 2020 22:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Linear-Equations-in-Linear-Algebra-1</link>
-        <guid isPermaLink="true">http://localhost:4000/Linear-Equations-in-Linear-Algebra-1</guid>
+        https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1</guid>
       </item>
       
     
@@ -229,8 +229,8 @@
         
         <pubDate>Fri, 07 Aug 2020 20:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/SMART-goal</link>
-        <guid isPermaLink="true">http://localhost:4000/SMART-goal</guid>
+        https://soonjune.github.io/SMART-goal</link>
+        <guid isPermaLink="true">https://soonjune.github.io/SMART-goal</guid>
       </item>
       
     
@@ -251,8 +251,8 @@
         
         <pubDate>Wed, 05 Aug 2020 17:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/rouge</link>
-        <guid isPermaLink="true">http://localhost:4000/rouge</guid>
+        https://soonjune.github.io/rouge</link>
+        <guid isPermaLink="true">https://soonjune.github.io/rouge</guid>
       </item>
       
     
@@ -270,8 +270,8 @@
         
         <pubDate>Sat, 01 Aug 2020 18:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/blog-opening</link>
-        <guid isPermaLink="true">http://localhost:4000/blog-opening</guid>
+        https://soonjune.github.io/blog-opening</link>
+        <guid isPermaLink="true">https://soonjune.github.io/blog-opening</guid>
       </item>
       
     
@@ -287,8 +287,8 @@
         
         <pubDate>Fri, 05 Oct 2018 21:22:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Node.js-study</link>
-        <guid isPermaLink="true">http://localhost:4000/Node.js-study</guid>
+        https://soonjune.github.io/Node.js-study</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Node.js-study</guid>
       </item>
       
     
@@ -303,8 +303,8 @@
         
         <pubDate>Fri, 05 Oct 2018 20:38:03 +0900</pubDate>
         <link>
-        http://localhost:4000/Vue.js</link>
-        <guid isPermaLink="true">http://localhost:4000/Vue.js</guid>
+        https://soonjune.github.io/Vue.js</link>
+        <guid isPermaLink="true">https://soonjune.github.io/Vue.js</guid>
       </item>
       
     
@@ -318,8 +318,8 @@
         
         <pubDate>Wed, 26 Sep 2018 17:15:03 +0900</pubDate>
         <link>
-        http://localhost:4000/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome-to-jekyll</guid>
+        https://soonjune.github.io/welcome-to-jekyll</link>
+        <guid isPermaLink="true">https://soonjune.github.io/welcome-to-jekyll</guid>
       </item>
       
     
