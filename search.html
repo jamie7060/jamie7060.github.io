@@ -179,6 +179,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "vector-spaces-and-linear-independence": {
+        "title": "Vector Spaces and Linear Independence",
+            "author": "soonjune",
+            "category": "",
+            "content": "데이터사이언스대학원 Bootcamp 2일차에는 벡터 공간(Vector space)와 선형 독립(Linear Independence)을 주로 다뤘다. 들어가기에 앞서, 저번 시간에 배웠던 연립 일차 방정식을 풀기 위한 elementary transformation에 대해 잠깐 살펴보자. Elementray row/column operations은 elementary matrix를 우측 또는 좌측에 곱함으로써 수행할 수 있다.(Elementary Matrix) 기본행연산에는 3가지가 있는데 아래와 같다.  두 row를 바꾼다 (swap)  row에 0이 아닌 상수를 곱한다.  두 row를 더한다.위 세가지 operation은 solution에 영향을 끼치지 않는다. 따라서 이들 연산을 이용해서 행렬을 reduced echelon form(계단 모양으로 나타난다)으로 바꿔 해를 구한다.2.3.3 The Minus-1 Trick행렬 A가 k X n이라면 reduced echeolon form으로 만든 뒤 n X n으로 만들어 주기 위해서 n - k row를 추가한다. 이 때 pivot이 없는 대각선 부분을 -1로 만들어주기 위해 row를 해당 부분에 추가한다. 이 때 -1이 있는 부분의 column을 이용해서 Homogeneous system1의 바로 해를 찾을 수 있다.2.3.4 Algorithms for Solving a System of Linear EquationsGaussian elimination은 아래 상황에서 모두 사용되기에 매우 유용하다.(1) determinant를 계산(2) 선형 독립 여부 확인(3) 역행렬 연산(4) rank 계산(3) 벡터 공간의 basis 구하기하지만 효율성을 위해서 실용적으로는 어느 정도의 오차를 감안하고 iterative한 방법이 활용되고 있다.2.4 Vector Spaces2.4.1 GroupsGroup 정의.n X n 행렬에 대해서도 행렬의 곱셈 정의에 따라 결합법칙이 성립하고 살수 n X n 행렬에 대해 닫혀 있다. 항등원 I가 존재하고 역행렬이 존재할 경우 위에서 정의한 group애 해당한다. 이를 general linear group이라고 부른다.2.4.2 Vector SpacesV는 집합니다. 이 집합의 원소를 벡터라고 한다. Real-valued vector space V = (V, +, ·)은 아래 두 연산을 갖는 집합이다.            : 벡터 덧셈        · : 스칼라 곱셈벡터간 곱셈은 정의되지 않았음에 유의하자.2.4.3 Vector SubspacesVector space에 contained된 space. Vector space가 지닌 특성들을 모두 inherit한다. Vector subspace는 closure 조건을 만족시켜야 하며 덧셈에 대한 항등원인 0을 포함해야 한다.  Vector subspace 간 교집합도 vector subspace이다. (증명)  Ax = O의 solution x가 항상 의 subspace이다.2.5 Linear Independence키워드: 선형 결합, 선형독립선형결합은 Vector space에 있는 유한한 수의 벡터들과 상수배를 이용해서 vector space 내 다른 벡터 v를 나타내는 방법. 선형독립은 선형결합으로 영벡터를 나타내는 방법이 오직 상수(람다)를 모두 0으로 해야만 하는 경우이다.Echelon form으로 나타냈을 때 모든 column이 pivot column일 경우에만 선형독립이다(필요충분)2.6 Basis and Rank2.6.1 Generating Set and BasisGenerating set은 Vector Space V에 속하는 벡터 v가 유한(k)개의 벡터로 나타낼 수 있으면 이 벡터들의 집합 A를 generating set이라고 한다. Generating set A를 가지고 만들 수 있는 모든 선형결합의 집합을 span of A라고 정의한다.Basis는 Vector space V의 가장 작은 generating set이다. 가장 작다는 것은 해당 generating set보다 더 작은 generating set의 조건을 만족하는 집합이 없음을 의미한다. Generating set의 선형독립인 vector들을 V의 basis라고 부른다.Basis는 unique하지 않지만 벡터 수는 같다. 이때 vector space의 차원은 basis 벡터의 수와 같다. basis를 이용해서 vector space 내 다른 vector를 표현할 때의 해는 유일하다.2.6.2 Rank행렬 내에 independent한 행 또는 열의 수를 rank라고 한다.2.7 Linear Mappings벡터 공간의 성질을 만족시키기 위해서 mapping할 때 특정 성질을 만족하는 경우 linear mapping이라고 한다. Linear mapping을 행렬로 표현할 수 있다.Image와 Kernel(또는 Null Space)은 다음과 같이 정의한다. Kernel은 영행렬이 나오게끔하는 정의역 내 벡터들의 집합. Image는 치역으로 볼 수 있다.(Rank-Nullity Theorem)1: A system of linear equations is homogeneous if all of the constant terms are zero",
+        "url": "/vector-spaces-and-linear-independence"
+    }
+    ,
+    
     "linear-algebra": {
         "title": "Mathematics for Machine Learning",
             "author": "soonjune",

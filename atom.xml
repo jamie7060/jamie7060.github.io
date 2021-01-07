@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Vector Spaces and Linear Independence</title>
+        
+          <description>&lt;p&gt;데이터사이언스대학원 Bootcamp 2일차에는 벡터 공간(Vector space)와 선형 독립(Linear Independence)을 주로 다뤘다. 들어가기에 앞서, 저번 시간에 배웠던 연립 일차 방정식을 풀기 위한 elementary transformation에 대해 잠깐 살펴보자. Elementray row/column operations은 elementary matrix를 우측 또는 좌측에 곱함으로써 수행할 수 있다.(&lt;a href=&quot;https://en.wikipedia.org/wiki/Elementary_matrix#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,when%20R%20is%20a%20field.&quot;&gt;Elementary Matrix&lt;/a&gt;) 기본행연산에는 3가지가 있는데 아래와 같다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 06 Jan 2021 20:00:00 +0900</pubDate>
+        <link>
+        https://soonjune.github.io/vector-spaces-and-linear-independence</link>
+        <guid isPermaLink="true">https://soonjune.github.io/vector-spaces-and-linear-independence</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Mathematics for Machine Learning</title>
         
           <description>&lt;p&gt;서울대 데이터사이언스대학원 Bootcamp를 수강하면서 배운 내용을 정리해보고자 한다. 1주차에는 데이터사이언스를 위한 수학을 주제로 오민환 교수님께서 강의를 진행했다. 교재는 &lt;a href=&quot;https://mml-book.github.io/book/mml-book.pdf&quot;&gt;Mathematics for Machine Learning&lt;/a&gt;이라는 오픈 소스 교재를 사용하였다. 오늘은 Ch2까지 배운 선형대수의 기초적인 내용을 정리해본다.&lt;/p&gt;

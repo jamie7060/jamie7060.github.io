@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/tag/math/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-05T23:36:52+09:00</updated>
+  <updated>2021-01-07T23:30:52+09:00</updated>
   <id>https://soonjune.github.io/tag/math/feed.xml</id>
 
   
@@ -30,6 +30,118 @@
   
   
 
+  
+    <entry>
+      <title type="html">Vector Spaces and Linear Independence</title>
+      <link href="https://soonjune.github.io/vector-spaces-and-linear-independence" rel="alternate" type="text/html" title="Vector Spaces and Linear Independence" />
+      <published>2021-01-06T20:00:00+09:00</published>
+      <updated>2021-01-06T20:00:00+09:00</updated>
+      <id>https://soonjune.github.io/vector-spaces-and-linear-independence</id>
+      <content type="html" xml:base="https://soonjune.github.io/vector-spaces-and-linear-independence">&lt;p&gt;데이터사이언스대학원 Bootcamp 2일차에는 벡터 공간(Vector space)와 선형 독립(Linear Independence)을 주로 다뤘다. 들어가기에 앞서, 저번 시간에 배웠던 연립 일차 방정식을 풀기 위한 elementary transformation에 대해 잠깐 살펴보자. Elementray row/column operations은 elementary matrix를 우측 또는 좌측에 곱함으로써 수행할 수 있다.(&lt;a href=&quot;https://en.wikipedia.org/wiki/Elementary_matrix#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,when%20R%20is%20a%20field.&quot;&gt;Elementary Matrix&lt;/a&gt;) 기본행연산에는 3가지가 있는데 아래와 같다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;두 row를 바꾼다 (swap)&lt;/li&gt;
+  &lt;li&gt;row에 0이 아닌 상수를 곱한다.&lt;/li&gt;
+  &lt;li&gt;두 row를 더한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;위 세가지 operation은 solution에 영향을 끼치지 않는다. 따라서 이들 연산을 이용해서 행렬을 reduced echelon form(계단 모양으로 나타난다)으로 바꿔 해를 구한다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;233-the-minus-1-trick&quot;&gt;2.3.3 The Minus-1 Trick&lt;/h3&gt;
+&lt;p&gt;행렬 A가 k X n이라면 reduced echeolon form으로 만든 뒤 n X n으로 만들어 주기 위해서 n - k row를 추가한다. 이 때 pivot이 없는 대각선 부분을 -1로 만들어주기 위해 row를 해당 부분에 추가한다. 이 때 -1이 있는 부분의 column을 이용해서 Homogeneous system&lt;sup&gt;&lt;a href=&quot;#footnote_1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;의 바로 해를 찾을 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;234-algorithms-for-solving-a-system-of-linear-equations&quot;&gt;2.3.4 Algorithms for Solving a System of Linear Equations&lt;/h3&gt;
+&lt;p&gt;Gaussian elimination은 아래 상황에서 모두 사용되기에 매우 유용하다.
+(1) determinant를 계산
+(2) 선형 독립 여부 확인
+(3) 역행렬 연산
+(4) rank 계산
+(3) 벡터 공간의 basis 구하기&lt;/p&gt;
+
+&lt;p&gt;하지만 효율성을 위해서 실용적으로는 어느 정도의 오차를 감안하고 iterative한 방법이 활용되고 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;24-vector-spaces&quot;&gt;2.4 Vector Spaces&lt;/h3&gt;
+&lt;h4 id=&quot;241-groups&quot;&gt;2.4.1 Groups&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Group_(mathematics)&quot;&gt;Group&lt;/a&gt; 정의.&lt;/p&gt;
+
+&lt;p&gt;n X n 행렬에 대해서도 행렬의 곱셈 정의에 따라 결합법칙이 성립하고 살수 n X n 행렬에 대해 닫혀 있다. 항등원 I가 존재하고 역행렬이 존재할 경우 위에서 정의한 group애 해당한다. 이를 general linear group이라고 부른다.&lt;/p&gt;
+
+&lt;h4 id=&quot;242-vector-spaces&quot;&gt;2.4.2 Vector Spaces&lt;/h4&gt;
+&lt;p&gt;V는 집합니다. 이 집합의 원소를 벡터라고 한다. Real-valued vector space V = (V, +, ·)은 아래 두 연산을 갖는 집합이다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;: 벡터 덧셈&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;· : 스칼라 곱셈
+벡터간 곱셈은 정의되지 않았음에 유의하자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;243-vector-subspaces&quot;&gt;2.4.3 Vector Subspaces&lt;/h4&gt;
+&lt;p&gt;Vector space에 contained된 space. Vector space가 지닌 특성들을 모두 inherit한다. Vector subspace는 closure 조건을 만족시켜야 하며 덧셈에 대한 항등원인 0을 포함해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Vector subspace 간 교집합도 vector subspace이다. (&lt;a href=&quot;https://yutsumura.com/the-intersection-of-two-subspaces-is-also-a-subspace/#:~:text=To%20prove%20that%20the%20intersection,x%E2%88%88U%E2%88%A9V.&quot;&gt;증명&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Ax = O의 solution x가 항상 &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt;의 subspace이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;25-linear-independence&quot;&gt;2.5 Linear Independence&lt;/h4&gt;
+&lt;p&gt;키워드: &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%84%A0%ED%98%95_%EA%B2%B0%ED%95%A9&quot;&gt;선형 결합&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_independence#:~:text=In%20the%20theory%20of%20vector,said%20to%20be%20linearly%20independent.&quot;&gt;선형독립&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;선형결합은 Vector space에 있는 유한한 수의 벡터들과 상수배를 이용해서 vector space 내 다른 벡터 v를 나타내는 방법. 선형독립은 선형결합으로 영벡터를 나타내는 방법이 오직 상수(람다)를 모두 0으로 해야만 하는 경우이다.&lt;/p&gt;
+
+&lt;p&gt;Echelon form으로 나타냈을 때 모든 column이 pivot column일 경우에만 선형독립이다(필요충분)&lt;/p&gt;
+
+&lt;h3 id=&quot;26-basis-and-rank&quot;&gt;2.6 Basis and Rank&lt;/h3&gt;
+&lt;h4 id=&quot;261-generating-set-and-basis&quot;&gt;2.6.1 Generating Set and Basis&lt;/h4&gt;
+&lt;p&gt;Generating set은 Vector Space V에 속하는 벡터 v가 유한(k)개의 벡터로 나타낼 수 있으면 이 벡터들의 집합 A를 generating set이라고 한다. Generating set A를 가지고 만들 수 있는 모든 선형결합의 집합을 span of A라고 정의한다.&lt;/p&gt;
+
+&lt;p&gt;Basis는 Vector space V의 가장 작은 generating set이다. 가장 작다는 것은 해당 generating set보다 더 작은 generating set의 조건을 만족하는 집합이 없음을 의미한다. Generating set의 선형독립인 vector들을 V의 basis라고 부른다.&lt;/p&gt;
+
+&lt;p&gt;Basis는 unique하지 않지만 벡터 수는 같다. 이때 vector space의 차원은 basis 벡터의 수와 같다. basis를 이용해서 vector space 내 다른 vector를 표현할 때의 해는 유일하다.&lt;/p&gt;
+
+&lt;h4 id=&quot;262-rank&quot;&gt;2.6.2 Rank&lt;/h4&gt;
+&lt;p&gt;행렬 내에 independent한 행 또는 열의 수를 rank라고 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;27-linear-mappings&quot;&gt;2.7 Linear Mappings&lt;/h3&gt;
+&lt;p&gt;벡터 공간의 성질을 만족시키기 위해서 mapping할 때 특정 성질을 만족하는 경우 linear mapping이라고 한다. Linear mapping을 행렬로 표현할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;Image와 Kernel(또는 Null Space)은 다음과 같이 정의한다. Kernel은 영행렬이 나오게끔하는 정의역 내 벡터들의 집합. Image는 치역으로 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://brilliant.org/wiki/rank-nullity-theorem/#:~:text=The%20rank%2Dnullity%20theorem%20states,columns%20over%20a%20field%2C%20then&quot;&gt;Rank-Nullity Theorem&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;footnote_1&quot;&gt;1&lt;/a&gt;: A system of linear equations is homogeneous if all of the constant terms are zero&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linear-algebra" />
+      
+        <category term="math" />
+      
+
+      
+        <summary type="html">데이터사이언스대학원 Bootcamp 2일차에는 벡터 공간(Vector space)와 선형 독립(Linear Independence)을 주로 다뤘다. 들어가기에 앞서, 저번 시간에 배웠던 연립 일차 방정식을 풀기 위한 elementary transformation에 대해 잠깐 살펴보자. Elementray row/column operations은 elementary matrix를 우측 또는 좌측에 곱함으로써 수행할 수 있다.(Elementary Matrix) 기본행연산에는 3가지가 있는데 아래와 같다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Mathematics for Machine Learning</title>
