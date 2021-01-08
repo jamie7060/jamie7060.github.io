@@ -179,6 +179,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "analytic-geometry": {
+        "title": "Analytic Geometry",
+            "author": "soonjune",
+            "category": "",
+            "content": "데이터사이언스대학원 Bootcamp 3일차에는 교재의 해석기하학 챕터(Chapter 3)를 다뤘다. 이번 장에서는 앞서 배운 내용들에 대한 기하학적 해석들을 살펴본다. Geometric vector를 이용해서 길이, 거리, 두 벡터간 각도를 계산할 수 있는데, 이를 위해서 아래 내용들부터 살펴보자.3.1 NormsNorm은 벡터 공간을 input으로 하고 output으로 음이 아닌 실수를 내뱉는 함수이다.링크에 나온의 세가지 조건을 만족해야 한다. 대표적으로 l1-norm과 l2-norm이 있는데 l2-norm은 Euclidean distance라고 부르기도 한다.3.2 Inner Products벡터의 길이 또는 두 벡터 사이의 각도에 대한 직관적인 이해를 위해서 inner product 개념이 활용된다. Inner product로 두 벡터가 서로 orthogonal한지 확인할 수 있다. 우선 inner product의 대표격인 dot product부터 살펴보자.3.2.1 Dot ProductDot product 또는 스칼라곱은 유클리드 공간의 두 벡터로부터 실수 스칼라를 얻는 연산이다.3.2.2 General Inner Products먼저, linear mapping 개념에 더해서 bilinear mapping 개념을 살펴본다. Bilinear map은 두개의 벡터 공간을 input으로 받아 새로운 벡터 공간을 뱉어내는 함수이다.Symmetric교환에 대하여 불변Positive definite0 벡터를 제외한 벡터 공간을 input으로 해서 같은 벡터로 bilinear mapping을 해서 항상 0보다 크면 bilinear map은 positive definite이다. 두개 argument 모두 영벡터인 경우에만 0이 나온다.최종적으로 inner product는 다음과 같이 정의할 수 있다.Positive definite, symmetric한 bilinear mapping2.4.1 GroupsGroup 정의.n X n 행렬에 대해서도 행렬의 곱셈 정의에 따라 결합법칙이 성립하고 살수 n X n 행렬에 대해 닫혀 있다. 항등원 I가 존재하고 역행렬이 존재할 경우 위에서 정의한 group애 해당한다. 이를 general linear group이라고 부른다.2.4.2 Vector SpacesV는 집합니다. 이 집합의 원소를 벡터라고 한다. Real-valued vector space V = (V, +, ·)은 아래 두 연산을 갖는 집합이다.            : 벡터 덧셈        · : 스칼라 곱셈벡터간 곱셈은 정의되지 않았음에 유의하자.2.4.3 Vector SubspacesVector space에 contained된 space. Vector space가 지닌 특성들을 모두 inherit한다. Vector subspace는 closure 조건을 만족시켜야 하며 덧셈에 대한 항등원인 0을 포함해야 한다.  Vector subspace 간 교집합도 vector subspace이다. (증명)  Ax = O의 solution x가 항상 의 subspace이다.2.5 Linear Independence키워드: 선형 결합, 선형독립선형결합은 Vector space에 있는 유한한 수의 벡터들과 상수배를 이용해서 vector space 내 다른 벡터 v를 나타내는 방법. 선형독립은 선형결합으로 영벡터를 나타내는 방법이 오직 상수(람다)를 모두 0으로 해야만 하는 경우이다.Echelon form으로 나타냈을 때 모든 column이 pivot column일 경우에만 선형독립이다(필요충분)2.6 Basis and Rank2.6.1 Generating Set and BasisGenerating set은 Vector Space V에 속하는 벡터 v가 유한(k)개의 벡터로 나타낼 수 있으면 이 벡터들의 집합 A를 generating set이라고 한다. Generating set A를 가지고 만들 수 있는 모든 선형결합의 집합을 span of A라고 정의한다.Basis는 Vector space V의 가장 작은 generating set이다. 가장 작다는 것은 해당 generating set보다 더 작은 generating set의 조건을 만족하는 집합이 없음을 의미한다. Generating set의 선형독립인 vector들을 V의 basis라고 부른다.Basis는 unique하지 않지만 벡터 수는 같다. 이때 vector space의 차원은 basis 벡터의 수와 같다. basis를 이용해서 vector space 내 다른 vector를 표현할 때의 해는 유일하다.2.6.2 Rank행렬 내에 independent한 행 또는 열의 수를 rank라고 한다.2.7 Linear Mappings벡터 공간의 성질을 만족시키기 위해서 mapping할 때 특정 성질을 만족하는 경우 linear mapping이라고 한다. Linear mapping을 행렬로 표현할 수 있다.Image와 Kernel(또는 Null Space)은 다음과 같이 정의한다. Kernel은 영행렬이 나오게끔하는 정의역 내 벡터들의 집합. Image는 치역으로 볼 수 있다.(Rank-Nullity Theorem)1: A system of linear equations is homogeneous if all of the constant terms are zero",
+        "url": "/analytic-geometry"
+    }
+    ,
+    
     "vector-spaces-and-linear-independence": {
         "title": "Vector Spaces and Linear Independence",
             "author": "soonjune",

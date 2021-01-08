@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2021-01-07T23:30:52+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Vector Spaces and Linear Independence</title><link href="https://soonjune.github.io/vector-spaces-and-linear-independence" rel="alternate" type="text/html" title="Vector Spaces and Linear Independence" /><published>2021-01-06T20:00:00+09:00</published><updated>2021-01-06T20:00:00+09:00</updated><id>https://soonjune.github.io/vector-spaces-and-linear-independence</id><content type="html" xml:base="https://soonjune.github.io/vector-spaces-and-linear-independence">&lt;p&gt;데이터사이언스대학원 Bootcamp 2일차에는 벡터 공간(Vector space)와 선형 독립(Linear Independence)을 주로 다뤘다. 들어가기에 앞서, 저번 시간에 배웠던 연립 일차 방정식을 풀기 위한 elementary transformation에 대해 잠깐 살펴보자. Elementray row/column operations은 elementary matrix를 우측 또는 좌측에 곱함으로써 수행할 수 있다.(&lt;a href=&quot;https://en.wikipedia.org/wiki/Elementary_matrix#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,when%20R%20is%20a%20field.&quot;&gt;Elementary Matrix&lt;/a&gt;) 기본행연산에는 3가지가 있는데 아래와 같다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2021-01-09T00:20:47+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Analytic Geometry</title><link href="https://soonjune.github.io/analytic-geometry" rel="alternate" type="text/html" title="Analytic Geometry" /><published>2021-01-07T20:00:00+09:00</published><updated>2021-01-07T20:00:00+09:00</updated><id>https://soonjune.github.io/analytic-geometry</id><content type="html" xml:base="https://soonjune.github.io/analytic-geometry">&lt;p&gt;데이터사이언스대학원 Bootcamp 3일차에는 교재의 해석기하학 챕터(Chapter 3)를 다뤘다. 이번 장에서는 앞서 배운 내용들에 대한 기하학적 해석들을 살펴본다. Geometric vector를 이용해서 길이, 거리, 두 벡터간 각도를 계산할 수 있는데, 이를 위해서 아래 내용들부터 살펴보자.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;31-norms&quot;&gt;3.1 Norms&lt;/h3&gt;
+&lt;p&gt;Norm은 벡터 공간을 input으로 하고 output으로 음이 아닌 실수를 내뱉는 함수이다.
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Norm_(mathematics)#Definition&quot;&gt;링크&lt;/a&gt;에 나온의 세가지 조건을 만족해야 한다. 대표적으로 l1-norm과 l2-norm이 있는데 l2-norm은 Euclidean distance라고 부르기도 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;32-inner-products&quot;&gt;3.2 Inner Products&lt;/h3&gt;
+&lt;p&gt;벡터의 길이 또는 두 벡터 사이의 각도에 대한 직관적인 이해를 위해서 inner product 개념이 활용된다. Inner product로 두 벡터가 서로 orthogonal한지 확인할 수 있다. 우선 inner product의 대표격인 dot product부터 살펴보자.&lt;/p&gt;
+
+&lt;h4 id=&quot;321-dot-product&quot;&gt;3.2.1 Dot Product&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dot_product#Complex_vectors&quot;&gt;Dot product&lt;/a&gt; 또는 스칼라곱은 유클리드 공간의 두 벡터로부터 실수 스칼라를 얻는 연산이다.&lt;/p&gt;
+
+&lt;h4 id=&quot;322-general-inner-products&quot;&gt;3.2.2 General Inner Products&lt;/h4&gt;
+&lt;p&gt;먼저, linear mapping 개념에 더해서 &lt;a href=&quot;https://en.wikipedia.org/wiki/Bilinear_map&quot;&gt;bilinear mapping&lt;/a&gt; 개념을 살펴본다. Bilinear map은 두개의 벡터 공간을 input으로 받아 새로운 벡터 공간을 뱉어내는 함수이다.&lt;/p&gt;
+
+&lt;h5 id=&quot;symmetric&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Symmetric_function&quot;&gt;Symmetric&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;교환에 대하여 불변&lt;/p&gt;
+
+&lt;h5 id=&quot;positive-definite&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Positive_definiteness&quot;&gt;Positive definite&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;0 벡터를 제외한 벡터 공간을 input으로 해서 같은 벡터로 bilinear mapping을 해서 항상 0보다 크면 bilinear map은 positive definite이다. 두개 argument 모두 영벡터인 경우에만 0이 나온다.&lt;/p&gt;
+
+&lt;p&gt;최종적으로 &lt;a href=&quot;https://en.wikipedia.org/wiki/Inner_product_space&quot;&gt;inner product&lt;/a&gt;는 다음과 같이 정의할 수 있다.
+Positive definite, symmetric한 bilinear mapping&lt;/p&gt;
+
+&lt;h4 id=&quot;241-groups&quot;&gt;2.4.1 Groups&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Group_(mathematics)&quot;&gt;Group&lt;/a&gt; 정의.&lt;/p&gt;
+
+&lt;p&gt;n X n 행렬에 대해서도 행렬의 곱셈 정의에 따라 결합법칙이 성립하고 살수 n X n 행렬에 대해 닫혀 있다. 항등원 I가 존재하고 역행렬이 존재할 경우 위에서 정의한 group애 해당한다. 이를 general linear group이라고 부른다.&lt;/p&gt;
+
+&lt;h4 id=&quot;242-vector-spaces&quot;&gt;2.4.2 Vector Spaces&lt;/h4&gt;
+&lt;p&gt;V는 집합니다. 이 집합의 원소를 벡터라고 한다. Real-valued vector space V = (V, +, ·)은 아래 두 연산을 갖는 집합이다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;: 벡터 덧셈&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;· : 스칼라 곱셈
+벡터간 곱셈은 정의되지 않았음에 유의하자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;243-vector-subspaces&quot;&gt;2.4.3 Vector Subspaces&lt;/h4&gt;
+&lt;p&gt;Vector space에 contained된 space. Vector space가 지닌 특성들을 모두 inherit한다. Vector subspace는 closure 조건을 만족시켜야 하며 덧셈에 대한 항등원인 0을 포함해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Vector subspace 간 교집합도 vector subspace이다. (&lt;a href=&quot;https://yutsumura.com/the-intersection-of-two-subspaces-is-also-a-subspace/#:~:text=To%20prove%20that%20the%20intersection,x%E2%88%88U%E2%88%A9V.&quot;&gt;증명&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Ax = O의 solution x가 항상 &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt;의 subspace이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;25-linear-independence&quot;&gt;2.5 Linear Independence&lt;/h4&gt;
+&lt;p&gt;키워드: &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%84%A0%ED%98%95_%EA%B2%B0%ED%95%A9&quot;&gt;선형 결합&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_independence#:~:text=In%20the%20theory%20of%20vector,said%20to%20be%20linearly%20independent.&quot;&gt;선형독립&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;선형결합은 Vector space에 있는 유한한 수의 벡터들과 상수배를 이용해서 vector space 내 다른 벡터 v를 나타내는 방법. 선형독립은 선형결합으로 영벡터를 나타내는 방법이 오직 상수(람다)를 모두 0으로 해야만 하는 경우이다.&lt;/p&gt;
+
+&lt;p&gt;Echelon form으로 나타냈을 때 모든 column이 pivot column일 경우에만 선형독립이다(필요충분)&lt;/p&gt;
+
+&lt;h3 id=&quot;26-basis-and-rank&quot;&gt;2.6 Basis and Rank&lt;/h3&gt;
+&lt;h4 id=&quot;261-generating-set-and-basis&quot;&gt;2.6.1 Generating Set and Basis&lt;/h4&gt;
+&lt;p&gt;Generating set은 Vector Space V에 속하는 벡터 v가 유한(k)개의 벡터로 나타낼 수 있으면 이 벡터들의 집합 A를 generating set이라고 한다. Generating set A를 가지고 만들 수 있는 모든 선형결합의 집합을 span of A라고 정의한다.&lt;/p&gt;
+
+&lt;p&gt;Basis는 Vector space V의 가장 작은 generating set이다. 가장 작다는 것은 해당 generating set보다 더 작은 generating set의 조건을 만족하는 집합이 없음을 의미한다. Generating set의 선형독립인 vector들을 V의 basis라고 부른다.&lt;/p&gt;
+
+&lt;p&gt;Basis는 unique하지 않지만 벡터 수는 같다. 이때 vector space의 차원은 basis 벡터의 수와 같다. basis를 이용해서 vector space 내 다른 vector를 표현할 때의 해는 유일하다.&lt;/p&gt;
+
+&lt;h4 id=&quot;262-rank&quot;&gt;2.6.2 Rank&lt;/h4&gt;
+&lt;p&gt;행렬 내에 independent한 행 또는 열의 수를 rank라고 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;27-linear-mappings&quot;&gt;2.7 Linear Mappings&lt;/h3&gt;
+&lt;p&gt;벡터 공간의 성질을 만족시키기 위해서 mapping할 때 특정 성질을 만족하는 경우 linear mapping이라고 한다. Linear mapping을 행렬로 표현할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;Image와 Kernel(또는 Null Space)은 다음과 같이 정의한다. Kernel은 영행렬이 나오게끔하는 정의역 내 벡터들의 집합. Image는 치역으로 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://brilliant.org/wiki/rank-nullity-theorem/#:~:text=The%20rank%2Dnullity%20theorem%20states,columns%20over%20a%20field%2C%20then&quot;&gt;Rank-Nullity Theorem&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;footnote_1&quot;&gt;1&lt;/a&gt;: A system of linear equations is homogeneous if all of the constant terms are zero&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="math" /><summary type="html">데이터사이언스대학원 Bootcamp 3일차에는 교재의 해석기하학 챕터(Chapter 3)를 다뤘다. 이번 장에서는 앞서 배운 내용들에 대한 기하학적 해석들을 살펴본다. Geometric vector를 이용해서 길이, 거리, 두 벡터간 각도를 계산할 수 있는데, 이를 위해서 아래 내용들부터 살펴보자.</summary></entry><entry><title type="html">Vector Spaces and Linear Independence</title><link href="https://soonjune.github.io/vector-spaces-and-linear-independence" rel="alternate" type="text/html" title="Vector Spaces and Linear Independence" /><published>2021-01-06T20:00:00+09:00</published><updated>2021-01-06T20:00:00+09:00</updated><id>https://soonjune.github.io/vector-spaces-and-linear-independence</id><content type="html" xml:base="https://soonjune.github.io/vector-spaces-and-linear-independence">&lt;p&gt;데이터사이언스대학원 Bootcamp 2일차에는 벡터 공간(Vector space)와 선형 독립(Linear Independence)을 주로 다뤘다. 들어가기에 앞서, 저번 시간에 배웠던 연립 일차 방정식을 풀기 위한 elementary transformation에 대해 잠깐 살펴보자. Elementray row/column operations은 elementary matrix를 우측 또는 좌측에 곱함으로써 수행할 수 있다.(&lt;a href=&quot;https://en.wikipedia.org/wiki/Elementary_matrix#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,when%20R%20is%20a%20field.&quot;&gt;Elementary Matrix&lt;/a&gt;) 기본행연산에는 3가지가 있는데 아래와 같다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;두 row를 바꾼다 (swap)&lt;/li&gt;
@@ -409,102 +485,4 @@ Determinant is Linear Each Row &lt;br /&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.</summary></entry><entry><title type="html">면접 대비 - 인공지능, 기계학습 개념 복습</title><link href="https://soonjune.github.io/AI-Review" rel="alternate" type="text/html" title="면접 대비 - 인공지능, 기계학습 개념 복습" /><published>2020-08-17T23:30:00+09:00</published><updated>2020-08-17T23:30:00+09:00</updated><id>https://soonjune.github.io/AI-Review</id><content type="html" xml:base="https://soonjune.github.io/AI-Review">&lt;p&gt;면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;1-machine-learning-정의&quot;&gt;1. Machine Learning 정의&lt;/h2&gt;
-&lt;h3 id=&quot;well-posed-learning-problem-by-tom-mitchell&quot;&gt;Well-posed learning problem by Tom Mitchell&lt;/h3&gt;
-&lt;p&gt;경험(E)이 늘어남에 따라 특정 작업(T)를 수행하는 지표(P)의 개선이 이루어 질 때 기계가 학습한다고 정의할 수 있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;2-지도비지도-학습-강화학습&quot;&gt;2. 지도/비지도 학습, 강화학습&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;지도 학습 - 정답과 오답이 주어져서 training set을 바탕으로 정확도 높은 함수를 학습하는 것이 목표이다. 연속적인 데이터를 바탕으로 예측하는 회귀 문제나 비연속적인 데이터를 분류하는 Classification 문제가 지도 학습의 예이다.&lt;/li&gt;
-  &lt;li&gt;비지도 학습 - 어떤 명시적인 정답이 주어지지 않고 데이터의 특성을 파악하는 과정이라고 할 수 있다. Clustering, Anomaly detection, association, autoencoder와 같은 문제가 해당된다.&lt;/li&gt;
-  &lt;li&gt;강화학습 - Agent가 가장 reward가 높은 policy를 학습하는 학습 방법이다. 이제부터 강화학습에 대해 좀 더 알아보자.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;search-problem&quot;&gt;Search Problem&lt;/h2&gt;
-&lt;p&gt;4가지 요소를 갖는다. - state space, successor function(action, cost), start sate/goal state   &lt;br /&gt;
-여기서 start state에서 goal state까지 도달하게 만드는 일련의 action을 solution이라고 한다.&lt;/p&gt;
-&lt;h3 id=&quot;1-uninformed-search&quot;&gt;1. Uninformed Search&lt;/h3&gt;
-&lt;p&gt;어떤 그래프(State Space Graph) 또는 트리(Search Tree)를 탐색하는 문제에서 아무런 정보가 주어지지 않은 상태이다. DFS, BFS를 통해 완전탐색을 할 수 있다. 그래프는 각각의 상태가 한나의 노드로만 표현되기에 사이즈가 작다는 장점이 있고 트리는 상태가 여러번 등장하기도 하지만 goal state까지 하나의 고유한 path로 나타낼 수 있다는 장점이 있다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Uniform Cost Search - 모든 옵션까지의 비용을 계산해서 가장 비용이 작은 노드를 확장한다.(Optimal, Complete, but Slow)
-    &lt;h3 id=&quot;2-informed-search&quot;&gt;2. Informed Search&lt;/h3&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Gready Search - Heuristic function(goal에 가까운 정도를 예측하는 함수)에 따라 goal state에 가장 가깝다고 생각되는 node를 expand한다. Optimal한 solution을 보장하지 못한다.&lt;/li&gt;
-  &lt;li&gt;A* Search(Best of both worlds - optimal &amp;amp; fast)&lt;/li&gt;
-  &lt;li&gt;조건: Admissible(Optimistic) Heuristic - goal까지의 true cost보다 높게(비관적인) 전망을 하지 않아야 한다.   &lt;br /&gt;
-똑같은 node를 두번 탐색하지 않도록 Graph Search에서는 Consistency 조건이 필요하다. 하나의 arc(간선)의 비용 예측이 실제 비용보다 작아야한다.
-f = h + g
-goal에 더 가까운 지점 B보다 goal에서 먼 A가 더 먼저 fringe에 들어간다는 것을 보이는 것으로 optmiality를 증명할 수 있다.
-    &lt;h3 id=&quot;3-adverserial-search&quot;&gt;3. Adverserial Search&lt;/h3&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Minimax는 deterministic &amp;amp; perfect information 게임에서 상대방이 optimal한 선택을 한다고 가정하고 상대가 나에게 가장 불리한 선택할 것을 가정한뒤 선택에 임한다. 내가 Max agent인 경우에는 상대가 선택한 최소 reward 중에서 가장 큰 것을 선택하게 되고 min agent는 그 반대로 행동할 것이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Pruning - 선택되지 않을 것들을 탐색에서 제외할 수 있다. 알파-베타 프루닝을 통해서 Max agent는 탐색과정에서 얻을 수 있는 최대 value(알파), Min agent는 탐색과정에서 얻을 수 있는 최소 value(베타)와 새로운 노드를 비교해서 탐색하게 되는 노드 수를 줄이는 과정을 거친다.   &lt;br /&gt;
-Minimizer: v &amp;gt; alpha =&amp;gt; prune
-Maximizer: v &amp;lt; beta =&amp;gt; prune&lt;/p&gt;
-
-&lt;p&gt;Expectimax는 상대방이 최적의 선택을 하지 않는다고 가정하고 확률을 도입해서 expected value가 가장 큰 노드를 선택한다.&lt;/p&gt;
-&lt;h3 id=&quot;4-markov-decision-processes&quot;&gt;4. &lt;a href=&quot;https://en.wikipedia.org/wiki/Markov_decision_process&quot;&gt;Markov Decision Processes&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;다음 state는 오직 현재 state에 의해서만 영향을 받는다(Simplified version of the world). 즉, 미래와 과거가 독립이라는 것을 가정한다. 보상 R(s, a, s’) / Transition function T(s, a, s’) = P(s’|s, a)&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Value Iteration
-&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/642146ac65c7d64f99f1a77ffdff3397b555068e&quot; /&gt;
-Complexity - O(S^2A)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bellman_equation&quot;&gt;Bellman Equations&lt;/a&gt;: a Bellman equation is a recursion for expected rewards.
-    &lt;h3 id=&quot;value-iteration의-문제점&quot;&gt;Value Iteration의 문제점&lt;/h3&gt;
-    &lt;p&gt;V function에는 optimal action이 포함되지 않음. 수렴하는데 오래 걸림. =&amp;gt; Policy Iteration: action을 track하지 않아도 돼서 시간이 적게 걸림(Value iteration 둘다 one-step lookahead 개념 활용) &lt;br /&gt;
-Q value를 활용하면 action을 선택하기 쉬워짐&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;regret = u(possible action) - u(action taken)
-it converges to 0 if the strategy is good enough&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mdp-아닌-경우model-free-문제점&quot;&gt;MDP 아닌 경우(Model-free) 문제점&lt;/h3&gt;
-&lt;p&gt;In reinforcement learning (RL), a model-free algorithm (as opposed to a model-based one) is an algorithm which does not use the transition probability distribution (and the reward function) associated with the Markov decision process (MDP)   &lt;br /&gt;
-R, T를 모름&lt;/p&gt;
-&lt;h4 id=&quot;해결책-q-learning&quot;&gt;해결책: Q-Learning&lt;/h4&gt;
-&lt;p&gt;Q-values를 활용: action을 선택하고 그에 따른 reward에 맞춰서 Q-value를 업데이트 해줌.
-&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/678cb558a9d59c33ef4810c9618baf34a9577686&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;q-learning의-문제점&quot;&gt;Q-Learning의 문제점&lt;/h3&gt;
-&lt;p&gt;비슷한 노드끼리 서로 다르게 보기 때문에 탐색과정을 일일이 거쳐야 한다는 단점. 따라서 feature를 이용해서 state를 일반화해주는 것이 가능하다. =&amp;gt; Feature-Based Representation &amp;amp; Approximate Q-Learning&lt;/p&gt;
-
-&lt;h3 id=&quot;5-naive-bayes-및-확률-기초-개념-정리&quot;&gt;5. Naive Bayes 및 확률 기초 개념 정리&lt;/h3&gt;
-&lt;p&gt;1) random variable - 확률적인 과정에 따라 값이 결정되는 변수(오메가 -&amp;gt; E로의 mapping)  &lt;br /&gt;
-2) 조건부 확률 - 주어진 사건이 일어났다는 가정 하에 다른 한 사건이 일어날 확률을 뜻한다.  &lt;br /&gt;
-3) &lt;a href=&quot;https://en.wikipedia.org/wiki/Chain_rule_(probability)&quot;&gt;Chain rule&lt;/a&gt;  &lt;br /&gt;
-4) &lt;a href=&quot;https://en.wikipedia.org/wiki/Bayes%27_theorem&quot;&gt;Bayes Theorem&lt;/a&gt;   &lt;br /&gt;
-5) &lt;a href=&quot;https://en.wikipedia.org/wiki/Maximum_likelihood_estimation&quot;&gt;MLE&lt;/a&gt;    &lt;br /&gt;
-6) &lt;a href=&quot;https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation&quot;&gt;MAP&lt;/a&gt;    &lt;br /&gt;
-7) 조건부 독립 - p(a|b,c)=p(a|c), 즉 b, c가 있거나 없거나 a의 확률에 영향을 미치지 않는다.
-8) Naive Bayes- 조건부 독립을 가정하면 c의 prior와 c와 다른 사건의 조건부 확률의 곱 또는 log합으로 나타낼 수 있다.   &lt;br /&gt;
-장점은 단순하고 빠르다는 것이 있으나 independent하지 않을 경우 bias 문제에 빠질 수 있으며 pattern을 모델링 할 수 없다는 문제가 있다. 따라서 정확도도 낮은 편이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;6-기계학습-정리&quot;&gt;6. 기계학습 정리&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Overfitting 방지를 위한 regularization term 추가&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Backpropagation&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A support vector machine (SVM) is a supervised machine learning model that uses classification algorithms for two-group classification problems. After giving an SVM model sets of labeled training data for each category, they’re able to categorize new text.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Kernel Trick - Kernel function(similarity function)은 높은 차원의 내적을 의미한다. K(x_i,x_j)로 구성된 행렬은 positive semi-definite matrix여야 하며 대칭행렬(symetric matrix)이어야 합니다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;PCA - eigenvalue decomposition of covariance matrices&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;7-딥러닝&quot;&gt;7. 딥러닝&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;CNN - In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of deep neural networks, most commonly applied to analyzing visual imagery.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;RNN - A recurrent neural network (RNN) is a class of artificial neural networks where connections between nodes form a directed graph along a temporal sequence.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Park Seung Joon</name></author><category term="interview" /><summary type="html">면접 대비를 위해서 정리한 내용을 간단히 써보고자 한다.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.</summary></entry></feed>
