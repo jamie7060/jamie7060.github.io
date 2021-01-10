@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Matrix Decompositions</title>
+        
+          <description>&lt;p&gt;데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 &lt;a href=&quot;https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors#:~:text=In%20linear%20algebra%2C%20an%20eigenvector,which%20the%20eigenvector%20is%20scaled.&quot;&gt;eigenvalue와 eigenvector&lt;/a&gt;가 나오므로 잘 알아두는 게 중요하다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 08 Jan 2021 20:00:00 +0900</pubDate>
+        <link>
+        https://soonjune.github.io/matrix-decompositions</link>
+        <guid isPermaLink="true">https://soonjune.github.io/matrix-decompositions</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Analytic Geometry</title>
         
           <description>&lt;p&gt;데이터사이언스대학원 Bootcamp 3일차에는 교재의 해석기하학 챕터(Chapter 3)를 다뤘다. 이번 장에서는 앞서 배운 내용들에 대한 기하학적 해석들을 살펴본다. Geometric vector를 이용해서 길이, 거리, 두 벡터간 각도를 계산할 수 있는데, 이를 위해서 아래 내용들부터 살펴보자.&lt;/p&gt;

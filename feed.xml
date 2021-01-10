@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2021-01-09T00:20:47+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Analytic Geometry</title><link href="https://soonjune.github.io/analytic-geometry" rel="alternate" type="text/html" title="Analytic Geometry" /><published>2021-01-07T20:00:00+09:00</published><updated>2021-01-07T20:00:00+09:00</updated><id>https://soonjune.github.io/analytic-geometry</id><content type="html" xml:base="https://soonjune.github.io/analytic-geometry">&lt;p&gt;데이터사이언스대학원 Bootcamp 3일차에는 교재의 해석기하학 챕터(Chapter 3)를 다뤘다. 이번 장에서는 앞서 배운 내용들에 대한 기하학적 해석들을 살펴본다. Geometric vector를 이용해서 길이, 거리, 두 벡터간 각도를 계산할 수 있는데, 이를 위해서 아래 내용들부터 살펴보자.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://soonjune.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://soonjune.github.io/" rel="alternate" type="text/html" /><updated>2021-01-10T14:54:49+09:00</updated><id>https://soonjune.github.io/</id><title type="html">Seung Joon’s Blog</title><subtitle>Personal Blog of Park Seung Joon</subtitle><entry><title type="html">Matrix Decompositions</title><link href="https://soonjune.github.io/matrix-decompositions" rel="alternate" type="text/html" title="Matrix Decompositions" /><published>2021-01-08T20:00:00+09:00</published><updated>2021-01-08T20:00:00+09:00</updated><id>https://soonjune.github.io/matrix-decompositions</id><content type="html" xml:base="https://soonjune.github.io/matrix-decompositions">&lt;p&gt;데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 &lt;a href=&quot;https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors#:~:text=In%20linear%20algebra%2C%20an%20eigenvector,which%20the%20eigenvector%20is%20scaled.&quot;&gt;eigenvalue와 eigenvector&lt;/a&gt;가 나오므로 잘 알아두는 게 중요하다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;41-determinant-and-trace&quot;&gt;4.1 Determinant and Trace&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Determinant&quot;&gt;Determinant&lt;/a&gt;는 square matrix에 대해서만 정의되며 &lt;a href=&quot;https://en.wikipedia.org/wiki/Laplace_expansion&quot;&gt;Laplace Expansion&lt;/a&gt;을 통해 구할 수 있다. 역행렬의 존재여부를 확인하고 구하거나 n-dimensional 평행육면체의 부피를 구하는 등에 쓰인다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Trace_(linear_algebra)&quot;&gt;Trace&lt;/a&gt;는 diagonal elements의 합이다. 두 행렬이 각각 n X k, k X n이라면 교환법칙이 성립하기 때문에 cyclic permutation에 대해 invariant하다.&lt;/p&gt;
+
+&lt;h3 id=&quot;42-eigenvalues-and-eigenvectors&quot;&gt;4.2 Eigenvalues and Eigenvectors&lt;/h3&gt;
+&lt;p&gt;행렬 A의 eigenvalue와 eigenvector를 구하는 방법을 알아보자. 우선 &lt;a href=&quot;https://en.wikipedia.org/wiki/Characteristic_polynomial&quot;&gt;charateristic polynomial&lt;/a&gt;을 solve해서 λ를 구한다. 이때 구해지는 λ가 eigenvalue들이 된다. 특정 λ에 대해 (A-λI)x = O를 풀어서 구한 벡터 x들이 eigenvectors가 되며 이들의 span이 eigenspace가 된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;44-eigendecomposition-and-diagonalization&quot;&gt;4.4 Eigendecomposition and Diagonalization&lt;/h3&gt;
+&lt;p&gt;Diagonal matrix D는 &lt;script type=&quot;math/tex&quot;&gt;D = P^{-1}AP&lt;/script&gt;과 같이 invertible matrix P를 이용해서 나타낼수 있는 행렬을 의미한다. 이때, A와 D는 닮음 관계에 있다고 한다. 식을 다시 표현하면 AP = PD로 나타낼 수 있는데 이는 eignevalue와 eigenvector를 정의할 때 보았던 식과 유사하다. 즉, 우리는 A를 &lt;script type=&quot;math/tex&quot;&gt;PDP^{-1}&lt;/script&gt; 꼴로 나타낼 수 있는데 이를 eigendecomposition이라고 한다. D는 entry(대각선 값)들이 eigenvalue이고 P는 그에 상응하는 eigenvector들이 column vector인 행렬이다. P는 full rank인 square matrix여야 한다. 이는 eigenvector들이 모두 선형독립이라는 말과 동치이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;45-singular-value-decomposition&quot;&gt;4.5 &lt;a href=&quot;https://en.wikipedia.org/wiki/Singular_value_decomposition&quot;&gt;Singular Value Decomposition&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;square matrix가 아닌 행렬도 분해해서 차원을 축소해서 나타낼수 있다. Eigendecompostion의 일반화된 버전으로 볼 수 있기에 SVD는 특정 행렬에 대해 항상 가능하다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="linear-algebra" /><category term="math" /><summary type="html">데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 eigenvalue와 eigenvector가 나오므로 잘 알아두는 게 중요하다.</summary></entry><entry><title type="html">Analytic Geometry</title><link href="https://soonjune.github.io/analytic-geometry" rel="alternate" type="text/html" title="Analytic Geometry" /><published>2021-01-07T20:00:00+09:00</published><updated>2021-01-07T20:00:00+09:00</updated><id>https://soonjune.github.io/analytic-geometry</id><content type="html" xml:base="https://soonjune.github.io/analytic-geometry">&lt;p&gt;데이터사이언스대학원 Bootcamp 3일차에는 교재의 해석기하학 챕터(Chapter 3)를 다뤘다. 이번 장에서는 앞서 배운 내용들에 대한 기하학적 해석들을 살펴본다. Geometric vector를 이용해서 길이, 거리, 두 벡터간 각도를 계산할 수 있는데, 이를 위해서 아래 내용들부터 살펴보자.&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
 &lt;/script&gt;
@@ -22,59 +39,29 @@
 &lt;h5 id=&quot;positive-definite&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Positive_definiteness&quot;&gt;Positive definite&lt;/a&gt;&lt;/h5&gt;
 &lt;p&gt;0 벡터를 제외한 벡터 공간을 input으로 해서 같은 벡터로 bilinear mapping을 해서 항상 0보다 크면 bilinear map은 positive definite이다. 두개 argument 모두 영벡터인 경우에만 0이 나온다.&lt;/p&gt;
 
-&lt;p&gt;최종적으로 &lt;a href=&quot;https://en.wikipedia.org/wiki/Inner_product_space&quot;&gt;inner product&lt;/a&gt;는 다음과 같이 정의할 수 있다.
-Positive definite, symmetric한 bilinear mapping&lt;/p&gt;
+&lt;p&gt;최종적으로 일반적인 &lt;a href=&quot;https://en.wikipedia.org/wiki/Inner_product_space&quot;&gt;inner product&lt;/a&gt;는 positive definite, symmetric한 bilinear mapping으로 같이 정의할 수 있다.&lt;/p&gt;
 
-&lt;h4 id=&quot;241-groups&quot;&gt;2.4.1 Groups&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Group_(mathematics)&quot;&gt;Group&lt;/a&gt; 정의.&lt;/p&gt;
+&lt;h4 id=&quot;323-symmetric-positive-definite-matriceshttpsenwikipediaorgwikidefinite_symmetric_matrix&quot;&gt;3.2.3 Symmetric, Positive (Definite Matrices)[https://en.wikipedia.org/wiki/Definite_symmetric_matrix]&lt;/h4&gt;
+&lt;p&gt;n X n 실수 행렬 A가 symmetric, postive definite이고 &amp;lt;x, y&amp;gt; = &lt;script type=&quot;math/tex&quot;&gt;x̂^TAŷ&lt;/script&gt;이면 벡터 공간 V와 V의 ordered basis B에 대하여 &amp;lt;·,·&amp;gt;: V x V → R은 inner product이다. x̂(x hat)과 ŷ(y hat)은 basis B에 대한 x, y 좌표이다.&lt;/p&gt;
 
-&lt;p&gt;n X n 행렬에 대해서도 행렬의 곱셈 정의에 따라 결합법칙이 성립하고 살수 n X n 행렬에 대해 닫혀 있다. 항등원 I가 존재하고 역행렬이 존재할 경우 위에서 정의한 group애 해당한다. 이를 general linear group이라고 부른다.&lt;/p&gt;
+&lt;h3 id=&quot;33-lengths-and-distances&quot;&gt;3.3 Lengths and Distances&lt;/h3&gt;
+&lt;p&gt;길이는 inner product에 루트를 씌어준 것, 즉 norm으로 정의할 수 있다. 하지만 모든 norm이 inner product로 유도되는 것은 아니라는 점에 유의하자. Inner product에 따라서 길이가 달라질 수 있다. 두 벡터 간 거리는 두 벡터를 뺀 것의 norm으로 정의할 수 있다.&lt;/p&gt;
 
-&lt;h4 id=&quot;242-vector-spaces&quot;&gt;2.4.2 Vector Spaces&lt;/h4&gt;
-&lt;p&gt;V는 집합니다. 이 집합의 원소를 벡터라고 한다. Real-valued vector space V = (V, +, ·)은 아래 두 연산을 갖는 집합이다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;ul&gt;
-      &lt;li&gt;: 벡터 덧셈&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;· : 스칼라 곱셈
-벡터간 곱셈은 정의되지 않았음에 유의하자.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;34-angles-and-orthogonality&quot;&gt;3.4 Angles and Orthogonality&lt;/h3&gt;
+&lt;p&gt;두 subspace 간 &lt;a href=&quot;https://en.wikipedia.org/wiki/Angles_between_flats#:~:text=Advanced%20properties,-Non%2Dtrivial%20(different&amp;amp;text=)%20angles%20between%20two%20subspaces%20are,angles%20between%20their%20orthogonal%20complements.&amp;amp;text=The%20angles%20between%20subspaces%20satisfy,set%20into%20a%20metric%20space&quot;&gt;각도&lt;/a&gt;는 inner product를 이용해서 정의할 수 있다. 각도는 방향이 얼마나 유사한지를 나타낸다. 비슷할 수록 각도는 0에 가깝다.&lt;/p&gt;
 
-&lt;h4 id=&quot;243-vector-subspaces&quot;&gt;2.4.3 Vector Subspaces&lt;/h4&gt;
-&lt;p&gt;Vector space에 contained된 space. Vector space가 지닌 특성들을 모두 inherit한다. Vector subspace는 closure 조건을 만족시켜야 하며 덧셈에 대한 항등원인 0을 포함해야 한다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Vector subspace 간 교집합도 vector subspace이다. (&lt;a href=&quot;https://yutsumura.com/the-intersection-of-two-subspaces-is-also-a-subspace/#:~:text=To%20prove%20that%20the%20intersection,x%E2%88%88U%E2%88%A9V.&quot;&gt;증명&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Ax = O의 solution x가 항상 &lt;script type=&quot;math/tex&quot;&gt;R^n&lt;/script&gt;의 subspace이다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;두 벡터를 argument로 하는 inner product가 0 일 때 orthogonal하다고 한다. 특별히 두 벡터의 norm이 1인 경우는 orthonormal하다고 한다.&lt;/p&gt;
 
-&lt;h4 id=&quot;25-linear-independence&quot;&gt;2.5 Linear Independence&lt;/h4&gt;
-&lt;p&gt;키워드: &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%84%A0%ED%98%95_%EA%B2%B0%ED%95%A9&quot;&gt;선형 결합&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_independence#:~:text=In%20the%20theory%20of%20vector,said%20to%20be%20linearly%20independent.&quot;&gt;선형독립&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Orthogonal Matrix는 transpose와 곱해서 identity matrix가 나오는 square matrix로 정의한다. 이는 &lt;script type=&quot;math/tex&quot;&gt;A^T = A^{-1}&lt;/script&gt;을 의미한다.&lt;/p&gt;
 
-&lt;p&gt;선형결합은 Vector space에 있는 유한한 수의 벡터들과 상수배를 이용해서 vector space 내 다른 벡터 v를 나타내는 방법. 선형독립은 선형결합으로 영벡터를 나타내는 방법이 오직 상수(람다)를 모두 0으로 해야만 하는 경우이다.&lt;/p&gt;
+&lt;h3 id=&quot;35-orthonormal-basis&quot;&gt;3.5 Orthonormal Basis&lt;/h3&gt;
+&lt;p&gt;n-dimensional vector space에서 n개의 basis 벡터들이 서로 orthogonal하고 길이가 1인 경우이다.&lt;/p&gt;
 
-&lt;p&gt;Echelon form으로 나타냈을 때 모든 column이 pivot column일 경우에만 선형독립이다(필요충분)&lt;/p&gt;
+&lt;h3 id=&quot;36-orthogonal-complement&quot;&gt;3.6 Orthogonal Complement&lt;/h3&gt;
+&lt;p&gt;D-dimensional vector space V는 M-dimensional subspace U와 그 (D-M)-dimensional orthogonal complement로 나타낼 수 있다. U와 그 orthogonal complement의 교집합의 원소는 영벡터 뿐이다.&lt;/p&gt;
 
-&lt;h3 id=&quot;26-basis-and-rank&quot;&gt;2.6 Basis and Rank&lt;/h3&gt;
-&lt;h4 id=&quot;261-generating-set-and-basis&quot;&gt;2.6.1 Generating Set and Basis&lt;/h4&gt;
-&lt;p&gt;Generating set은 Vector Space V에 속하는 벡터 v가 유한(k)개의 벡터로 나타낼 수 있으면 이 벡터들의 집합 A를 generating set이라고 한다. Generating set A를 가지고 만들 수 있는 모든 선형결합의 집합을 span of A라고 정의한다.&lt;/p&gt;
-
-&lt;p&gt;Basis는 Vector space V의 가장 작은 generating set이다. 가장 작다는 것은 해당 generating set보다 더 작은 generating set의 조건을 만족하는 집합이 없음을 의미한다. Generating set의 선형독립인 vector들을 V의 basis라고 부른다.&lt;/p&gt;
-
-&lt;p&gt;Basis는 unique하지 않지만 벡터 수는 같다. 이때 vector space의 차원은 basis 벡터의 수와 같다. basis를 이용해서 vector space 내 다른 vector를 표현할 때의 해는 유일하다.&lt;/p&gt;
-
-&lt;h4 id=&quot;262-rank&quot;&gt;2.6.2 Rank&lt;/h4&gt;
-&lt;p&gt;행렬 내에 independent한 행 또는 열의 수를 rank라고 한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;27-linear-mappings&quot;&gt;2.7 Linear Mappings&lt;/h3&gt;
-&lt;p&gt;벡터 공간의 성질을 만족시키기 위해서 mapping할 때 특정 성질을 만족하는 경우 linear mapping이라고 한다. Linear mapping을 행렬로 표현할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;Image와 Kernel(또는 Null Space)은 다음과 같이 정의한다. Kernel은 영행렬이 나오게끔하는 정의역 내 벡터들의 집합. Image는 치역으로 볼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;(&lt;a href=&quot;https://brilliant.org/wiki/rank-nullity-theorem/#:~:text=The%20rank%2Dnullity%20theorem%20states,columns%20over%20a%20field%2C%20then&quot;&gt;Rank-Nullity Theorem&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;footnote_1&quot;&gt;1&lt;/a&gt;: A system of linear equations is homogeneous if all of the constant terms are zero&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="math" /><summary type="html">데이터사이언스대학원 Bootcamp 3일차에는 교재의 해석기하학 챕터(Chapter 3)를 다뤘다. 이번 장에서는 앞서 배운 내용들에 대한 기하학적 해석들을 살펴본다. Geometric vector를 이용해서 길이, 거리, 두 벡터간 각도를 계산할 수 있는데, 이를 위해서 아래 내용들부터 살펴보자.</summary></entry><entry><title type="html">Vector Spaces and Linear Independence</title><link href="https://soonjune.github.io/vector-spaces-and-linear-independence" rel="alternate" type="text/html" title="Vector Spaces and Linear Independence" /><published>2021-01-06T20:00:00+09:00</published><updated>2021-01-06T20:00:00+09:00</updated><id>https://soonjune.github.io/vector-spaces-and-linear-independence</id><content type="html" xml:base="https://soonjune.github.io/vector-spaces-and-linear-independence">&lt;p&gt;데이터사이언스대학원 Bootcamp 2일차에는 벡터 공간(Vector space)와 선형 독립(Linear Independence)을 주로 다뤘다. 들어가기에 앞서, 저번 시간에 배웠던 연립 일차 방정식을 풀기 위한 elementary transformation에 대해 잠깐 살펴보자. Elementray row/column operations은 elementary matrix를 우측 또는 좌측에 곱함으로써 수행할 수 있다.(&lt;a href=&quot;https://en.wikipedia.org/wiki/Elementary_matrix#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,when%20R%20is%20a%20field.&quot;&gt;Elementary Matrix&lt;/a&gt;) 기본행연산에는 3가지가 있는데 아래와 같다.&lt;/p&gt;
+&lt;h3 id=&quot;38-orthogonal-projections&quot;&gt;3.8 Orthogonal Projections&lt;/h3&gt;
+&lt;p&gt;앞서 vector space V를 어떤 subspace U와 그 orthogonal complement로 표현할 수 있다는 것을 알았다. 이를 이용해서 V에 속하는 벡터 x를 U에 projection할 수 있다. U의 ordered basis B와 B의 각 원소의 coordinate을 표현하는 λ를 행렬곱하면 x를 projection한 결과를 얻을 수 있다. 우리가 관심 있는 부분은 λ이다. &lt;script type=&quot;math/tex&quot;&gt;B^T&lt;/script&gt;(x - Bλ) = 0&lt;script type=&quot;math/tex&quot;&gt;이 되는 λ를 찾으면 된다. B의 역행렬이 존재한다면 λ =&lt;/script&gt;(B^TB)^{-1}&lt;script type=&quot;math/tex&quot;&gt;&lt;/script&gt;B^Tx&lt;script type=&quot;math/tex&quot;&gt;로 나타낼 수 있다. B의 column들은 모두 linearly independent 하기 때문에&lt;/script&gt;B^TB$$의 역행렬이 존재한다. 따라서 λ를 구할 수 있다.&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="math" /><summary type="html">데이터사이언스대학원 Bootcamp 3일차에는 교재의 해석기하학 챕터(Chapter 3)를 다뤘다. 이번 장에서는 앞서 배운 내용들에 대한 기하학적 해석들을 살펴본다. Geometric vector를 이용해서 길이, 거리, 두 벡터간 각도를 계산할 수 있는데, 이를 위해서 아래 내용들부터 살펴보자.</summary></entry><entry><title type="html">Vector Spaces and Linear Independence</title><link href="https://soonjune.github.io/vector-spaces-and-linear-independence" rel="alternate" type="text/html" title="Vector Spaces and Linear Independence" /><published>2021-01-06T20:00:00+09:00</published><updated>2021-01-06T20:00:00+09:00</updated><id>https://soonjune.github.io/vector-spaces-and-linear-independence</id><content type="html" xml:base="https://soonjune.github.io/vector-spaces-and-linear-independence">&lt;p&gt;데이터사이언스대학원 Bootcamp 2일차에는 벡터 공간(Vector space)와 선형 독립(Linear Independence)을 주로 다뤘다. 들어가기에 앞서, 저번 시간에 배웠던 연립 일차 방정식을 풀기 위한 elementary transformation에 대해 잠깐 살펴보자. Elementray row/column operations은 elementary matrix를 우측 또는 좌측에 곱함으로써 수행할 수 있다.(&lt;a href=&quot;https://en.wikipedia.org/wiki/Elementary_matrix#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,when%20R%20is%20a%20field.&quot;&gt;Elementary Matrix&lt;/a&gt;) 기본행연산에는 3가지가 있는데 아래와 같다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;두 row를 바꾼다 (swap)&lt;/li&gt;
@@ -443,46 +430,4 @@ Determinant is Linear Each Row &lt;br /&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.</summary></entry><entry><title type="html">Pythonic Thinking(1) 파이썬 효율적으로 사용하기</title><link href="https://soonjune.github.io/Effective-Python1_1" rel="alternate" type="text/html" title="Pythonic Thinking(1) 파이썬 효율적으로 사용하기" /><published>2020-08-26T23:30:00+09:00</published><updated>2020-08-26T23:30:00+09:00</updated><id>https://soonjune.github.io/Effective-Python1_1</id><content type="html" xml:base="https://soonjune.github.io/Effective-Python1_1">&lt;p&gt;유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.&lt;/p&gt;
-
-&lt;p&gt;첫번째 챕터는 Pythonic Thinking이다. Pythonic이라는 것이 형용사로 만들어질만큼 C나 Java와는 다른 특성을 지는 것을 알 수 있다. Pythonic의 정의를 찾아보니 Stack Overflow에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Exploiting the features of the Python language to produce code that is clear, concise and maintainable.&lt;/code&gt;이라는 설명이 나온다. 즉, 파이썬 코드의 간결하고 명확한 특성을 나타내는 말이다. Pythonic Thinking은 이러한 명확한 코드를 구현하기 위한 생각 방식이라고 볼 수 있다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;파이썬 버전을 알자
- 최신 버전은 Python 3.8이다(2020년 8월 기준). 커맨드 또는 터미널에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 --version&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;python --version&lt;/code&gt;을 통해서 버전을 확인할 수 있다. 맥의 경우 python 2.7이 기본으로 설치되어 있는데 새로 Python 3을 설치해주자.
-    &lt;ul&gt;
-      &lt;li&gt;명령 프롬트에서 올바른 버전의 파이썬이 설치되어 있는지 확인하자.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;PEP8 스타일 가이드를 따르자
-    &lt;ul&gt;
-      &lt;li&gt;PEP8 가이드에 대해 정리가 잘 된 &lt;a href=&quot;https://wayhome25.github.io/python/2017/05/04/pep8/&quot;&gt;블로그&lt;/a&gt;를 참조하자.&lt;/li&gt;
-      &lt;li&gt;공통의 스타일을 사용함으로써 협업을 용이하게 할 수 있다.&lt;/li&gt;
-      &lt;li&gt;일관적인 스타일의 사용은 추후 자신의 코드 수정을 용이하게 한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt;의 차이를 알자.
-    &lt;ul&gt;
-      &lt;li&gt;bytes: 8-bit values    &lt;br /&gt;
- str: Unicode cdoe points&lt;/li&gt;
-      &lt;li&gt;헬퍼 함수(개발자의 편의를 위한 함수)를 이용해서 원하는 문자 시퀀스 타입을 리턴하도록 하자.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt; 인스턴스는 서로 연산할 수 없다 (&amp;gt;, ==, +, % 등).&lt;/li&gt;
-      &lt;li&gt;바이너리 데이터를 읽고 쓰기 위해서는 ‘rb’, ‘wb’ 모드에서 파일을 &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt;한다.
-        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'wb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\xf1\xf2\xf3\xf4\xf5&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'rb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Unicode 데이터를 읽고 쓸 때에는 시스템의 디폴트 인코딩에 주의해라. encoding parameter를 명시적으로 전달하자. &lt;br /&gt;
- 아래는 윈도우의 ‘cp1252’로 인코딩된 파일을 읽는 예시.
-        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data.bin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp1252) as f:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;  data = f.read()&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">유명한 Effective 시리즈의 Python 부분을 읽고 정리하고자 한다. 효율적인 코드 작성을 위한 90가지 방법 중 하루에 3가지씩 정리해보자.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;출처: Slatkin, B. (2020). Effective Python: 90 specific ways to write better Python. USA: Addison-Wesley.&lt;/em&gt;&lt;/p&gt;</content><author><name>Park Seung Joon</name></author><category term="python" /><summary type="html">첫번째 챕터 Pythonic Thinking의 4-6번 팁을 간단하게 요약해보자.</summary></entry></feed>

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://soonjune.github.io/tag/linear-algebra/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://soonjune.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-09T00:20:47+09:00</updated>
+  <updated>2021-01-10T14:54:49+09:00</updated>
   <id>https://soonjune.github.io/tag/linear-algebra/feed.xml</id>
 
   
@@ -30,6 +30,59 @@
   
   
 
+  
+    <entry>
+      <title type="html">Matrix Decompositions</title>
+      <link href="https://soonjune.github.io/matrix-decompositions" rel="alternate" type="text/html" title="Matrix Decompositions" />
+      <published>2021-01-08T20:00:00+09:00</published>
+      <updated>2021-01-08T20:00:00+09:00</updated>
+      <id>https://soonjune.github.io/matrix-decompositions</id>
+      <content type="html" xml:base="https://soonjune.github.io/matrix-decompositions">&lt;p&gt;데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 &lt;a href=&quot;https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors#:~:text=In%20linear%20algebra%2C%20an%20eigenvector,which%20the%20eigenvector%20is%20scaled.&quot;&gt;eigenvalue와 eigenvector&lt;/a&gt;가 나오므로 잘 알아두는 게 중요하다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;h3 id=&quot;41-determinant-and-trace&quot;&gt;4.1 Determinant and Trace&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Determinant&quot;&gt;Determinant&lt;/a&gt;는 square matrix에 대해서만 정의되며 &lt;a href=&quot;https://en.wikipedia.org/wiki/Laplace_expansion&quot;&gt;Laplace Expansion&lt;/a&gt;을 통해 구할 수 있다. 역행렬의 존재여부를 확인하고 구하거나 n-dimensional 평행육면체의 부피를 구하는 등에 쓰인다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Trace_(linear_algebra)&quot;&gt;Trace&lt;/a&gt;는 diagonal elements의 합이다. 두 행렬이 각각 n X k, k X n이라면 교환법칙이 성립하기 때문에 cyclic permutation에 대해 invariant하다.&lt;/p&gt;
+
+&lt;h3 id=&quot;42-eigenvalues-and-eigenvectors&quot;&gt;4.2 Eigenvalues and Eigenvectors&lt;/h3&gt;
+&lt;p&gt;행렬 A의 eigenvalue와 eigenvector를 구하는 방법을 알아보자. 우선 &lt;a href=&quot;https://en.wikipedia.org/wiki/Characteristic_polynomial&quot;&gt;charateristic polynomial&lt;/a&gt;을 solve해서 λ를 구한다. 이때 구해지는 λ가 eigenvalue들이 된다. 특정 λ에 대해 (A-λI)x = O를 풀어서 구한 벡터 x들이 eigenvectors가 되며 이들의 span이 eigenspace가 된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;44-eigendecomposition-and-diagonalization&quot;&gt;4.4 Eigendecomposition and Diagonalization&lt;/h3&gt;
+&lt;p&gt;Diagonal matrix D는 &lt;script type=&quot;math/tex&quot;&gt;D = P^{-1}AP&lt;/script&gt;과 같이 invertible matrix P를 이용해서 나타낼수 있는 행렬을 의미한다. 이때, A와 D는 닮음 관계에 있다고 한다. 식을 다시 표현하면 AP = PD로 나타낼 수 있는데 이는 eignevalue와 eigenvector를 정의할 때 보았던 식과 유사하다. 즉, 우리는 A를 &lt;script type=&quot;math/tex&quot;&gt;PDP^{-1}&lt;/script&gt; 꼴로 나타낼 수 있는데 이를 eigendecomposition이라고 한다. D는 entry(대각선 값)들이 eigenvalue이고 P는 그에 상응하는 eigenvector들이 column vector인 행렬이다. P는 full rank인 square matrix여야 한다. 이는 eigenvector들이 모두 선형독립이라는 말과 동치이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;45-singular-value-decomposition&quot;&gt;4.5 &lt;a href=&quot;https://en.wikipedia.org/wiki/Singular_value_decomposition&quot;&gt;Singular Value Decomposition&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;square matrix가 아닌 행렬도 분해해서 차원을 축소해서 나타낼수 있다. Eigendecompostion의 일반화된 버전으로 볼 수 있기에 SVD는 특정 행렬에 대해 항상 가능하다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Park Seung Joon</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linear-algebra" />
+      
+        <category term="math" />
+      
+
+      
+        <summary type="html">데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 eigenvalue와 eigenvector가 나오므로 잘 알아두는 게 중요하다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Vector Spaces and Linear Independence</title>
