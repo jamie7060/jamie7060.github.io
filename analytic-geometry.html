@@ -166,7 +166,7 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-math post tag-linear-algebra no-image">
+        <article class="post-full  tag-math post tag-math no-image">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
@@ -211,59 +211,29 @@ into the {body} of the default.hbs template -->
 <h5 id="positive-definite"><a href="https://en.wikipedia.org/wiki/Positive_definiteness">Positive definite</a></h5>
 <p>0 벡터를 제외한 벡터 공간을 input으로 해서 같은 벡터로 bilinear mapping을 해서 항상 0보다 크면 bilinear map은 positive definite이다. 두개 argument 모두 영벡터인 경우에만 0이 나온다.</p>
 
-<p>최종적으로 <a href="https://en.wikipedia.org/wiki/Inner_product_space">inner product</a>는 다음과 같이 정의할 수 있다.
-Positive definite, symmetric한 bilinear mapping</p>
+<p>최종적으로 일반적인 <a href="https://en.wikipedia.org/wiki/Inner_product_space">inner product</a>는 positive definite, symmetric한 bilinear mapping으로 같이 정의할 수 있다.</p>
 
-<h4 id="241-groups">2.4.1 Groups</h4>
-<p><a href="https://en.wikipedia.org/wiki/Group_(mathematics)">Group</a> 정의.</p>
+<h4 id="323-symmetric-positive-definite-matriceshttpsenwikipediaorgwikidefinite_symmetric_matrix">3.2.3 Symmetric, Positive (Definite Matrices)[https://en.wikipedia.org/wiki/Definite_symmetric_matrix]</h4>
+<p>n X n 실수 행렬 A가 symmetric, postive definite이고 &lt;x, y&gt; = <script type="math/tex">x̂^TAŷ</script>이면 벡터 공간 V와 V의 ordered basis B에 대하여 &lt;·,·&gt;: V x V → R은 inner product이다. x̂(x hat)과 ŷ(y hat)은 basis B에 대한 x, y 좌표이다.</p>
 
-<p>n X n 행렬에 대해서도 행렬의 곱셈 정의에 따라 결합법칙이 성립하고 살수 n X n 행렬에 대해 닫혀 있다. 항등원 I가 존재하고 역행렬이 존재할 경우 위에서 정의한 group애 해당한다. 이를 general linear group이라고 부른다.</p>
+<h3 id="33-lengths-and-distances">3.3 Lengths and Distances</h3>
+<p>길이는 inner product에 루트를 씌어준 것, 즉 norm으로 정의할 수 있다. 하지만 모든 norm이 inner product로 유도되는 것은 아니라는 점에 유의하자. Inner product에 따라서 길이가 달라질 수 있다. 두 벡터 간 거리는 두 벡터를 뺀 것의 norm으로 정의할 수 있다.</p>
 
-<h4 id="242-vector-spaces">2.4.2 Vector Spaces</h4>
-<p>V는 집합니다. 이 집합의 원소를 벡터라고 한다. Real-valued vector space V = (V, +, ·)은 아래 두 연산을 갖는 집합이다.</p>
-<ul>
-  <li>
-    <ul>
-      <li>: 벡터 덧셈</li>
-    </ul>
-  </li>
-  <li>· : 스칼라 곱셈
-벡터간 곱셈은 정의되지 않았음에 유의하자.</li>
-</ul>
+<h3 id="34-angles-and-orthogonality">3.4 Angles and Orthogonality</h3>
+<p>두 subspace 간 <a href="https://en.wikipedia.org/wiki/Angles_between_flats#:~:text=Advanced%20properties,-Non%2Dtrivial%20(different&amp;text=)%20angles%20between%20two%20subspaces%20are,angles%20between%20their%20orthogonal%20complements.&amp;text=The%20angles%20between%20subspaces%20satisfy,set%20into%20a%20metric%20space">각도</a>는 inner product를 이용해서 정의할 수 있다. 각도는 방향이 얼마나 유사한지를 나타낸다. 비슷할 수록 각도는 0에 가깝다.</p>
 
-<h4 id="243-vector-subspaces">2.4.3 Vector Subspaces</h4>
-<p>Vector space에 contained된 space. Vector space가 지닌 특성들을 모두 inherit한다. Vector subspace는 closure 조건을 만족시켜야 하며 덧셈에 대한 항등원인 0을 포함해야 한다.</p>
-<ul>
-  <li>Vector subspace 간 교집합도 vector subspace이다. (<a href="https://yutsumura.com/the-intersection-of-two-subspaces-is-also-a-subspace/#:~:text=To%20prove%20that%20the%20intersection,x%E2%88%88U%E2%88%A9V.">증명</a>)</li>
-  <li>Ax = O의 solution x가 항상 <script type="math/tex">R^n</script>의 subspace이다.</li>
-</ul>
+<p>두 벡터를 argument로 하는 inner product가 0 일 때 orthogonal하다고 한다. 특별히 두 벡터의 norm이 1인 경우는 orthonormal하다고 한다.</p>
 
-<h4 id="25-linear-independence">2.5 Linear Independence</h4>
-<p>키워드: <a href="https://ko.wikipedia.org/wiki/%EC%84%A0%ED%98%95_%EA%B2%B0%ED%95%A9">선형 결합</a>, <a href="https://en.wikipedia.org/wiki/Linear_independence#:~:text=In%20the%20theory%20of%20vector,said%20to%20be%20linearly%20independent.">선형독립</a></p>
+<p>Orthogonal Matrix는 transpose와 곱해서 identity matrix가 나오는 square matrix로 정의한다. 이는 <script type="math/tex">A^T = A^{-1}</script>을 의미한다.</p>
 
-<p>선형결합은 Vector space에 있는 유한한 수의 벡터들과 상수배를 이용해서 vector space 내 다른 벡터 v를 나타내는 방법. 선형독립은 선형결합으로 영벡터를 나타내는 방법이 오직 상수(람다)를 모두 0으로 해야만 하는 경우이다.</p>
+<h3 id="35-orthonormal-basis">3.5 Orthonormal Basis</h3>
+<p>n-dimensional vector space에서 n개의 basis 벡터들이 서로 orthogonal하고 길이가 1인 경우이다.</p>
 
-<p>Echelon form으로 나타냈을 때 모든 column이 pivot column일 경우에만 선형독립이다(필요충분)</p>
+<h3 id="36-orthogonal-complement">3.6 Orthogonal Complement</h3>
+<p>D-dimensional vector space V는 M-dimensional subspace U와 그 (D-M)-dimensional orthogonal complement로 나타낼 수 있다. U와 그 orthogonal complement의 교집합의 원소는 영벡터 뿐이다.</p>
 
-<h3 id="26-basis-and-rank">2.6 Basis and Rank</h3>
-<h4 id="261-generating-set-and-basis">2.6.1 Generating Set and Basis</h4>
-<p>Generating set은 Vector Space V에 속하는 벡터 v가 유한(k)개의 벡터로 나타낼 수 있으면 이 벡터들의 집합 A를 generating set이라고 한다. Generating set A를 가지고 만들 수 있는 모든 선형결합의 집합을 span of A라고 정의한다.</p>
-
-<p>Basis는 Vector space V의 가장 작은 generating set이다. 가장 작다는 것은 해당 generating set보다 더 작은 generating set의 조건을 만족하는 집합이 없음을 의미한다. Generating set의 선형독립인 vector들을 V의 basis라고 부른다.</p>
-
-<p>Basis는 unique하지 않지만 벡터 수는 같다. 이때 vector space의 차원은 basis 벡터의 수와 같다. basis를 이용해서 vector space 내 다른 vector를 표현할 때의 해는 유일하다.</p>
-
-<h4 id="262-rank">2.6.2 Rank</h4>
-<p>행렬 내에 independent한 행 또는 열의 수를 rank라고 한다.</p>
-
-<h3 id="27-linear-mappings">2.7 Linear Mappings</h3>
-<p>벡터 공간의 성질을 만족시키기 위해서 mapping할 때 특정 성질을 만족하는 경우 linear mapping이라고 한다. Linear mapping을 행렬로 표현할 수 있다.</p>
-
-<p>Image와 Kernel(또는 Null Space)은 다음과 같이 정의한다. Kernel은 영행렬이 나오게끔하는 정의역 내 벡터들의 집합. Image는 치역으로 볼 수 있다.</p>
-
-<p>(<a href="https://brilliant.org/wiki/rank-nullity-theorem/#:~:text=The%20rank%2Dnullity%20theorem%20states,columns%20over%20a%20field%2C%20then">Rank-Nullity Theorem</a>)</p>
-
-<p><a name="footnote_1">1</a>: A system of linear equations is homogeneous if all of the constant terms are zero</p>
+<h3 id="38-orthogonal-projections">3.8 Orthogonal Projections</h3>
+<p>앞서 vector space V를 어떤 subspace U와 그 orthogonal complement로 표현할 수 있다는 것을 알았다. 이를 이용해서 V에 속하는 벡터 x를 U에 projection할 수 있다. U의 ordered basis B와 B의 각 원소의 coordinate을 표현하는 λ를 행렬곱하면 x를 projection한 결과를 얻을 수 있다. 우리가 관심 있는 부분은 λ이다. <script type="math/tex">B^T</script>(x - Bλ) = 0<script type="math/tex">이 되는 λ를 찾으면 된다. B의 역행렬이 존재한다면 λ =</script>(B^TB)^{-1}<script type="math/tex"></script>B^Tx<script type="math/tex">로 나타낼 수 있다. B의 column들은 모두 linearly independent 하기 때문에</script>B^TB$$의 역행렬이 존재한다. 따라서 λ를 구할 수 있다.</p>
 
 
                 </div>
@@ -375,6 +345,17 @@ Positive definite, symmetric한 bilinear mapping</p>
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/matrix-decompositions">Matrix Decompositions</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -398,8 +379,6 @@ Positive definite, symmetric한 bilinear mapping</p>
                                   
                                     
                                         
-                                        
-                                            <li><a href="/Subspace">4. Subspace</a></li>
                                         
                                     
                                   
@@ -465,7 +444,7 @@ Positive definite, symmetric한 bilinear mapping</p>
                         <footer class="read-next-card-footer">
                             <a href="/tag/math/">
                                 
-                                    See all 7 posts  →
+                                    See all 8 posts  →
                                 
                             </a>
                         </footer>
@@ -474,6 +453,51 @@ Positive definite, symmetric한 bilinear mapping</p>
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/number-system-and-boolean-algebra">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Computer-system</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Number Systems and Boolean Algebra</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/jdj-logo.jpg" alt="Park Seung Joon" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/soonjune/">Park Seung Joon</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->

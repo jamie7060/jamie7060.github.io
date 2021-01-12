@@ -11,7 +11,7 @@
 
 
 
-    <title>1. Linear Equations in Linear Algebra (1)</title>
+    <title>Matrix Decompositions</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -48,24 +48,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Personal Blog of Park Seung Joon" />
     <link rel="shortcut icon" href="https://soonjune.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1" />
+    <link rel="canonical" href="https://soonjune.github.io/matrix-decompositions" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Seung Joon's Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="1. Linear Equations in Linear Algebra (1)" />
-    <meta property="og:description" content="오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 강의와 수업에 사용한 교과서를 참고했다. 간단히 오늘 배운 내용을 정리해보자. 오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자. 1.1 Systems of" />
-    <meta property="og:url" content="https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1" />
+    <meta property="og:title" content="Matrix Decompositions" />
+    <meta property="og:description" content="데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 eigenvalue와 eigenvector가 나오므로 잘 알아두는 게 중요하다. 4.1 Determinant and Trace Determinant는 square matrix에 대해서만 정의되며 Laplace Expansion을 통해 구할 수 있다. 역행렬의 존재여부를 확인하고 구하거나 n-dimensional 평행육면체의 부피를 구하는 등에 쓰인다. Trace는 diagonal elements의 합이다. 두 행렬이 각각" />
+    <meta property="og:url" content="https://soonjune.github.io/matrix-decompositions" />
     <meta property="og:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-08-08T22:00:00+09:00" />
-    <meta property="article:modified_time" content="2020-08-08T22:00:00+09:00" />
+    <meta property="article:published_time" content="2021-01-09T20:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-01-09T20:00:00+09:00" />
     <meta property="article:tag" content="Linear-algebra" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="1. Linear Equations in Linear Algebra (1)" />
-    <meta name="twitter:description" content="오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 강의와 수업에 사용한 교과서를 참고했다. 간단히 오늘 배운 내용을 정리해보자. 오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자. 1.1 Systems of" />
+    <meta name="twitter:title" content="Matrix Decompositions" />
+    <meta name="twitter:description" content="데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 eigenvalue와 eigenvector가 나오므로 잘 알아두는 게 중요하다. 4.1 Determinant and Trace Determinant는 square matrix에 대해서만 정의되며 Laplace Expansion을 통해 구할 수 있다. 역행렬의 존재여부를 확인하고 구하거나 n-dimensional 평행육면체의 부피를 구하는 등에 쓰인다. Trace는 diagonal elements의 합이다. 두 행렬이 각각" />
     <meta name="twitter:url" content="https://soonjune.github.io/" />
     <meta name="twitter:image" content="https://soonjune.github.io/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -86,7 +86,7 @@
         "name": "Seung Joon's Blog",
         "logo": "https://soonjune.github.io/"
     },
-    "url": "https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1",
+    "url": "https://soonjune.github.io/matrix-decompositions",
     "image": {
         "@type": "ImageObject",
         "url": "https://soonjune.github.io/assets/images/blog-cover.jpg",
@@ -95,9 +95,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1"
+        "@id": "https://soonjune.github.io/matrix-decompositions"
     },
-    "description": "오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 강의와 수업에 사용한 교과서를 참고했다. 간단히 오늘 배운 내용을 정리해보자. 오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자. 1.1 Systems of"
+    "description": "데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 eigenvalue와 eigenvector가 나오므로 잘 알아두는 게 중요하다. 4.1 Determinant and Trace Determinant는 square matrix에 대해서만 정의되며 Laplace Expansion을 통해 구할 수 있다. 역행렬의 존재여부를 확인하고 구하거나 n-dimensional 평행육면체의 부피를 구하는 등에 쓰인다. Trace는 diagonal elements의 합이다. 두 행렬이 각각"
 }
     </script>
 
@@ -110,7 +110,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="1. Linear Equations in Linear Algebra (1)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Matrix Decompositions" href="/feed.xml" />
 
 
 </head>
@@ -170,7 +170,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 8 August 2020"> 8 August 2020</time>
+                    <time class="post-full-meta-date" datetime=" 9 January 2021"> 9 January 2021</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -184,58 +184,33 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">1. Linear Equations in Linear Algebra (1)</h1>
+                <h1 class="post-full-title">Matrix Decompositions</h1>
             </header>
 
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>오늘 선형대수 공부를 시작했다. 자료는 고려대에 계시다가 현재는 KAIST AI 대학원으로 가신 주재걸 교수님의 <a href="https://www.youtube.com/watch?v=3bTr91fLHOg&amp;list=PLep-kTP3NkcOBWLIfjMYymsdagnGi3XS6">강의</a>와 수업에 사용한 <a href="https://www.amazon.com/Linear-Algebra-Its-Applications-5th/dp/032198238X">교과서</a>를 참고했다.
-간단히 오늘 배운 내용을 정리해보자.</p>
+                    <p>데이터사이언스대학원 Bootcamp 4일차 수업은 4장 Matrix Decomposition을 공부했다. 선형대수의 핵심적 개념인 <a href="https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors#:~:text=In%20linear%20algebra%2C%20an%20eigenvector,which%20the%20eigenvector%20is%20scaled.">eigenvalue와 eigenvector</a>가 나오므로 잘 알아두는 게 중요하다.</p>
 
-<p>오늘은 간단한 개요 정도였다. 요즘 교육과정에서는 행렬이 빠졌다고 하는데 구7차 교육과정에서 처음으로 등장하는 것이 행렬이었던 것 같다. 그러면 섹션별로 간단한 개념만 짚고 넘어가자.</p>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
 
-<h2 id="11-systems-of-linear-equations">1.1 Systems of Linear Equations</h2>
-<p>1) <a href="https://en.wikipedia.org/wiki/Linear_equation">linear equation의 정의</a> <br />
-=&gt; 이러한 linear equation(s)의 집합을 <a href="https://en.wikipedia.org/wiki/System_of_linear_equations">systems of linear equations</a> 라 한다.   <br />
-2) <a href="https://en.wikipedia.org/wiki/Consistent_and_inconsistent_equations">consistent</a> - 하나 이상의 해가 존재하는 경우 / 그 반대로 해가 없는 경우는 inconsistent   <br />
-3) 선형방정식을 행렬로 나타낼 수 있다. (coefficient matrix, augmented matrix)   <br />
-4) linear system을 푸는 가장 기본적인 방법은 triangular form으로 만들어 주는 것이다. 이때 아래의 3가지 기본 row operation을 사용한다.<br />
-=&gt; Replacement, Interchange, Scaling <br />
-세가지 row operation을 통해 만들 수 있는 행렬들은 row equivalent하다고 표현한다.</p>
+<h3 id="41-determinant-and-trace">4.1 Determinant and Trace</h3>
+<p><a href="https://en.wikipedia.org/wiki/Determinant">Determinant</a>는 square matrix에 대해서만 정의되며 <a href="https://en.wikipedia.org/wiki/Laplace_expansion">Laplace Expansion</a>을 통해 구할 수 있다. 역행렬의 존재여부를 확인하고 구하거나 n-dimensional 평행육면체의 부피를 구하는 등에 쓰인다.</p>
 
-<h2 id="12-row-reduction-and-echelon-forms">1.2 Row Reduction and Echelon Forms</h2>
-<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3743aca294b2e5346c167819fd9ee0bcb79ef22c" align="left" />    
-</p>
+<p><a href="https://en.wikipedia.org/wiki/Trace_(linear_algebra)">Trace</a>는 diagonal elements의 합이다. 두 행렬이 각각 n X k, k X n이라면 교환법칙이 성립하기 때문에 cyclic permutation에 대해 invariant하다.</p>
 
-<p>위와 같은 모양을 지닌 행렬의 형태를 <a href="https://en.wikipedia.org/wiki/Row_echelon_form">echelon form</a> 이라고 한다.  <br />
-여기서 각 행의 맨 앞의 0이 아닌 수를 leading entry라고 한다. (여기서는 1, 2, 1)</p>
+<h3 id="42-eigenvalues-and-eigenvectors">4.2 Eigenvalues and Eigenvectors</h3>
+<p>행렬 A의 eigenvalue와 eigenvector를 구하는 방법을 알아보자. 우선 <a href="https://en.wikipedia.org/wiki/Characteristic_polynomial">charateristic polynomial</a>을 solve해서 λ를 구한다. 이때 구해지는 λ가 eigenvalue들이 된다. 특정 λ에 대해 (A-λI)x = O를 풀어서 구한 벡터 x들이 eigenvectors가 되며 이들의 span이 eigenspace가 된다.</p>
 
-<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0cbe2a26712d3e37787d46b087e97748740b553e" align="left" />
-</p>
-<p>위와 같이 leading entry가 1이고 leading entry 밑뿐만 아니라 위의 원소들도 0이면 reduced echelon form이라고 부른다.</p>
+<h3 id="44-eigendecomposition-and-diagonalization">4.4 Eigendecomposition and Diagonalization</h3>
+<p>Diagonal matrix D는 <script type="math/tex">D = P^{-1}AP</script>과 같이 invertible matrix P를 이용해서 나타낼수 있는 행렬을 의미한다. 이때, A와 D는 닮음 관계에 있다고 한다. 식을 다시 표현하면 AP = PD로 나타낼 수 있는데 이는 eignevalue와 eigenvector를 정의할 때 보았던 식과 유사하다. 즉, 우리는 A를 <script type="math/tex">PDP^{-1}</script> 꼴로 나타낼 수 있는데 이를 eigendecomposition이라고 한다. D는 entry(대각선 값)들이 eigenvalue이고 P는 그에 상응하는 eigenvector들이 column vector인 행렬이다. P는 full rank인 square matrix여야 한다. 이는 eigenvector들이 모두 선형독립이라는 말과 동치이다.</p>
 
-<h3 id="theorem-1-uniqueness-of-the-reduced-echelon-form">Theorem 1: Uniqueness of the Reduced Echelon Form</h3>
-<p>우선, 모든 행렬은 (reduced) echelon form으로 변환할 수 있다.</p>
-<ul>
-  <li>Echelon form인 행렬의 leading entry를 pivot position이라고 한다.  <br />
-각 행에 pivot position이 존재하느냐의 여부에 따라이 해당 열이 basic variable인지 free variable인지 결정된다.</li>
-</ul>
+<p>Orthormal Basis B의 역행렬은 transopose와 같다는 점이 eigendecomposition할 때 유용하게 쓰일 수 있다. 우선 하나의 eigenvector를 이용해서 Gram–Schmidt process를 수행하면 서로 orthornormal한 벡터들을 얻을 수 있다.</p>
 
-<h3 id="theorem-2-existence-and-uniqueness-theorem">Theorem 2: Existence and Uniqueness Theorem</h3>
-<p>Echelon form의 행렬에서 [0, …, b] 꼴로 나오는 행(b는 0이 아닌 실수)이 존재하면 해가 없다.</p>
-
-<h2 id="13-vector-equations">1.3 Vector Equations</h2>
-<p>교환 법칙, 결합 법칙 등이 성립한다. <br />
-span의 개념을 확인하자 - set of all possible linear combinations   <br />
-<a href="https://www.youtube.com/watch?v=k7RM-ot2NWY">등장개념 영상</a></p>
-
-<h2 id="14-the-matrix-equation-ax--b">1.4 The Matrix Equation Ax = b</h2>
-<p><img src="https://i.imgur.com/1mgvPjG.png" alt="theorem 3 and 4" /></p>
-
-<p>공부를 하면서 최근에 본 물리학자인 <a href="https://youtu.be/8n80LX2LGjY?t=90">파인만의 영상</a>이 떠올랐다. 선형대수도 직관이 더해지면 더 오래 기억하고 의미있게 활용할 수 있을 것이다. 단순히 해를 구하는 것은 컴퓨터가 더 잘하니 숨겨진 의의를 찾는데 집중하면 좋을 것 같다.</p>
-
+<h3 id="45-singular-value-decomposition">4.5 <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">Singular Value Decomposition</a></h3>
+<p>square matrix가 아닌 행렬도 분해해서 차원을 축소해서 나타낼수 있다. Eigendecompostion의 일반화된 버전으로 볼 수 있기에 SVD는 특정 행렬에 대해 항상 가능하다.</p>
 
                 </div>
             </section>
@@ -299,9 +274,9 @@ span의 개념을 확인하자 - set of all possible linear combinations   <br /
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1';
-                            this.page.identifier = '/Linear-Equations-in-Linear-Algebra-1';
-                            this.page.title = '1. Linear Equations in Linear Algebra (1)';
+                            this.page.url = 'https://soonjune.github.io/matrix-decompositions';
+                            this.page.identifier = '/matrix-decompositions';
+                            this.page.title = 'Matrix Decompositions';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -346,11 +321,6 @@ span의 개념을 확인하자 - set of all possible linear combinations   <br /
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/matrix-decompositions">Matrix Decompositions</a></li>
-                                        
-                                    
                                   
                                 
                                   
@@ -379,6 +349,8 @@ span의 개념을 확인하자 - set of all possible linear combinations   <br /
                                     
                                         
                                         
+                                            <li><a href="/Subspace">4. Subspace</a></li>
+                                        
                                     
                                   
                                 
@@ -420,6 +392,9 @@ span의 개념을 확인하자 - set of all possible linear combinations   <br /
                                   
                                 
                                   
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -450,55 +425,6 @@ span의 개념을 확인하자 - set of all possible linear combinations   <br /
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template no-image">
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/Linear-Equations-in-Linear-Algebra-2">
-                <header class="post-card-header">
-                    
-                        
-                            
-                               <span class="post-card-tags">Linear-algebra</span>
-                            
-                        
-                            
-                                <span class="post-card-tags">Math</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">1. Linear Equations in Linear Algebra (2)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/jdj-logo.jpg" alt="Park Seung Joon" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/soonjune/">Park Seung Joon</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -507,17 +433,17 @@ span의 개념을 확인하자 - set of all possible linear combinations   <br /
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/SMART-goal">
+            <a class="post-card-content-link" href="/number-system-and-boolean-algebra">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Personal</span>
+                                <span class="post-card-tags">Computer-system</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">SMART한 목표 설정하기</h2>
+                    <h2 class="post-card-title">Number Systems and Boolean Algebra</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -561,18 +487,18 @@ span의 개념을 확인하자 - set of all possible linear combinations   <br /
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">1. Linear Equations in Linear Algebra (1)</div>
+    <div class="floating-header-title">Matrix Decompositions</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=1.+Linear+Equations+in+Linear+Algebra+%281%29&amp;url=https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Matrix+Decompositions&amp;url=https://soonjune.github.io/matrix-decompositions"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://soonjune.github.io/Linear-Equations-in-Linear-Algebra-1"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://soonjune.github.io/matrix-decompositions"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
